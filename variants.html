@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -292,14 +312,14 @@ P_n(r)
 <h2 class="anchored" data-anchor-id="full-information-secretary-problem">1. Full-information secretary problem</h2>
 <section id="problem" class="level3">
 <h3 class="anchored" data-anchor-id="problem">Problem</h3>
-<p>Instead of seeing only relative ranks, suppose the actual observations</p>
+<p>Instead of seeing only relative ranks, suppose the numerical observations</p>
 <p><span class="math display">\[
-X_1,\ldots,X_n
+Y_1,\ldots,Y_n\overset{\mathrm{iid}}{\sim}F
 \]</span></p>
-<p>are revealed sequentially, typically as independent observations from a known continuous distribution <span class="math inline">\(F\)</span>.</p>
-<p>The objective remains</p>
+<p>are revealed sequentially, where <span class="math inline">\(F\)</span> is a known continuous distribution. Here <span class="math inline">\(Y_k\)</span> is an observed value, not the absolute rank <span class="math inline">\(X_k\)</span> used in the classical model.</p>
+<p>The objective is to maximize</p>
 <p><span class="math display">\[
-\Pr\!\left(X_\tau=\max_{1\le j\le n}X_j\right).
+\Pr\!\left(Y_\tau=\max_{1\le j\le n}Y_j\right).
 \]</span></p>
 </section>
 <section id="what-changes" class="level3">
@@ -311,7 +331,7 @@ X_1,\ldots,X_n
 <h3 class="anchored" data-anchor-id="optimal-strategy-structure">Optimal-strategy structure</h3>
 <p>Using the probability-integral transform,</p>
 <p><span class="math display">\[
-U_i=F(X_i),
+U_i=F(Y_i),
 \]</span></p>
 <p>the problem can be reduced to independent <span class="math inline">\(U(0,1)\)</span> observations.</p>
 <p>The optimal rule is described by time-dependent critical values: a record is accepted only when its value is sufficiently large relative to the number of observations remaining.</p>
@@ -423,7 +443,7 @@ N.
 </section>
 <section id="connection-to-the-1e-phenomenon" class="level3">
 <h3 class="anchored" data-anchor-id="connection-to-the-1e-phenomenon">Connection to the <span class="math inline">\(1/e\)</span> phenomenon</h3>
-<p>Random-horizon best-choice models are one of the settings in which <span class="math inline">\(1/e\)</span>-type laws appear beyond the classical fixed-<span class="math inline">\(n\)</span> problem.</p>
+<p>The classical <span class="math inline">\(1/e\)</span> threshold is <strong>not</strong> a universal rule for random horizons. In the continuous-time unified-approach model of Bruss (1984), candidate arrival times are conditionally independent and a <span class="math inline">\(1/e\)</span> law holds under the model’s specific assumptions. A generic prior distribution for the unknown horizon <span class="math inline">\(N\)</span> need not yield the same optimal rule or success probability. See <a href="https://doi.org/10.1214/aop/1176993237">Bruss (1984)</a>.</p>
 <hr>
 </section>
 </section>
@@ -437,16 +457,20 @@ I_1,\ldots,I_n
 \]</span></p>
 <p>be independent Bernoulli random variables with</p>
 <p><span class="math display">\[
-\Pr(I_k=1)=p_k.
+\Pr(I_k=1)=p_k,\qquad 0\le p_k&lt;1.
 \]</span></p>
-<p>The objective is to stop on the last success.</p>
+<p>The objective is to stop at an index <span class="math inline">\(\tau\)</span> for which <span class="math inline">\(I_\tau=1\)</span> and no later success occurs. If there is no success, the attempt fails. Assume decisions use only the observations up to the current index.</p>
 <p>Define</p>
 <p><span class="math display">\[
-q_k=1-p_k,
+q_k=1-p_k&gt;0,
 \qquad
 r_k=\frac{p_k}{q_k}.
 \]</span></p>
-<p>Bruss’s odds theorem provides an elegant optimal rule based on summing the odds backward from the end of the sequence.</p>
+<p><strong>Sum-the-odds rule (Bruss, 2000).</strong> Define</p>
+<p><span class="math display">\[
+s=\max\left(\{1\}\cup\left\{k\in\{1,\ldots,n\}:\sum_{j=k}^{n}r_j\ge1\right\}\right).
+\]</span></p>
+<p>Reject observations before <span class="math inline">\(s\)</span>, then stop at the first success <span class="math inline">\(I_k=1\)</span> with <span class="math inline">\(k\ge s\)</span>. If no success occurs after <span class="math inline">\(s\)</span>, the attempt fails. When the total sum of odds is less than <span class="math inline">\(1\)</span>, this convention gives <span class="math inline">\(s=1\)</span>. This rule maximizes the probability of stopping on the last success among all stopping times in this model. See <span class="citation" data-cites="bruss2000">Bruss (<a href="#ref-bruss2000" role="doc-biblioref">2000</a>)</span>.</p>
 </section>
 <section id="connection-to-secretary-problems" class="level3">
 <h3 class="anchored" data-anchor-id="connection-to-secretary-problems">Connection to secretary problems</h3>
@@ -493,11 +517,11 @@ i.
 <p>Suppose the applicant does not know their absolute rank.</p>
 <p>Let</p>
 <p><span class="math display">\[
-R\in\{1,\ldots,n\}
+J\in\{1,\ldots,n\}
 \]</span></p>
-<p>be random with a prior distribution. For example, a truncated geometric prior is</p>
+<p>be the applicant’s random <strong>absolute rank</strong>, distinct from the observed relative ranks <span class="math inline">\(R_k\)</span>, with a prior distribution. For example, a truncated geometric prior is</p>
 <p><span class="math display">\[
-\Pr(R=j)
+\Pr(J=j)
 =
 \frac{(1-q)q^{j-1}}{1-q^n},
 \qquad 0&lt;q&lt;1.
@@ -507,8 +531,8 @@ R\in\{1,\ldots,n\}
 V(i)
 =
 \sum_{j=1}^{n}
-\Pr(R=j)
-\Pr(\text{selected}\mid R=j,\text{position }i).
+\Pr(J=j)
+\Pr(\text{selected}\mid J=j,\text{position }i).
 \]</span></p>
 <p>This turns applicant positioning into a Bayesian decision problem.</p>
 <hr>
@@ -652,9 +676,14 @@ V(i)
 </ul>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bruss2000" class="csl-entry" role="listitem">
+Bruss, F. Thomas. 2000. <span>“Sum the Odds to One and Stop.”</span> <em>The Annals of Probability</em> 28 (3): 1384–91. <a href="https://doi.org/10.1214/aop/1019160340">https://doi.org/10.1214/aop/1019160340</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
