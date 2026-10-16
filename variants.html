@@ -267,11 +267,11 @@ window.Quarto = {
 <p><span class="math display">\[
 1,2,\ldots,n,
 \]</span></p>
-<p>with rank <span class="math inline">\(1\)</span> best.</p>
+<p>with rank <span class="math inline">\(1\)</span> best. Write <span class="math inline">\(X_k\)</span> for the absolute rank of the candidate arriving at position <span class="math inline">\(k\)</span>, and <span class="math inline">\(R_k\)</span> for that candidate’s relative rank among the first <span class="math inline">\(k\)</span> arrivals.</p>
 <p>Candidates are observed sequentially. At time <span class="math inline">\(k\)</span>, only the candidate’s relative rank among the first <span class="math inline">\(k\)</span> observations is known. Decisions are irrevocable, and only one candidate may be selected.</p>
 <p>The objective is</p>
 <p><span class="math display">\[
-\max_{\tau}\Pr(R_\tau=1).
+\max_{\tau}\Pr(X_\tau=1).
 \]</span></p>
 <p>For a threshold <span class="math inline">\(r\)</span>, reject the first <span class="math inline">\(r\)</span> candidates and then accept the first subsequent record. Its success probability is</p>
 <p><span class="math display">\[
@@ -334,7 +334,7 @@ U_i=F(X_i),
 <h3 class="anchored" data-anchor-id="problem-1">Problem</h3>
 <p>Change the reward from selecting absolute rank <span class="math inline">\(1\)</span> to selecting absolute rank <span class="math inline">\(2\)</span>:</p>
 <p><span class="math display">\[
-\max_{\tau}\Pr(R_\tau=2).
+\max_{\tau}\Pr(X_\tau=2).
 \]</span></p>
 <p>The arrival order is still uniformly random, decisions remain irrevocable, and only relative ranks are observed.</p>
 </section>
@@ -347,9 +347,9 @@ U_i=F(X_i),
 <h3 class="anchored" data-anchor-id="connection-to-the-classical-model-1">Connection to the classical model</h3>
 <p>The information structure is unchanged. Only the reward changes:</p>
 <p><span class="math display">\[
-\mathbf 1_{\{R_\tau=1\}}
+\mathbf 1_{\{X_\tau=1\}}
 \quad\longrightarrow\quad
-\mathbf 1_{\{R_\tau=2\}}.
+\mathbf 1_{\{X_\tau=2\}}.
 \]</span></p>
 <p>This makes the postdoc problem a particularly useful example of how the optimal rule can change when the target rank changes.</p>
 <hr>
