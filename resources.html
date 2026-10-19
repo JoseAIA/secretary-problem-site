@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Download standard-library Python programs for the classical, postdoc, full-information and last-success optimal stopping problems.">
+<meta name="description" content="Four guided Google Colab notebooks with mathematical explanations, optimal stopping simulations, and classroom exercises.">
 
-<title>Secretary Problem Teaching and Python Resources – The Secretary Problem Site</title>
+<title>Secretary Problem Colab Notebooks and Teaching Resources – The Secretary Problem Site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -114,39 +79,10 @@ gtag('js', new Date());
 gtag('config', 'G-35SSF14JG7', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Secretary Problem Teaching and Python Resources – The Secretary Problem Site">
-<meta property="og:description" content="Download standard-library Python programs for the classical, postdoc, full-information and last-success optimal stopping problems.">
+<meta property="og:title" content="Secretary Problem Colab Notebooks and Teaching Resources – The Secretary Problem Site">
+<meta property="og:description" content="Four guided Google Colab notebooks with mathematical explanations, optimal stopping simulations, and classroom exercises.">
 <meta property="og:site_name" content="The Secretary Problem Site">
 </head>
 
@@ -221,16 +157,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#teaching-python-resources" id="toc-teaching-python-resources" class="nav-link active" data-scroll-target="#teaching-python-resources">Teaching &amp; Python Resources</a>
+  <li><a href="#teaching-resources-google-colab-notebooks" id="toc-teaching-resources-google-colab-notebooks" class="nav-link active" data-scroll-target="#teaching-resources-google-colab-notebooks">Teaching Resources: Google Colab Notebooks</a>
   <ul class="collapse">
-  <li><a href="#classical-secretary-problem-exact-probability-and-simulation" id="toc-classical-secretary-problem-exact-probability-and-simulation" class="nav-link" data-scroll-target="#classical-secretary-problem-exact-probability-and-simulation">Classical secretary problem: exact probability and simulation</a></li>
-  <li><a href="#last-success-problem-brusss-odds-theorem" id="toc-last-success-problem-brusss-odds-theorem" class="nav-link" data-scroll-target="#last-success-problem-brusss-odds-theorem">Last-success problem: Bruss’s odds theorem</a></li>
-  <li><a href="#postdoc-problem-choosing-the-second-best-candidate" id="toc-postdoc-problem-choosing-the-second-best-candidate" class="nav-link" data-scroll-target="#postdoc-problem-choosing-the-second-best-candidate">Postdoc problem: choosing the second-best candidate</a></li>
-  <li><a href="#full-information-best-choice-first-stage-thresholds" id="toc-full-information-best-choice-first-stage-thresholds" class="nav-link" data-scroll-target="#full-information-best-choice-first-stage-thresholds">Full-information best choice: first-stage thresholds</a></li>
-  <li><a href="#interactive-activities" id="toc-interactive-activities" class="nav-link" data-scroll-target="#interactive-activities">Interactive activities</a></li>
-  <li><a href="#suggested-classroom-exercises" id="toc-suggested-classroom-exercises" class="nav-link" data-scroll-target="#suggested-classroom-exercises">Suggested classroom exercises</a></li>
-  <li><a href="#check-the-mathematical-examples" id="toc-check-the-mathematical-examples" class="nav-link" data-scroll-target="#check-the-mathematical-examples">Check the mathematical examples</a></li>
-  <li><a href="#reuse-and-attribution" id="toc-reuse-and-attribution" class="nav-link" data-scroll-target="#reuse-and-attribution">Reuse and attribution</a></li>
+  <li><a href="#classical-secretary-problem" id="toc-classical-secretary-problem" class="nav-link" data-scroll-target="#classical-secretary-problem">Classical secretary problem</a></li>
+  <li><a href="#last-success-problem-and-brusss-odds-theorem" id="toc-last-success-problem-and-brusss-odds-theorem" class="nav-link" data-scroll-target="#last-success-problem-and-brusss-odds-theorem">Last-success problem and Bruss’s odds theorem</a></li>
+  <li><a href="#postdoc-problem-selecting-the-second-best" id="toc-postdoc-problem-selecting-the-second-best" class="nav-link" data-scroll-target="#postdoc-problem-selecting-the-second-best">Postdoc problem: selecting the second best</a></li>
+  <li><a href="#full-information-secretary-problem" id="toc-full-information-secretary-problem" class="nav-link" data-scroll-target="#full-information-secretary-problem">Full-information secretary problem</a></li>
+  <li><a href="#interactive-demonstrations-on-this-site" id="toc-interactive-demonstrations-on-this-site" class="nav-link" data-scroll-target="#interactive-demonstrations-on-this-site">Interactive demonstrations on this site</a></li>
+  <li><a href="#suggested-learning-sequence" id="toc-suggested-learning-sequence" class="nav-link" data-scroll-target="#suggested-learning-sequence">Suggested learning sequence</a></li>
+  <li><a href="#reproducibility-and-mathematical-tests" id="toc-reproducibility-and-mathematical-tests" class="nav-link" data-scroll-target="#reproducibility-and-mathematical-tests">Reproducibility and mathematical tests</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -240,12 +176,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Secretary Problem Teaching and Python Resources</h1>
+<h1 class="title">Secretary Problem Colab Notebooks and Teaching Resources</h1>
 </div>
 
 <div>
   <div class="description">
-    Download standard-library Python programs for the classical, postdoc, full-information and last-success optimal stopping problems.
+    Four guided Google Colab notebooks with mathematical explanations, optimal stopping simulations, and classroom exercises.
   </div>
 </div>
 
@@ -262,78 +198,57 @@ window.Quarto = {
 </header>
 
 
-<section id="teaching-python-resources" class="level1">
-<h1>Teaching &amp; Python Resources</h1>
-<p>These resources accompany <strong>The Secretary Problem Site</strong>. The programs use only the Python standard library and can run locally or in a Google Colab code cell. All simulations are illustrative: mathematical optimality follows from the exact formulas, not from Monte Carlo experiments.</p>
-<section id="classical-secretary-problem-exact-probability-and-simulation" class="level2">
-<h2 class="anchored" data-anchor-id="classical-secretary-problem-exact-probability-and-simulation">Classical secretary problem: exact probability and simulation</h2>
-<p><a href="code/classical_secretary.py">Download <code>classical_secretary.py</code></a></p>
-<p>The script computes the exact finite-(n) threshold probabilities, identifies the smallest maximizing threshold, and estimates success using random permutations.</p>
-<p>For (r),</p>
-<p><span class="math display">\[
-P_n(r)=\frac{r}{n}\sum_{j=r}^{n-1}\frac1j,
-\qquad P_n(0)=\frac1n.
-\]</span></p>
-<p>Run it in a terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/classical_secretary.py <span class="at">--n</span> 30 <span class="at">--r</span> 11 <span class="at">--trials</span> 10000 <span class="at">--seed</span> 123</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/classical_secretary.py <span class="at">--self-test</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>For Colab, download and upload the script, then run <code>!python classical_secretary.py --n 30 --r 11</code>.</p>
+<section id="teaching-resources-google-colab-notebooks" class="level1">
+<h1>Teaching Resources: Google Colab Notebooks</h1>
+<p>These materials accompany <strong>The Secretary Problem Site</strong>. Each notebook combines a short mathematical introduction, the stopping rule, <strong>Python code that runs in Google Colab</strong>, a reproducible simulation, and suggested exercises. You can read and run the material directly in your browser; you do not need to open a terminal or install Python locally.</p>
+<p>The notebooks are written for independent study or classroom use. They use Python’s standard library for mathematics and simulations; optional charts use Matplotlib (already available in Google Colab).</p>
+<p><strong>Important:</strong> A simulated success rate illustrates the mathematical result but does not establish optimality. Exact formulas or backward induction justify the stopping rules presented here.</p>
+<section id="classical-secretary-problem" class="level2">
+<h2 class="anchored" data-anchor-id="classical-secretary-problem">Classical secretary problem</h2>
+<p>Derive the exact finite-(n) probability, find the optimal rejection threshold, simulate uniform random permutations, and compare Monte Carlo outcomes with the theoretical curve.</p>
+<p><a href="https://colab.research.google.com/github/JoseAIA/secretary-problem-site/blob/main/notebooks/classical_secretary.ipynb"><strong>Open in Google Colab</strong></a> · <a href="notebooks/classical_secretary.ipynb">Download notebook (.ipynb)</a></p>
 </section>
-<section id="last-success-problem-brusss-odds-theorem" class="level2">
-<h2 class="anchored" data-anchor-id="last-success-problem-brusss-odds-theorem">Last-success problem: Bruss’s odds theorem</h2>
-<p><a href="code/last_success_odds.py">Download <code>last_success_odds.py</code></a></p>
-<p>For independent Bernoulli observations with (0p_k&lt;1), the code calculates the optimal start index given by the sum-the-odds rule and checks its exact success probability against all deterministic start indices.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/last_success_odds.py <span class="at">--probabilities</span> 0.2 0.5 0.3 0.4</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/last_success_odds.py <span class="at">--self-test</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The calculation uses exact fractions when decimal inputs are supplied; floating-point Monte Carlo is not required.</p>
+<section id="last-success-problem-and-brusss-odds-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="last-success-problem-and-brusss-odds-theorem">Last-success problem and Bruss’s odds theorem</h2>
+<p>Study independent Bernoulli observations, compute the sum-the-odds stopping index, simulate the last-success objective, and compare exact and estimated winning probabilities.</p>
+<p><a href="https://colab.research.google.com/github/JoseAIA/secretary-problem-site/blob/main/notebooks/last_success_odds.ipynb"><strong>Open in Google Colab</strong></a> · <a href="notebooks/last_success_odds.ipynb">Download notebook (.ipynb)</a></p>
 </section>
-<section id="postdoc-problem-choosing-the-second-best-candidate" class="level2">
-<h2 class="anchored" data-anchor-id="postdoc-problem-choosing-the-second-best-candidate">Postdoc problem: choosing the second-best candidate</h2>
-<p><a href="code/postdoc_secretary.py">Download <code>postdoc_secretary.py</code></a></p>
-<p>This script solves the finite-horizon postdoc problem using <strong>exact rational backward induction</strong>. It calculates the conditional stopping reward at each relative rank and returns the optimal decision. The built-in tests compare the resulting policy with exhaustive enumeration of all permutations for small <span class="math inline">\(n\)</span>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/postdoc_secretary.py <span class="at">--n</span> 10 <span class="at">--k</span> 5 <span class="at">--rank</span> 2</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/postdoc_secretary.py <span class="at">--self-test</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>See the <a href="./variants.html#postdoc-experiment">interactive postdoc explorer</a>.</p>
+<section id="postdoc-problem-selecting-the-second-best" class="level2">
+<h2 class="anchored" data-anchor-id="postdoc-problem-selecting-the-second-best">Postdoc problem: selecting the second best</h2>
+<p>Solve the finite-horizon problem by exact backward induction over relative ranks, then simulate policies using random permutations to validate the success probability.</p>
+<p><a href="https://colab.research.google.com/github/JoseAIA/secretary-problem-site/blob/main/notebooks/postdoc_secretary.ipynb"><strong>Open in Google Colab</strong></a> · <a href="notebooks/postdoc_secretary.ipynb">Download notebook (.ipynb)</a></p>
 </section>
-<section id="full-information-best-choice-first-stage-thresholds" class="level2">
-<h2 class="anchored" data-anchor-id="full-information-best-choice-first-stage-thresholds">Full-information best choice: first-stage thresholds</h2>
-<p><a href="code/full_information_uniform.py">Download <code>full_information_uniform.py</code></a></p>
-<p>This program covers the first stopping decision for <span class="math inline">\(n=2\)</span> or <span class="math inline">\(n=3\)</span> independent <span class="math inline">\(U(0,1)\)</span> observations. It evaluates exact rational acceptance and continuation probabilities at any rational first observation <span class="math inline">\(x\)</span>, and reports the analytic acceptance cutoff: <span class="math inline">\(1/2\)</span> for <span class="math inline">\(n=2\)</span> or <span class="math inline">\((1+\sqrt6)/5\)</span> for <span class="math inline">\(n=3\)</span>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/full_information_uniform.py <span class="at">--n</span> 3 <span class="at">--x</span> 0.70</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> code/full_information_uniform.py <span class="at">--self-test</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>See the <a href="./variants.html#full-information-experiment">interactive full-information explorer</a>. This deliberately focuses on two small horizons so that the displayed decision has a transparent analytical derivation.</p>
+<section id="full-information-secretary-problem" class="level2">
+<h2 class="anchored" data-anchor-id="full-information-secretary-problem">Full-information secretary problem</h2>
+<p>Derive the first-stage optimal decision for two and three independent uniform observations; simulate success conditional on the initial value and graph the stop–continue crossover.</p>
+<p><a href="https://colab.research.google.com/github/JoseAIA/secretary-problem-site/blob/main/notebooks/full_information_uniform.ipynb"><strong>Open in Google Colab</strong></a> · <a href="notebooks/full_information_uniform.ipynb">Download notebook (.ipynb)</a></p>
 </section>
-<section id="interactive-activities" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-activities">Interactive activities</h2>
+<section id="interactive-demonstrations-on-this-site" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-demonstrations-on-this-site">Interactive demonstrations on this site</h2>
 <ul>
-<li><a href="./classical.html#optimal-threshold-explorer">Optimal Threshold Explorer</a>: see how the exact success curve changes with (n) and (r).</li>
-<li><a href="./simulations.html">Sequential decision game and simulations</a>: compare mathematical predictions to simulated outcomes.</li>
-<li><a href="./variants.html#postdoc-experiment">Postdoc decision explorer</a>: use exact dynamic programming to choose rank 2.</li>
-<li><a href="./variants.html#full-information-experiment">Full-information first-decision explorer</a>: compare acceptance with continuation for two or three observations.</li>
-<li><a href="./variants.html#last-success-experiment">Odds-theorem explorer</a>: vary four Bernoulli success probabilities and inspect the optimal start index.</li>
-<li><a href="./backward-induction.html">Backward-induction proof</a>: derive optimal decisions from the Bellman recursion.</li>
+<li><a href="./classical.html">Classical threshold explorer and single-game simulation</a></li>
+<li><a href="./simulations.html">Monte Carlo threshold experiments and probability curve</a></li>
+<li><a href="./variants.html">Postdoc, full-information, and odds-theorem experiments</a></li>
+<li><a href="./backward-induction.html">Backward-induction derivation</a></li>
 </ul>
 </section>
-<section id="suggested-classroom-exercises" class="level2">
-<h2 class="anchored" data-anchor-id="suggested-classroom-exercises">Suggested classroom exercises</h2>
+<section id="suggested-learning-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-learning-sequence">Suggested learning sequence</h2>
 <ol type="1">
-<li>Determine the smallest optimal threshold for (n=10), and verify its exact success probability.</li>
-<li>Compare optimal rejection fractions for (n=10,30,100) with (1/e).</li>
-<li>Investigate the difference between exact probability and simulated frequency for increasing numbers of trials.</li>
-<li>For <span class="math inline">\(n=5\)</span>, derive the postdoc stopping rewards for relative ranks 1 and 2 and verify the backward recursion.</li>
-<li>For three iid uniform observations, derive the first-stage continuation function and its stopping cutoff.</li>
-<li>For four independent Bernoulli trials, compute the sum-the-odds threshold and enumerate the exact success probabilities of all fixed starting positions.</li>
+<li>Begin with the classical notebook to understand random order, records, and the finite-(n) rejection threshold.</li>
+<li>Use the postdoc notebook to see how changing the target from the best to the second best changes the optimal decisions.</li>
+<li>Compare that relative-rank problem with the full-information notebook, which observes numerical values.</li>
+<li>Study the last-success notebook to learn a different optimal-stopping objective and the sum-the-odds rule.</li>
 </ol>
 </section>
-<section id="check-the-mathematical-examples" class="level2">
-<h2 class="anchored" data-anchor-id="check-the-mathematical-examples">Check the mathematical examples</h2>
-<p>Run the complete regression suite with Python’s standard-library <code>unittest</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> unittest discover <span class="at">-s</span> tests <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The tests check exact classical thresholds, compare finite postdoc policies with exhaustive permutation enumeration, independently enumerate Bernoulli last-success outcomes, and verify the full-information continuation formulas at representative rational observations. No additional packages are required.</p>
+<section id="reproducibility-and-mathematical-tests" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility-and-mathematical-tests">Reproducibility and mathematical tests</h2>
+<p>Each notebook uses a fixed random seed in its simulations. You can vary the parameters or the number of trials and compare Monte Carlo frequencies with the exact probabilities.</p>
+<p>The site’s source repository also contains automated mathematical regression tests for the reference calculations. Those developer tests are kept separate from these student-facing notebooks.</p>
 </section>
-<section id="reuse-and-attribution" class="level2">
-<h2 class="anchored" data-anchor-id="reuse-and-attribution">Reuse and attribution</h2>
-<p>These examples are offered as educational materials. When using them in a course, credit <strong>The Secretary Problem Site</strong> and link to the relevant mathematical derivation. Primary mathematical sources are listed in the <a href="./references.html">References</a> section.</p>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<p>The foundational work is described in <a href="./references.html">References</a>. The classical and full-information problems draw on Gilbert and Mosteller (1966), and the last-success model uses Bruss (2000). The postdoc notebook uses the relative-rank model presented on the <a href="./variants.html">Variants</a> page.</p>
 
 
 </section>

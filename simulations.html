@@ -225,7 +225,7 @@ window.Quarto = {
 <section id="explore-one-selection" class="level2">
 <h2 class="anchored" data-anchor-id="explore-one-selection">Explore one selection</h2>
 <p>You will observe the candidates sequentially. Smaller relative ranks are better, and relative rank (1) means that the current candidate is the best observed so far.</p>
-<p>The absolute ranks remain hidden until you hire someone or reach the final candidate.</p>
+<p>Absolute ranks remain hidden while you make decisions. After a game ends, the complete sequence is revealed for learning. Moving the candidate-count slider affects the <strong>next game</strong>, not the current one.</p>
 <section class="atlas-interactive-card play-card">
   <div class="interactive-card-heading">
     <div>
@@ -244,7 +244,7 @@ window.Quarto = {
 
   <div class="game-settings">
     <label for="game-n-slider">
-      Number of candidates:
+      Candidates in next game:
       <strong id="game-n-value">10</strong>
     </label>
 
@@ -283,7 +283,7 @@ window.Quarto = {
     <div id="observed-ranks" class="observed-ranks"></div>
   </div>
 
-  <div id="game-result" class="game-result" hidden=""></div>
+  <div id="game-result" class="game-result" role="status" aria-live="polite" hidden=""></div>
 
   <div id="game-reveal" class="game-reveal" hidden="">
     <h3 class="anchored">Complete sequence of absolute ranks</h3>
@@ -295,7 +295,7 @@ window.Quarto = {
 <section id="simulate-a-threshold-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="simulate-a-threshold-strategy">Simulate a threshold strategy</h2>
 <p>Choose a total number of candidates (n), a rejection threshold (r), and the number of simulated repetitions.</p>
-<p>The strategy rejects the first (r) candidates and then accepts the first subsequent record.</p>
+<p>The strategy rejects the first (r) candidates and then accepts the first subsequent record. If there is no later record, the trial fails. A new simulation is required after any input is changed.</p>
 <section class="atlas-interactive-card experiment-card">
   <div class="interactive-card-heading">
     <div>
@@ -344,7 +344,7 @@ window.Quarto = {
   <div class="experiment-statistics">
     <div class="statistic-card statistic-empirical">
       <span>Empirical probability</span>
-      <strong id="empirical-probability">—</strong>
+      <strong id="empirical-probability">Not run</strong>
     </div>
 
     <div class="statistic-card">
@@ -363,7 +363,7 @@ window.Quarto = {
     </div>
   </div>
 
-  <div id="experiment-message" class="experiment-message">
+  <div id="experiment-message" class="experiment-message" role="status" aria-live="polite">
     Run the experiment to compare simulation and theory.
   </div>
 </section>
@@ -388,8 +388,9 @@ P_n(0)=\frac1n.
       <p class="interactive-eyebrow">UNDERSTAND</p>
       <h2 class="anchored">The probability curve</h2>
       <p>
-        The blue curve gives the exact probability. The selected
-        threshold is shown in coral and the optimum in gold.
+        The blue curve gives the exact probability for each integer threshold.
+        The selected threshold is shown in coral and the optimum in gold;
+        the dashed line indicates the continuous approximation \(n/e\).
       </p>
     </div>
   </div>

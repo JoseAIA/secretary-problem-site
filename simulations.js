@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let relativeRanks = [];
   let currentIndex = 0;
   let gameFinished = false;
+  let experimentRevision = 0;
 
   function randomPermutation(n) {
     const permutation = Array.from(
@@ -326,10 +327,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const r = Number(experimentRSlider.value);
     const trials = Number(trialsSlider.value);
 
+    const revision = experimentRevision;
     runExperimentButton.disabled = true;
     runExperimentButton.textContent = "Running…";
 
     window.setTimeout(() => {
+      if (revision !== experimentRevision) return;
       let successes = 0;
 
       for (let trial = 0; trial < trials; trial += 1) {
@@ -376,6 +379,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateExperimentControls() {
+    experimentRevision += 1;
+    runExperimentButton.disabled = false;
+    runExperimentButton.textContent = "Run experiment";
+    empiricalProbability.textContent = "Not run";
+    experimentMessage.className = "experiment-message";
+    experimentMessage.textContent = "Settings changed. Run the experiment to compare simulation and theory.";
+
     const n = Number(experimentNSlider.value);
 
     experimentRSlider.max = n - 1;

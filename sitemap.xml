@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joseaia.github.io/secretary-problem-site/timeline.html</loc>
-    <lastmod>2026-10-19T18:20:54.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://joseaia.github.io/secretary-problem-site/references.html</loc>
-    <lastmod>2026-10-14T19:17:14.242Z</lastmod>
-  </url>
-  <url>
     <loc>https://joseaia.github.io/secretary-problem-site/variants.html</loc>
     <lastmod>2026-10-19T20:00:30.458Z</lastmod>
   </url>
   <url>
-    <loc>https://joseaia.github.io/secretary-problem-site/index.html</loc>
-    <lastmod>2026-10-19T18:37:54.057Z</lastmod>
+    <loc>https://joseaia.github.io/secretary-problem-site/simulations.html</loc>
+    <lastmod>2026-10-19T20:14:36.909Z</lastmod>
   </url>
   <url>
-    <loc>https://joseaia.github.io/secretary-problem-site/backward-induction.html</loc>
-    <lastmod>2026-10-19T19:57:06.567Z</lastmod>
+    <loc>https://joseaia.github.io/secretary-problem-site/references.html</loc>
+    <lastmod>2026-10-14T19:17:14.242Z</lastmod>
   </url>
   <url>
     <loc>https://joseaia.github.io/secretary-problem-site/classical.html</loc>
@@ -29,11 +21,19 @@
     <lastmod>2026-10-14T19:17:14.234Z</lastmod>
   </url>
   <url>
-    <loc>https://joseaia.github.io/secretary-problem-site/simulations.html</loc>
-    <lastmod>2026-10-14T19:17:14.244Z</lastmod>
+    <loc>https://joseaia.github.io/secretary-problem-site/backward-induction.html</loc>
+    <lastmod>2026-10-19T19:57:06.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joseaia.github.io/secretary-problem-site/index.html</loc>
+    <lastmod>2026-10-19T18:37:54.057Z</lastmod>
   </url>
   <url>
     <loc>https://joseaia.github.io/secretary-problem-site/resources.html</loc>
-    <lastmod>2026-10-19T19:02:03.526Z</lastmod>
+    <lastmod>2026-10-19T20:14:36.903Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joseaia.github.io/secretary-problem-site/timeline.html</loc>
+    <lastmod>2026-10-19T18:20:54.204Z</lastmod>
   </url>
 </urlset>
