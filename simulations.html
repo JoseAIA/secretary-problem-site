@@ -417,11 +417,12 @@ P_n(0)=\frac1n.
     </span>
   </div>
 
-  <div class="probability-chart-container">
-    <svg id="probability-chart" class="probability-chart" viewbox="0 0 900 480" role="img" aria-label="Exact success probability by rejection threshold"></svg>
+  <p id="probability-chart-help" class="chart-scroll-help">The curve plots the exact success probability at each integer rejection threshold. On a narrow screen, scroll the chart horizontally to see the full graph.</p>
+  <div class="probability-chart-container" role="region" aria-label="Scrollable probability chart" tabindex="0">
+    <svg id="probability-chart" class="probability-chart" viewbox="0 0 900 480" role="img" aria-label="Exact success probability by rejection threshold" aria-describedby="probability-chart-help probability-chart-values"></svg>
   </div>
 
-  <div class="graph-explanation">
+  <div id="probability-chart-values" class="graph-explanation">
     <div>
       <span>Selected threshold</span>
       <strong id="graph-selected-threshold">—</strong>

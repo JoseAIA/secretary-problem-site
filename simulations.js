@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "This candidate is the best observed so far.";
     } else {
       candidateDescription.textContent =
-        `At least ${relativeRank - 1} observed candidate(s) were better.`;
+        `Exactly ${relativeRank - 1} earlier candidate(s) were better.`;
     }
 
     addObservedRank(position, relativeRank, isRecord);
