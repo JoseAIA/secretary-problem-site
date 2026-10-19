@@ -374,7 +374,7 @@ C_3(x)=
     <p>Continue optimally <strong id="full-continue"></strong></p>
   </div>
   <p>First-stage cutoff: <strong id="full-cutoff"></strong></p>
-  <p class="variant-decision"><strong id="full-decision"></strong></p>
+  <p class="variant-decision" role="status" aria-live="polite"><strong id="full-decision"></strong></p>
   <p id="full-reason" aria-live="polite"></p>
   <p class="explorer-note">Assumptions: independent, identical and continuous Uniform(0,1) observations. Exact analytical continuation formulas; probabilities shown as rounded percentages.</p>
 </section>
@@ -389,7 +389,7 @@ C_3(x)=
 <li><strong>no information:</strong> only relative ranks are observed;</li>
 <li><strong>full information:</strong> the actual values are observed.</li>
 </ul>
-<p>Gilbert and Mosteller developed the foundational analysis of both settings.</p>
+<p>Gilbert and Mosteller developed the foundational analysis of both settings (<span class="citation" data-cites="gilbert1966">Gilbert and Mosteller (<a href="#ref-gilbert1966" role="doc-biblioref">1966</a>)</span>).</p>
 <hr>
 </section>
 </section>
@@ -441,7 +441,7 @@ V_k=\frac1k\sum_{a=1}^k\max\{g_{n,k}(a),V_{k+1}\},
     <p>Continue optimally <strong id="postdoc-continue"></strong></p>
   </div>
   <p>Optimal win probability before the first candidate: <strong id="postdoc-initial"></strong></p>
-  <p class="variant-decision"><strong id="postdoc-decision"></strong></p>
+  <p class="variant-decision" role="status" aria-live="polite"><strong id="postdoc-decision"></strong></p>
   <p id="postdoc-reason" aria-live="polite"></p>
   <p class="explorer-note">Assumptions: uniformly random arrival order, relative ranks only, one irrevocable selection. Calculations use the exact Bellman recursion and display rounded percentages.</p>
 </section>
@@ -456,7 +456,7 @@ V_k=\frac1k\sum_{a=1}^k\max\{g_{n,k}(a),V_{k+1}\},
 \quad\longrightarrow\quad
 \mathbf 1_{\{X_\tau=2\}}.
 \]</span></p>
-<p>This makes the postdoc problem a particularly useful example of how the optimal rule can change when the target rank changes.</p>
+<p>This makes the postdoc problem a particularly useful example of how the optimal rule can change when the target rank changes. For further analysis of the standard postdoc problem and its relationship to best-or-worst selection, see <span class="citation" data-cites="bayon2018postdoc">Bayón et al. (<a href="#ref-bayon2018postdoc" role="doc-biblioref">2018</a>)</span>.</p>
 <hr>
 </section>
 </section>
@@ -790,8 +790,14 @@ V(i)
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bayon2018postdoc" class="csl-entry" role="listitem">
+Bayón, L., P. Fortuny Ayuso, J. M. Grau, A. M. Oller-Marcén, and M. M. Ruiz. 2018. <span>“The Best-or-Worst and the Postdoc Problems.”</span> <em>Journal of Combinatorial Optimization</em> 35 (3). <a href="https://doi.org/10.1007/s10878-017-0203-4">https://doi.org/10.1007/s10878-017-0203-4</a>.
+</div>
 <div id="ref-bruss2000" class="csl-entry" role="listitem">
 Bruss, F. Thomas. 2000. <span>“Sum the Odds to One and Stop.”</span> <em>The Annals of Probability</em> 28 (3): 1384–91. <a href="https://doi.org/10.1214/aop/1019160340">https://doi.org/10.1214/aop/1019160340</a>.
+</div>
+<div id="ref-gilbert1966" class="csl-entry" role="listitem">
+Gilbert, John P., and Frederick Mosteller. 1966. <span>“Recognizing the Maximum of a Sequence.”</span> <em>Journal of the American Statistical Association</em> 61 (313): 35–73. <a href="https://doi.org/10.1080/01621459.1966.10502008">https://doi.org/10.1080/01621459.1966.10502008</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

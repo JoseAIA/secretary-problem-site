@@ -229,6 +229,7 @@ window.Quarto = {
   <li><a href="#full-information-best-choice-first-stage-thresholds" id="toc-full-information-best-choice-first-stage-thresholds" class="nav-link" data-scroll-target="#full-information-best-choice-first-stage-thresholds">Full-information best choice: first-stage thresholds</a></li>
   <li><a href="#interactive-activities" id="toc-interactive-activities" class="nav-link" data-scroll-target="#interactive-activities">Interactive activities</a></li>
   <li><a href="#suggested-classroom-exercises" id="toc-suggested-classroom-exercises" class="nav-link" data-scroll-target="#suggested-classroom-exercises">Suggested classroom exercises</a></li>
+  <li><a href="#check-the-mathematical-examples" id="toc-check-the-mathematical-examples" class="nav-link" data-scroll-target="#check-the-mathematical-examples">Check the mathematical examples</a></li>
   <li><a href="#reuse-and-attribution" id="toc-reuse-and-attribution" class="nav-link" data-scroll-target="#reuse-and-attribution">Reuse and attribution</a></li>
   </ul></li>
   </ul>
@@ -319,8 +320,16 @@ P_n(r)=\frac{r}{n}\sum_{j=r}^{n-1}\frac1j,
 <li>Determine the smallest optimal threshold for (n=10), and verify its exact success probability.</li>
 <li>Compare optimal rejection fractions for (n=10,30,100) with (1/e).</li>
 <li>Investigate the difference between exact probability and simulated frequency for increasing numbers of trials.</li>
-<li>For <span class="math inline">\(n=5\)</span>, derive the postdoc stopping rewards for relative ranks 1 and 2 and verify the backward recursion.. For three iid uniform observations, derive the first-stage continuation function and its stopping cutoff.. For four independent Bernoulli trials, compute the sum-the-odds threshold and enumerate the exact success probabilities of all fixed starting positions.</li>
+<li>For <span class="math inline">\(n=5\)</span>, derive the postdoc stopping rewards for relative ranks 1 and 2 and verify the backward recursion.</li>
+<li>For three iid uniform observations, derive the first-stage continuation function and its stopping cutoff.</li>
+<li>For four independent Bernoulli trials, compute the sum-the-odds threshold and enumerate the exact success probabilities of all fixed starting positions.</li>
 </ol>
+</section>
+<section id="check-the-mathematical-examples" class="level2">
+<h2 class="anchored" data-anchor-id="check-the-mathematical-examples">Check the mathematical examples</h2>
+<p>Run the complete regression suite with Python’s standard-library <code>unittest</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> unittest discover <span class="at">-s</span> tests <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The tests check exact classical thresholds, compare finite postdoc policies with exhaustive permutation enumeration, independently enumerate Bernoulli last-success outcomes, and verify the full-information continuation formulas at representative rational observations. No additional packages are required.</p>
 </section>
 <section id="reuse-and-attribution" class="level2">
 <h2 class="anchored" data-anchor-id="reuse-and-attribution">Reuse and attribution</h2>
