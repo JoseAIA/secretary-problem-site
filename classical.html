@@ -262,7 +262,7 @@ window.Quarto = {
 <ol type="1">
 <li>Reject the first <span class="math inline">\(r\)</span> candidates, observing their relative ranks.</li>
 <li>Starting at position <span class="math inline">\(r+1\)</span>, accept the first <strong>record</strong> (a candidate better than every earlier candidate).</li>
-<li>If there is no subsequent record, no candidate is selected and the attempt fails.</li>
+<li>If there is no subsequent record, no candidate is selected and the attempt fails. (Requiring a selection at the final interview would not change the probability of selecting the overall best.)</li>
 </ol>
 <p>For <span class="math inline">\(r=0\)</span>, the rule accepts the first candidate immediately. This convention is used in the interactive simulation below.</p>
 <p>The classical theorem establishes that a threshold rule is optimal among <em>all</em> stopping rules based on relative ranks, not merely the best rule within a preselected class of thresholds. A backward-induction proof of this optimal-policy structure is provided on the <a href="./backward-induction.html">Backward Induction</a> page.</p>
@@ -311,14 +311,15 @@ nP_n(r+1)&amp;=(r+1)\sum_{j=r+1}^{n-1}\frac1j,\\
 nP_n(r)&amp;=1+r\sum_{j=r+1}^{n-1}\frac1j.
 \end{aligned}
 \]</span></p>
-<p>The sum in the difference decreases strictly as <span class="math inline">\(r\)</span> increases. Consequently the success probabilities increase until the displayed sum first becomes at most <span class="math inline">\(1\)</span>, then decrease. For <span class="math inline">\(n\ge3\)</span>, one optimal threshold is therefore</p>
+<p>The sum in the difference decreases strictly as <span class="math inline">\(r\)</span> increases. Consequently, the threshold probabilities increase while the sum exceeds <span class="math inline">\(1\)</span>, are equal at adjacent thresholds if the sum equals <span class="math inline">\(1\)</span>, and decrease once the sum falls below <span class="math inline">\(1\)</span>.</p>
+<p>The boundary case <span class="math inline">\(r=0\)</span> must be considered separately: for <span class="math inline">\(n\ge3\)</span>, <span class="math inline">\(P_n(1)=H_{n-1}/n&gt;1/n=P_n(0)\)</span>, whereas for <span class="math inline">\(n=2\)</span> the two probabilities are equal. Thus, for <span class="math inline">\(n\ge3\)</span>, the <strong>smallest</strong> optimal threshold is</p>
 <p><span class="math display">\[
 \boxed{
 r_n^\star=\min\left\{r\in\{1,\ldots,n-1\}:
 \sum_{j=r+1}^{n-1}\frac1j\le1\right\}.
 }
 \]</span></p>
-<p>An empty sum is <span class="math inline">\(0\)</span>. If the sum equals <span class="math inline">\(1\)</span> at the transition, the adjacent threshold <span class="math inline">\(r_n^\star+1\)</span> is <em>also</em> optimal. For <span class="math inline">\(n=2\)</span>, both <span class="math inline">\(r=0\)</span> and <span class="math inline">\(r=1\)</span> have success probability <span class="math inline">\(1/2\)</span>.</p>
+<p>An empty sum is <span class="math inline">\(0\)</span>. If the sum equals <span class="math inline">\(1\)</span> at the transition and <span class="math inline">\(r_n^\star&lt;n-1\)</span>, the adjacent threshold <span class="math inline">\(r_n^\star+1\)</span> is <em>also</em> optimal. For <span class="math inline">\(n=2\)</span>, both <span class="math inline">\(r=0\)</span> and <span class="math inline">\(r=1\)</span> have success probability <span class="math inline">\(1/2\)</span>.</p>
 <p>For example, with <span class="math inline">\(n=10\)</span>, the optimal threshold is <span class="math inline">\(r^\star=3\)</span>, and</p>
 <p><span class="math display">\[
 P_{10}(3)=\frac3{10}\left(\frac13+\frac14+\cdots+\frac19\right)\approx0.39869.
@@ -369,7 +370,7 @@ P_n(r_n^\star)\longrightarrow\frac1e
     <p>Smallest optimal threshold <strong id="explorer-best"></strong></p>
   </div>
   <svg id="explorer-chart" viewbox="0 0 700 270" role="img" aria-label="Exact probability by rejection threshold, with selected and optimal threshold markers"></svg>
-  <p id="explorer-difference" aria-live="polite"></p>
+  <p id="explorer-difference"></p>
   <button id="explorer-optimize" type="button" class="atlas-button">Choose optimal threshold</button>
   <p class="explorer-note">Blue: exact probability · Orange: your threshold · Green: optimal threshold. For finite \(n\), ties are resolved by choosing the smallest maximizing threshold.</p>
 </section>
@@ -384,7 +385,8 @@ P_n(r_n^\star)\longrightarrow\frac1e
       <h2 class="anchored">Try the stopping rule</h2>
       <p>
         Rank 1 is the best candidate. Taller bars represent better
-        candidates.
+        candidates. Absolute ranks are revealed after the simulated
+        decision for illustration; they are not available to the decision maker.
       </p>
     </div>
 
@@ -428,7 +430,7 @@ P_n(r_n^\star)\longrightarrow\frac1e
 
   <div id="candidate-plot" class="candidate-plot"></div>
 
-  <p id="result-message" class="simulation-result"></p>
+  <p id="result-message" class="simulation-result" role="status" aria-live="polite"></p>
 </div>
 
 <script src="classical.js"></script>
