@@ -186,7 +186,7 @@
     "href": "about.html",
     "title": "About The Secretary Problem Site",
     "section": "",
-    "text": "The Secretary Problem Site is a free, open-access educational and science-communication project created by José Ángel Islas Anguiano at Universidad Autónoma de Sinaloa. Its purpose is to make the mathematics, history, and applications of optimal stopping and secretary problems accessible to students, educators, researchers, and the general public.\nThe site combines intuitive explanations, mathematical derivations, interactive visualizations, historical context, and research references. No registration or payment is required."
+    "text": "The Secretary Problem Site is a personal educational website created by José Ángel Islas Anguiano, a mathematician at Universidad Autónoma de Sinaloa. It presents the classical secretary problem and selected optimal-stopping variations for students and readers interested in mathematics.\nThe site includes mathematical explanations, derivations, interactive simulations, references, and Google Colab notebooks. The materials can be accessed without registration or payment."
   },
   {
     "objectID": "backward-induction.html",
@@ -298,28 +298,28 @@
     "href": "index.html",
     "title": "The Secretary Problem Site",
     "section": "",
-    "text": "Universidad Autónoma de Sinaloa\nLearn the secretary problem and the famous 37% rule through exact formulas, optimal stopping proofs, interactive simulations, and research on sequential selection.\nExplore the site"
+    "text": "Universidad Autónoma de Sinaloa\nExplore the classical secretary problem and the 37% rule through mathematical explanations, exact formulas, interactive simulations, and selected research references.\nExplore the site"
   },
   {
-    "objectID": "index.html#optimal-stopping-explained-visually",
-    "href": "index.html#optimal-stopping-explained-visually",
+    "objectID": "index.html#an-introduction-to-optimal-stopping",
+    "href": "index.html#an-introduction-to-optimal-stopping",
     "title": "The Secretary Problem Site",
     "section": "",
-    "text": "Universidad Autónoma de Sinaloa\nLearn the secretary problem and the famous 37% rule through exact formulas, optimal stopping proofs, interactive simulations, and research on sequential selection.\nExplore the site"
+    "text": "Universidad Autónoma de Sinaloa\nExplore the classical secretary problem and the 37% rule through mathematical explanations, exact formulas, interactive simulations, and selected research references.\nExplore the site"
   },
   {
     "objectID": "index.html#explore-the-project",
     "href": "index.html#explore-the-project",
     "title": "The Secretary Problem Site",
     "section": "Explore the project",
-    "text": "Explore the project\n\n\nProblem Variants\nExplore the full-information problem, choosing the second best, multiple-choice models, and more.\nExplore variants & extensions →\n\n\nInteractive Simulations\nExplore the secretary problem and compare stopping thresholds with the optimal 37% strategy.\nTry interactive simulations →\n\n\nResearch\nExplore the complete backward-induction derivation and the history of optimal stopping research.\nRead the backward-induction proof →\nExplore the research timeline →\nDownload Python teaching resources →"
+    "text": "Explore the project\n\n\nProblem Variants\nExplore the full-information problem, choosing the second best, multiple-choice models, and more.\nExplore variants & extensions →\n\n\nInteractive Simulations\nExplore the secretary problem and compare stopping thresholds with the optimal 37% strategy.\nTry interactive simulations →\n\n\nResearch\nExplore the complete backward-induction derivation and the history of optimal stopping research.\nRead the backward-induction proof →\nExplore the research timeline →\nExplore Google Colab notebooks →"
   },
   {
-    "objectID": "index.html#why-a-site",
-    "href": "index.html#why-a-site",
+    "objectID": "index.html#about-the-subject",
+    "href": "index.html#about-the-subject",
     "title": "The Secretary Problem Site",
-    "section": "Why a Site?",
-    "text": "Why a Site?\nThe secretary problem is not a single problem. It is a family of optimal-stopping models that changes according to the information available, the number of selections allowed, the objective, and the costs involved.\nBegin with the classical secretary problem, explore its exact optimal stopping rule, and experiment with interactive simulations. The site connects these ideas to variants and extensions and the research literature."
+    "section": "About the subject",
+    "text": "About the subject\nThe secretary problem is a starting point for a family of optimal-stopping models. Different assumptions about the available information, number of choices, and objective lead to different mathematical questions.\nBegin with the classical secretary problem, explore its exact optimal stopping rule, and experiment with interactive simulations. The site connects these ideas to variants and extensions and the research literature."
   },
   {
     "objectID": "resources.html",
