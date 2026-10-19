@@ -1483,3 +1483,20 @@ body {
   font-size: 0.95rem;
   margin-bottom: 0.75rem;
 }
+
+
+/* Keep long mathematical displays and finite-n tables inside the viewport.
+   They may scroll horizontally on small screens without widening the page. */
+main mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+@media (max-width: 600px) {
+  main table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
