@@ -301,10 +301,17 @@ window.Quarto = {
 \max_{\tau}\Pr(X_\tau=1).
 \]</span></p>
 <p>For a threshold <span class="math inline">\(1\le r&lt;n\)</span>, reject the first <span class="math inline">\(r\)</span> candidates and then accept the first subsequent record. Its success probability is</p>
-<p>$$ P_n(r) = _{j=r+1}^{n}. $</p>
+<p><span class="math display">\[
+P_n(r)
+=
+\frac{r}{n}
+\sum_{j=r+1}^{n}\frac{1}{j-1}.
+\]</span></p>
 <p>For <span class="math inline">\(r=0\)</span>, the first candidate is selected immediately and <span class="math inline">\(P_n(0)=1/n\)</span>.</p>
 <p>As <span class="math inline">\(n\to\infty\)</span>, a choice of optimal threshold <span class="math inline">\(r_n^\star\)</span> satisfies</p>
-<p>$ 1e, $$</p>
+<p><span class="math display">\[
+\frac{r_n^\star}{n}\to \frac1e,
+\]</span></p>
 <p>and the optimal success probability also converges to <span class="math inline">\(1/e\)</span>.</p>
 <p>The extensions below can be organized by asking which part of this benchmark is changed.</p>
 <hr>

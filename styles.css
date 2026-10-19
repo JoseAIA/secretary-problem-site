@@ -1507,3 +1507,50 @@ body {
   background: #eff5fc;
   border-radius: 6px;
 }
+
+
+/* Presentation and keyboard-accessibility refinements.
+   Keep horizontal scrolling local to wide mathematical figures. */
+:where(a, button, input[type="range"]):focus-visible {
+  outline: 3px solid #194b86;
+  outline-offset: 3px;
+}
+:where(.atlas-hero, .problem-hero, .timeline-hero, .simulation-hero)
+  :where(a, button, input[type="range"]):focus-visible {
+  outline-color: #ffd66b;
+}
+:where(.atlas-card, .atlas-interactive-card, .simulation-panel, .timeline-card,
+  .author-paper-card, .variant-branch) {
+  min-width: 0;
+}
+:where(.atlas-interactive-card, .simulation-panel) .math.display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.probability-chart-container {
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 600px) {
+  .simulation-panel {
+    padding: 1.25rem;
+  }
+  .rule-summary {
+    padding: 1.5rem;
+  }
+  .current-candidate {
+    padding: 1.25rem;
+  }
+  .timeline-note {
+    padding: 1.25rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .atlas-card, .atlas-button, .timeline-card, .candidate-bar,
+  .current-candidate {
+    transition: none;
+  }
+  .atlas-card:hover, .atlas-button:hover, .timeline-card:hover {
+    transform: none;
+  }
+}
