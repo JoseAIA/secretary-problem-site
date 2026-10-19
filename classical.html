@@ -175,6 +175,10 @@ window.Quarto = {
 <span class="menu-text">Variants</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./timeline.html"> 
 <span class="menu-text">Timeline</span></a>
   </li>  
@@ -203,6 +207,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#the-classical-secretary-problem" id="toc-the-classical-secretary-problem" class="nav-link active" data-scroll-target="#the-classical-secretary-problem">The Classical Secretary Problem</a></li>
+  <li><a href="#interactive-optimal-threshold-explorer" id="toc-interactive-optimal-threshold-explorer" class="nav-link" data-scroll-target="#interactive-optimal-threshold-explorer">Interactive optimal threshold explorer</a></li>
   <li><a href="#explore-further" id="toc-explore-further" class="nav-link" data-scroll-target="#explore-further">Explore further</a></li>
   </ul>
 </nav>
@@ -346,6 +351,29 @@ P_n(r_n^\star)\longrightarrow\frac1e
 }
 \]</span></p>
 <p><strong>Interpretation:</strong> for a large pool, reject about 36.8% of candidates, then accept the next record. The limiting probability of choosing the best is also about 36.8%. These are <em>two distinct quantities</em> that happen to share the same limit; for a fixed finite <span class="math inline">\(n\)</span>, they generally differ.</p>
+</section>
+</div>
+<div id="optimal-threshold-explorer" class="atlas-section">
+<section id="interactive-optimal-threshold-explorer" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-optimal-threshold-explorer">Interactive optimal threshold explorer</h2>
+<p>Explore the <strong>exact</strong>, finite-(n) probability curve for every rejection threshold. Choose (n), move the threshold (r), and compare your choice to the smallest optimal threshold. The graph uses the harmonic-sum formula—not Monte Carlo simulation.</p>
+<section class="atlas-interactive-card threshold-explorer">
+  <div class="explorer-controls">
+    <label for="explorer-n">Number of candidates <strong id="explorer-n-value">30</strong></label>
+    <input id="explorer-n" type="range" min="5" max="100" value="30">
+    <label for="explorer-r">Reject the first <strong id="explorer-r-value">11</strong></label>
+    <input id="explorer-r" type="range" min="0" max="29" value="11">
+  </div>
+  <div class="explorer-statistics" aria-live="polite">
+    <p>Your exact probability <strong id="explorer-your-prob"></strong></p>
+    <p>Smallest optimal threshold <strong id="explorer-best"></strong></p>
+  </div>
+  <svg id="explorer-chart" viewbox="0 0 700 270" role="img" aria-label="Exact probability by rejection threshold, with selected and optimal threshold markers"></svg>
+  <p id="explorer-difference" aria-live="polite"></p>
+  <button id="explorer-optimize" type="button" class="atlas-button">Choose optimal threshold</button>
+  <p class="explorer-note">Blue: exact probability · Orange: your threshold · Green: optimal threshold. For finite \(n\), ties are resolved by choosing the smallest maximizing threshold.</p>
+</section>
+<script src="threshold-explorer.js"></script>
 </section>
 </div>
 <div id="interactive-experiment">

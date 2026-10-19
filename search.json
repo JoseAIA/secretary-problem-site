@@ -14,95 +14,130 @@
     "text": "More than sixty years of optimal stopping\nThe secretary problem developed from a recreational question into a major model in optimal stopping, applied probability, decision theory, economics, and online algorithms.\n\nIn Who Solved the Secretary Problem? (1989), Thomas S. Ferguson separates the problem’s early circulation from its publication and mathematical solution. Merrill Flood had discussed a version by 1950; Martin Gardner brought the problem to a wide audience in his February 1960 Scientific American column, drawing on a formulation attributed to John H. Fox Jr. and L. Gerald Marnie. Ferguson identifies D. V. Lindley’s 1961 paper as the first solution in a scientific journal. Gardner’s popularization and Lindley’s mathematical treatment are therefore distinct milestones in the history of the classical secretary problem."
   },
   {
-    "objectID": "simulations.html",
-    "href": "simulations.html",
-    "title": "Secretary Problem Simulations",
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Secretary Problem References",
     "section": "",
-    "text": "Experiment with sequential decisions, test different rejection thresholds, and discover why the classical strategy approaches the (37%) rule."
+    "text": "This bibliography supports the mathematical explanations, historical notes, and interactive experiments presented in The Secretary Problem Site.\n\n\nThe initial collection includes foundational work on the classical secretary problem, full-information models, historical development, extensions, and related optimal-stopping principles.\nAs the site grows, this database will be expanded to include literature on:\n\nmultiple-choice secretary problems,\nselecting the second-best candidate,\ngeneralized top-(m) objectives,\nfull-information best-choice models,\nduration problems,\ninterview costs and rewards,\nunknown numbers of candidates,\nrank-dependent payoffs."
   },
   {
-    "objectID": "simulations.html#explore-one-selection",
-    "href": "simulations.html#explore-one-selection",
-    "title": "Secretary Problem Simulations",
-    "section": "Explore one selection",
-    "text": "Explore one selection\nYou will observe the candidates sequentially. Smaller relative ranks are better, and relative rank (1) means that the current candidate is the best observed so far.\nThe absolute ranks remain hidden until you hire someone or reach the final candidate.\n\n  \n    \n      EXPLORE\n      Can you hire the best candidate?\n      \n        Decide whether to reject or hire each candidate using only the\n        information available at that moment.\n      \n    \n\n    \n      New game\n    \n  \n\n  \n    \n      Number of candidates:\n      10\n    \n\n    \n  \n\n  \n    Candidate\n    \n      1\n      /\n      10\n    \n  \n\n  \n    RELATIVE RANK\n    1\n    \n      This candidate is the best observed so far.\n    \n  \n\n  \n    \n      Reject\n    \n\n    \n      Hire\n    \n  \n\n  \n    Observed relative ranks\n    \n  \n\n  \n\n  \n    Complete sequence of absolute ranks\n    Absolute rank \\(1\\) is the overall best."
-  },
-  {
-    "objectID": "simulations.html#simulate-a-threshold-strategy",
-    "href": "simulations.html#simulate-a-threshold-strategy",
-    "title": "Secretary Problem Simulations",
-    "section": "Simulate a threshold strategy",
-    "text": "Simulate a threshold strategy\nChoose a total number of candidates (n), a rejection threshold (r), and the number of simulated repetitions.\nThe strategy rejects the first (r) candidates and then accepts the first subsequent record.\n\n  \n    \n      SIMULATE\n      Can your threshold beat the 37% rule?\n      \n        Compare a Monte Carlo estimate with the exact success\n        probability and the optimal finite-sample threshold.\n      \n    \n\n    \n      Run experiment\n    \n  \n\n  \n    \n      \n        Candidates \\(n\\):\n        50\n      \n\n      \n    \n\n    \n      \n        Rejection threshold \\(r\\):\n        18\n      \n\n      \n    \n\n    \n      \n        Simulated repetitions:\n        5000\n      \n\n      \n    \n  \n\n  \n    \n      Empirical probability\n      —\n    \n\n    \n      Exact probability\n      —\n    \n\n    \n      Optimal threshold\n      —\n    \n\n    \n      Optimal probability\n      —\n    \n  \n\n  \n    Run the experiment to compare simulation and theory."
-  },
-  {
-    "objectID": "simulations.html#understand-the-mathematics",
-    "href": "simulations.html#understand-the-mathematics",
-    "title": "Secretary Problem Simulations",
-    "section": "Understand the mathematics",
-    "text": "Understand the mathematics\nFor (r), the exact probability of selecting the overall best is\n\\[\nP_n(r)\n=\n\\frac{r}{n}\n\\sum_{j=r+1}^{n}\\frac{1}{j-1}.\n\\]\nIf (r=0), the first candidate is selected, so\n\\[\nP_n(0)=\\frac1n.\n\\]\nThe graph below displays (P_n(r)) for every admissible rejection threshold.\n\n  \n    \n      UNDERSTAND\n      The probability curve\n      \n        The blue curve gives the exact probability. The selected\n        threshold is shown in coral and the optimum in gold.\n      \n    \n  \n\n  \n    \n      \n      Exact probability\n    \n\n    \n      \n      Your threshold\n    \n\n    \n      \n      Optimal threshold\n    \n\n    \n      \n      \\(n/e\\)\n    \n  \n\n  \n    \n  \n\n  \n    \n      Selected threshold\n      —\n    \n\n    \n      Finite-\\(n\\) optimum\n      —\n    \n\n    \n      Approximation \\(n/e\\)\n      —"
-  },
-  {
-    "objectID": "simulations.html#what-the-experiments-show",
-    "href": "simulations.html#what-the-experiments-show",
-    "title": "Secretary Problem Simulations",
-    "section": "What the experiments show",
-    "text": "What the experiments show\nThe simulations illustrate three important facts:\n\nA nonrecord candidate cannot be the overall best.\nRejecting too few candidates provides insufficient information.\nRejecting too many candidates leaves too few opportunities to select a later record.\n\nThe optimal threshold balances these competing risks.\nFor large (n),\n\\[\nr^\\star\\approx \\frac{n}{e},\n\\qquad\nP_n(r^\\star)\\approx\\frac1e.\n\\]\nTherefore, both the optimal rejection fraction and the maximum success probability approach approximately (37%).\n\n\n\n\n\n\nNoteSimulation versus proof\n\n\n\nMonte Carlo simulation provides numerical evidence, but it does not prove optimality. The exact probability formula and the backward-induction argument establish the mathematical result."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About The Secretary Problem Site",
+    "objectID": "references.html#foundational-literature",
+    "href": "references.html#foundational-literature",
+    "title": "Secretary Problem References",
     "section": "",
-    "text": "The Secretary Problem Site is a free, open-access educational and science-communication project created by José Ángel Islas Anguiano at Universidad Autónoma de Sinaloa. Its purpose is to make the mathematics, history, and applications of optimal stopping and secretary problems accessible to students, educators, researchers, and the general public.\nThe site combines intuitive explanations, mathematical derivations, interactive visualizations, historical context, and research references. No registration or payment is required."
+    "text": "The initial collection includes foundational work on the classical secretary problem, full-information models, historical development, extensions, and related optimal-stopping principles.\nAs the site grows, this database will be expanded to include literature on:\n\nmultiple-choice secretary problems,\nselecting the second-best candidate,\ngeneralized top-(m) objectives,\nfull-information best-choice models,\nduration problems,\ninterview costs and rewards,\nunknown numbers of candidates,\nrank-dependent payoffs."
   },
   {
-    "objectID": "classical.html",
-    "href": "classical.html",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "objectID": "variants.html",
+    "href": "variants.html",
+    "title": "Secretary Problem Variants & Extensions",
     "section": "",
-    "text": "Why should you reject roughly the first 37% of candidates before choosing? The secretary problem is a classical optimal stopping problem: decisions are sequential, rejections are final, and success means selecting the single best candidate.\nThe exact finite-sample solution and its asymptotic 37% rule are derived below; you can also experiment with the rule."
+    "text": "The classical secretary problem is only the starting point.\nChanging the information available, the objective, the number of choices, or the horizon leads to genuinely different optimal-stopping problems."
   },
   {
-    "objectID": "classical.html#model-and-assumptions",
-    "href": "classical.html#model-and-assumptions",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Model and assumptions",
-    "text": "Model and assumptions\nThere are \\(n\\ge 2\\) candidates, ranked absolutely from \\(1\\) (best) to \\(n\\) (worst). The classical no-information model assumes:\n\nThe candidates arrive in a uniformly random order (all \\(n!\\) orders are equally likely).\nYou observe only each candidate’s relative rank among those seen so far, not their absolute rank.\nYou may accept at most one candidate. Every rejection is irrevocable.\nYour objective is to maximize the probability of choosing the single overall best candidate.\n\nA candidate is a record if they are better than all candidates seen before. Since a nonrecord cannot be the overall best, there is no benefit to selecting one when the objective is the overall best."
+    "objectID": "variants.html#the-classical-benchmark",
+    "href": "variants.html#the-classical-benchmark",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "The classical benchmark",
+    "text": "The classical benchmark\nThere are \\(n\\) candidates whose absolute ranks form a uniformly random permutation of\n\\[\n1,2,\\ldots,n,\n\\]\nwith rank \\(1\\) best. Write \\(X_k\\) for the absolute rank of the candidate arriving at position \\(k\\), and \\(R_k\\) for that candidate’s relative rank among the first \\(k\\) arrivals.\nCandidates are observed sequentially. At time \\(k\\), only the candidate’s relative rank among the first \\(k\\) observations is known. Decisions are irrevocable, and only one candidate may be selected.\nThe objective is\n\\[\n\\max_{\\tau}\\Pr(X_\\tau=1).\n\\]\nFor a threshold \\(r\\), reject the first \\(r\\) candidates and then accept the first subsequent record. Its success probability is\n\\[\nP_n(r)\n=\n\\frac{r}{n}\n\\sum_{j=r+1}^{n}\\frac{1}{j-1}.\n\\]\nAs \\(n\\to\\infty\\), the optimal threshold satisfies\n\\[\n\\frac{r_n}{n}\\to \\frac1e,\n\\]\nand the optimal success probability also converges to \\(1/e\\).\nThe extensions below can be organized by asking which part of this benchmark is changed."
   },
   {
-    "objectID": "classical.html#the-threshold-strategy",
-    "href": "classical.html#the-threshold-strategy",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "The threshold strategy",
-    "text": "The threshold strategy\nFix an integer \\(r\\) with \\(0\\le r&lt;n\\):\n\nReject the first \\(r\\) candidates, observing their relative ranks.\nStarting at position \\(r+1\\), accept the first record (a candidate better than every earlier candidate).\nIf there is no subsequent record, no candidate is selected and the attempt fails.\n\nFor \\(r=0\\), the rule accepts the first candidate immediately. This convention is used in the interactive simulation below.\nThe classical theorem establishes that a threshold rule is optimal among all stopping rules based on relative ranks, not merely the best rule within a preselected class of thresholds. A backward-induction proof of this optimal-policy structure is provided on the Backward Induction page."
+    "objectID": "variants.html#full-information-secretary-problem",
+    "href": "variants.html#full-information-secretary-problem",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "1. Full-information secretary problem",
+    "text": "1. Full-information secretary problem\n\nProblem\nInstead of seeing only relative ranks, suppose the numerical observations\n\\[\nY_1,\\ldots,Y_n\\overset{\\mathrm{iid}}{\\sim}F\n\\]\nare revealed sequentially, where \\(F\\) is a known continuous distribution. Here \\(Y_k\\) is an observed value, not the absolute rank \\(X_k\\) used in the classical model.\nThe objective is to maximize\n\\[\n\\Pr\\!\\left(Y_\\tau=\\max_{1\\le j\\le n}Y_j\\right).\n\\]\n\n\nWhat changes?\nThe numerical value of the current observation contains information about how likely future observations are to exceed it.\nThe optimal decision therefore depends not only on whether the current observation is a record, but also on how large that record is.\n\n\nOptimal-strategy structure\nUsing the probability-integral transform,\n\\[\nU_i=F(Y_i),\n\\]\nthe problem can be reduced to independent \\(U(0,1)\\) observations.\nThe optimal rule is described by time-dependent critical values: a record is accepted only when its value is sufficiently large relative to the number of observations remaining.\n\n\nInteractive first-decision experiment (uniform observations)\nTo obtain closed-form, verifiable stopping decisions, the experiment uses \\(Y_1,\\ldots,Y_n\\overset{\\mathrm{iid}}{\\sim}U(0,1)\\) with \\(n=2\\) or \\(n=3\\). After seeing the first value \\(x\\), accepting wins with probability \\(x^{n-1}\\).\nRejecting and then acting optimally has probability\n\\[\nC_2(x)=1-x,\n\\]\nand\n\\[\nC_3(x)=\n\\begin{cases}\n\\frac34-\\frac{x^2}{2},&0\\le x\\le\\frac12,\\\\\n\\frac12+x-\\frac{3x^2}{2},&\\frac12&lt;x\\le1.\n\\end{cases}\n\\]\nFor \\(n=3\\), if the first value \\(x\\) is rejected, the second observation \\(y\\) should be accepted only if it is a record and \\(y\\ge 1/2\\); otherwise the last observation is chosen only when it sets a new record. Integrating over the second observation gives \\(C_3(x)\\) above.\nThus the first-observation acceptance thresholds are \\(1/2\\) for \\(n=2\\) and \\((1+\\sqrt6)/5\\approx0.68990\\) for \\(n=3\\). These are first-stage thresholds, not the full-information rule for an arbitrary horizon.\n\n\n  Full-information: select or continue?\n  \n    Number of observations (n): 3\n    \n    First observed value (x): 0.70\n    \n  \n  \n    Accept now \n    Continue optimally \n  \n  First-stage cutoff: \n  \n  \n  Assumptions: independent, identical and continuous Uniform(0,1) observations. Exact analytical continuation formulas; probabilities shown as rounded percentages.\n\n\n\n\n\nConnection to the classical model\nBoth problems seek the overall maximum.\nThe difference is informational:\n\nno information: only relative ranks are observed;\nfull information: the actual values are observed.\n\nGilbert and Mosteller developed the foundational analysis of both settings."
   },
   {
-    "objectID": "classical.html#exact-success-probability-a-finite-n-derivation",
-    "href": "classical.html#exact-success-probability-a-finite-n-derivation",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Exact success probability: a finite-\\(n\\) derivation",
-    "text": "Exact success probability: a finite-\\(n\\) derivation\nLet \\(P_n(r)\\) denote the probability that the threshold-\\(r\\) strategy selects absolute rank \\(1\\).\nProposition. For \\(1\\le r&lt;n\\),\n\\[\n\\boxed{\nP_n(r)=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}\n=\\frac{r}{n}\\left(H_{n-1}-H_{r-1}\\right),\n}\n\\]\nwhere \\(H_m=\\sum_{j=1}^m 1/j\\) for \\(m\\ge1\\) and \\(H_0=0\\). For \\(r=0\\), \\(P_n(0)=1/n\\).\nProof. Write \\(K\\) for the arrival position of the overall best candidate. Uniform random order gives\n\\[\n\\Pr(K=k)=\\frac1n,\\qquad k=1,\\ldots,n.\n\\]\nIf \\(K\\le r\\), that candidate is rejected, so success is impossible. If \\(K=k&gt;r\\), the strategy selects the overall best precisely when the best candidate among the first \\(k-1\\) arrivals occurred during the initial \\(r\\) positions. Otherwise, a record after position \\(r\\) would have triggered selection earlier.\nConditionally on \\(K=k\\), each of the first \\(k-1\\) positions is equally likely to hold the best among those first \\(k-1\\) candidates. Thus\n\\[\n\\Pr(\\text{success}\\mid K=k)=\\frac{r}{k-1},\\qquad k&gt;r.\n\\]\nSumming over the possible positions of the overall best gives\n\\[\nP_n(r)\n=\\sum_{k=r+1}^{n}\\Pr(K=k)\\Pr(\\text{success}\\mid K=k)\n=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}.\n\\]\nIf \\(r=0\\), the first candidate is accepted, which is the overall best with probability \\(1/n\\). \\(\\square\\)"
+    "objectID": "variants.html#the-postdoc-problem-selecting-the-second-best",
+    "href": "variants.html#the-postdoc-problem-selecting-the-second-best",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "2. The postdoc problem: selecting the second best",
+    "text": "2. The postdoc problem: selecting the second best\n\nProblem\nChange the reward from selecting absolute rank \\(1\\) to selecting absolute rank \\(2\\):\n\\[\n\\max_{\\tau}\\Pr(X_\\tau=2).\n\\]\nThe arrival order is still uniformly random, decisions remain irrevocable, and only relative ranks are observed.\n\n\nWhat changes?\nThe current record is no longer the only potentially relevant candidate. A candidate with current relative rank \\(2\\) may also be strategically important.\nThus a small change in the terminal reward changes the state space of the stopping problem.\n\n\nInteractive postdoc decision (exact backward induction)\nConditional on observing relative rank \\(a\\) at position \\(k\\), the probability that the current candidate has absolute rank \\(2\\) is\n\\[\ng_{n,k}(a)=\n\\begin{cases}\n\\dfrac{k(n-k)}{n(n-1)},&a=1,\\\\[4pt]\n\\dfrac{k(k-1)}{n(n-1)},&a=2,\\\\[4pt]\n0,&a\\ge3.\n\\end{cases}\n\\]\nThe relative ranks are independent with \\(R_k\\) uniform on \\(\\{1,\\ldots,k\\}\\). Let \\(V_{n+1}=0\\) and let \\(V_k\\) be the maximum probability of selecting absolute rank \\(2\\) before observing relative rank \\(R_k\\). Then\n\\[\nV_k=\\frac1k\\sum_{a=1}^k\\max\\{g_{n,k}(a),V_{k+1}\\},\n\\qquad k=n,n-1,\\ldots,1.\n\\]\nAt position \\(k\\), select when \\(g_{n,k}(a)\\ge V_{k+1}\\) and this success probability is positive; otherwise continue. When tied at zero, the experiment displays continuation. This dynamic program optimizes over all admissible decisions based on observed relative ranks.\n\n\n  Postdoc problem: select rank 2\n  \n    Candidates (n): 10\n    \n    Current position (k): 5\n    \n    Observed relative rank (a): 2\n    \n  \n  \n    Select now \n    Continue optimally \n  \n  Optimal win probability before the first candidate: \n  \n  \n  Assumptions: uniformly random arrival order, relative ranks only, one irrevocable selection. Calculations use the exact Bellman recursion and display rounded percentages.\n\n\n\n\n\nConnection to the classical model\nThe information structure is unchanged. Only the reward changes:\n\\[\n\\mathbf 1_{\\{X_\\tau=1\\}}\n\\quad\\longrightarrow\\quad\n\\mathbf 1_{\\{X_\\tau=2\\}}.\n\\]\nThis makes the postdoc problem a particularly useful example of how the optimal rule can change when the target rank changes."
   },
   {
-    "objectID": "classical.html#which-threshold-is-optimal-for-a-given-n",
-    "href": "classical.html#which-threshold-is-optimal-for-a-given-n",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Which threshold is optimal for a given \\(n\\)?",
-    "text": "Which threshold is optimal for a given \\(n\\)?\nFinite-\\(n\\) criterion. For \\(1\\le r&lt;n-1\\),\n\\[\n\\boxed{\nP_n(r+1)-P_n(r)\n=\\frac1n\\left(\\sum_{j=r+1}^{n-1}\\frac1j-1\\right).\n}\n\\]\nTo see this, subtract the two formulas:\n\\[\n\\begin{aligned}\nnP_n(r+1)&=(r+1)\\sum_{j=r+1}^{n-1}\\frac1j,\\\\\nnP_n(r)&=1+r\\sum_{j=r+1}^{n-1}\\frac1j.\n\\end{aligned}\n\\]\nThe sum in the difference decreases strictly as \\(r\\) increases. Consequently the success probabilities increase until the displayed sum first becomes at most \\(1\\), then decrease. For \\(n\\ge3\\), one optimal threshold is therefore\n\\[\n\\boxed{\nr_n^\\star=\\min\\left\\{r\\in\\{1,\\ldots,n-1\\}:\n\\sum_{j=r+1}^{n-1}\\frac1j\\le1\\right\\}.\n}\n\\]\nAn empty sum is \\(0\\). If the sum equals \\(1\\) at the transition, the adjacent threshold \\(r_n^\\star+1\\) is also optimal. For \\(n=2\\), both \\(r=0\\) and \\(r=1\\) have success probability \\(1/2\\).\nFor example, with \\(n=10\\), the optimal threshold is \\(r^\\star=3\\), and\n\\[\nP_{10}(3)=\\frac3{10}\\left(\\frac13+\\frac14+\\cdots+\\frac19\\right)\\approx0.39869.\n\\]\nThis exact threshold need not equal the integer obtained by simply rounding \\(n/e\\)."
+    "objectID": "variants.html#multiple-choice-and-dowry-problems",
+    "href": "variants.html#multiple-choice-and-dowry-problems",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "3. Multiple-choice and dowry problems",
+    "text": "3. Multiple-choice and dowry problems\n\nProblem\nSuppose the decision maker is allowed more than one selection.\nWith \\(m\\) available choices, the decision maker chooses stopping times\n\\[\n\\tau_1&lt;\\tau_2&lt;\\cdots&lt;\\tau_m.\n\\]\nThe success event depends on the particular model—for example, whether one of the selected observations is the overall best, or whether several top ranks must be captured.\n\n\nSakaguchi’s contribution\nSakaguchi’s work is an important early part of this branch of the literature.\nHis 1978 paper\nDowry Problems and OLA Policies\nstudied secretary-type stopping rules in a dowry formulation and belongs to the early development of multiple-stopping extensions.\nSakaguchi also studied generalized secretary models with uncertain employment, showing that changing the selection mechanism itself can produce new optimal-stopping structures.\n\n\nTamaki’s double-choice problems\nTamaki subsequently analyzed explicit two-choice secretary problems.\nIn one formulation, the decision maker is allowed two choices and seeks to select either the best or the second-best candidate. In another, the objective is to recognize both the maximum and the second maximum.\nThese problems illustrate why multiple-choice secretary models require more state information than the classical one-choice problem.\n\n\nDynamic-programming structure\nIf \\(j\\) selections remain at time \\(k\\), the state must record both the information observed so far and the remaining number of choices.\nSchematically,\n\\[\nV_{k,j}(s)\n=\n\\max\\{\n\\text{value of selecting now},\n\\text{value of continuing}\n\\}.\n\\]\nSelecting now changes the state from \\(j\\) remaining choices to \\(j-1\\).\n\n\nConnection to the classical model\nThe classical secretary problem is recovered when\n\\[\nm=1.\n\\]\nThus multiple-choice models enlarge the stopping problem by adding a resource variable: the number of selections still available."
   },
   {
-    "objectID": "classical.html#why-the-37-rule-appears",
-    "href": "classical.html#why-the-37-rule-appears",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Why the 37% rule appears",
-    "text": "Why the 37% rule appears\nSuppose \\(n\\) grows and \\(r/n\\to x\\in(0,1)\\). The harmonic sum satisfies\n\\[\n\\sum_{j=r}^{n-1}\\frac1j\n=\\log\\left(\\frac nr\\right)+o(1),\n\\]\nso\n\\[\nP_n(r)=\\frac rn\\sum_{j=r}^{n-1}\\frac1j\n\\longrightarrow -x\\log x.\n\\]\nDifferentiating yields\n\\[\n\\frac{d}{dx}[-x\\log x]=-\\log x-1.\n\\]\nThis vanishes at \\(x=e^{-1}\\), where the second derivative \\(-1/x\\) is negative. The finite-\\(n\\) optimality criterion above also implies that \\(r_n^\\star/n\\to 1/e\\). Therefore,\n\\[\n\\boxed{\n\\frac{r_n^\\star}{n}\\longrightarrow\\frac1e,\n\\qquad\nP_n(r_n^\\star)\\longrightarrow\\frac1e\n\\approx 0.367879.\n}\n\\]\nInterpretation: for a large pool, reject about 36.8% of candidates, then accept the next record. The limiting probability of choosing the best is also about 36.8%. These are two distinct quantities that happen to share the same limit; for a fixed finite \\(n\\), they generally differ."
+    "objectID": "variants.html#unknown-or-random-horizon",
+    "href": "variants.html#unknown-or-random-horizon",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "4. Unknown or random horizon",
+    "text": "4. Unknown or random horizon\n\nProblem\nThe classical model assumes that the total number \\(n\\) of observations is known.\nSuppose instead that the number of observations is a random variable\n\\[\nN.\n\\]\nThe distribution of \\(N\\) may be known even though its realized value is not.\n\n\nWhat changes?\nWith a fixed horizon, the decision maker knows exactly how many observations remain.\nWith a random horizon, the continuation value must also account for the probability that the sequence ends.\nThis produces stopping rules that depend on both relative rank information and uncertainty about the remaining horizon.\n\n\nConnection to the \\(1/e\\) phenomenon\nThe classical \\(1/e\\) threshold is not a universal rule for random horizons. In the continuous-time unified-approach model of Bruss (1984), candidate arrival times are conditionally independent and a \\(1/e\\) law holds under the model’s specific assumptions. A generic prior distribution for the unknown horizon \\(N\\) need not yield the same optimal rule or success probability. See Bruss (1984)."
   },
   {
-    "objectID": "classical.html#explore-further",
-    "href": "classical.html#explore-further",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Explore further",
-    "text": "Explore further\n\nBackward induction: why a threshold strategy is optimal among all admissible stopping rules.\nInteractive simulations: explore stopping decisions and compare empirical success rates with exact probabilities.\nVariants and extensions: what changes when there is full information, a different target rank, or multiple selections.\nResearch timeline and references: foundational work and later developments.\n\nThe classical analysis appears in Gilbert and Mosteller (1966) and the survey Freeman (1983); historical context is given by Ferguson (1989)."
+    "objectID": "variants.html#last-success-problems-and-the-odds-theorem",
+    "href": "variants.html#last-success-problems-and-the-odds-theorem",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "5. Last-success problems and the odds theorem",
+    "text": "5. Last-success problems and the odds theorem\n\nProblem\nLet\n\\[\nI_1,\\ldots,I_n\n\\]\nbe independent Bernoulli random variables with\n\\[\n\\Pr(I_k=1)=p_k,\\qquad 0\\le p_k&lt;1.\n\\]\nThe objective is to stop at an index \\(\\tau\\) for which \\(I_\\tau=1\\) and no later success occurs. If there is no success, the attempt fails. Assume decisions use only the observations up to the current index.\nDefine\n\\[\nq_k=1-p_k&gt;0,\n\\qquad\nr_k=\\frac{p_k}{q_k}.\n\\]\nSum-the-odds rule (Bruss, 2000). Define\n\\[\ns=\\max\\left(\\{1\\}\\cup\\left\\{k\\in\\{1,\\ldots,n\\}:\\sum_{j=k}^{n}r_j\\ge1\\right\\}\\right).\n\\]\nReject observations before \\(s\\), then stop at the first success \\(I_k=1\\) with \\(k\\ge s\\). If no success occurs after \\(s\\), the attempt fails. When the total sum of odds is less than \\(1\\), this convention gives \\(s=1\\). This rule maximizes the probability of stopping on the last success among all stopping times in this model. See Bruss (2000).\n\n\nConnection to secretary problems\nThe odds theorem is not the classical secretary problem itself.\nIt belongs to the same broader optimal-stopping family: the decision maker must act without knowing whether a future event will supersede the current one.\n\n\n\n\nInteractive experiment: sum the odds\nChange the success probabilities of four independent Bernoulli trials. The page computes the exact last-success probability for each possible starting position and highlights the start prescribed by Bruss’s odds theorem. A decision maker rejects successes before that position and accepts the first later success.\n\n  \n    Probability p₁: 0.20\n    \n    Probability p₂: 0.50\n    \n    Probability p₃: 0.30\n    \n    Probability p₄: 0.40\n    \n  \n  \n    Optimal start —\n    Exact winning probability —\n  \n  \n  This demonstration concerns the last-success objective, not selecting the best candidate in the classical secretary problem. Probabilities remain strictly below 1."
+  },
+  {
+    "objectID": "variants.html#applicant-side-secretary-problems",
+    "href": "variants.html#applicant-side-secretary-problems",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "6. Applicant-side secretary problems",
+    "text": "6. Applicant-side secretary problems\n\nProblem\nThe classical problem is posed from the employer’s perspective:\n\nWhen should the employer stop?\n\nGlass reversed the perspective.\nSuppose the employer follows a known stopping rule and an applicant may choose an interview position \\(i\\).\nThe applicant seeks to maximize\n\\[\n\\Pr(\\text{selected}\\mid\\text{position }i).\n\\]\n\n\nWhat changes?\nThe decision variable is no longer a stopping time.\nInstead,\n\\[\n\\tau\n\\quad\\longrightarrow\\quad\ni.\n\\]\nThe employer’s stopping rule becomes part of the environment faced by the applicant.\n\n\nKnown self-rank\nIf the applicant knows their own absolute rank, the best position can depend strongly on that rank.\nThis produces a strategic positioning problem built on top of a classical secretary stopping rule."
+  },
+  {
+    "objectID": "variants.html#uncertain-self-rank",
+    "href": "variants.html#uncertain-self-rank",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "7. Uncertain self-rank",
+    "text": "7. Uncertain self-rank\nSuppose the applicant does not know their absolute rank.\nLet\n\\[\nJ\\in\\{1,\\ldots,n\\}\n\\]\nbe the applicant’s random absolute rank, distinct from the observed relative ranks \\(R_k\\), with a prior distribution. For example, a truncated geometric prior is\n\\[\n\\Pr(J=j)\n=\n\\frac{(1-q)q^{j-1}}{1-q^n},\n\\qquad 0&lt;q&lt;1.\n\\]\nThe applicant’s value from position \\(i\\) becomes\n\\[\nV(i)\n=\n\\sum_{j=1}^{n}\n\\Pr(J=j)\n\\Pr(\\text{selected}\\mid J=j,\\text{position }i).\n\\]\nThis turns applicant positioning into a Bayesian decision problem."
+  },
+  {
+    "objectID": "variants.html#comparing-the-main-variants",
+    "href": "variants.html#comparing-the-main-variants",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "Comparing the main variants",
+    "text": "Comparing the main variants\n\n\n\n\n\n\n\n\n\nVariant\nInformation\nObjective\nDecision\n\n\n\n\nClassical secretary\nRelative ranks\nSelect rank \\(1\\)\nOne stopping time\n\n\nFull information\nNumerical values\nSelect maximum\nOne stopping time\n\n\nPostdoc\nRelative ranks\nSelect rank \\(2\\)\nOne stopping time\n\n\nMultiple choice / dowry\nRelative ranks\nCapture target using several choices\nMultiple stopping times\n\n\nRandom horizon\nRelative ranks or events\nBest choice with uncertain \\(N\\)\nStopping time\n\n\nOdds theorem\nBernoulli successes\nStop on last success\nStopping time\n\n\nApplicant perspective\nEmployer rule + self-rank\nBe selected\nInterview position\n\n\nUncertain self-rank\nPrior over own rank\nBe selected\nInterview position"
+  },
+  {
+    "objectID": "variants.html#a-map-of-the-secretary-problem-family",
+    "href": "variants.html#a-map-of-the-secretary-problem-family",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "A map of the secretary-problem family",
+    "text": "A map of the secretary-problem family\nThe main extensions can be classified according to which component of the classical model is changed.\n\n\n  \n    Secretary Problem\n  \n\n  \n\n    \n      Information\n      Relative ranks\n      Full values\n      Partial information\n      Uncertain self-rank\n    \n\n    \n      Objective\n      Best candidate\n      Second best\n      Top k\n      Last success\n    \n\n    \n      Choice structure\n      One choice\n      Multiple choices\n      Dowry problems\n      Strategic positioning\n    \n\n    \n      Horizon\n      Fixed\n      Random\n      Unknown\n    \n\n  \n\n\nA useful way to generate new secretary problems is therefore to modify one or more components of the classical model:\n\n  Information\n  +\n  Objective\n  +\n  Choice structure\n  +\n  Horizon\n\nEach modification can produce a genuinely different optimal-stopping problem."
+  },
+  {
+    "objectID": "variants.html#where-to-go-next",
+    "href": "variants.html#where-to-go-next",
+    "title": "Secretary Problem Variants & Extensions",
+    "section": "Where to go next",
+    "text": "Where to go next\nThe Atlas develops these ideas from several complementary viewpoints.\n\nBackward Induction shows how finite stopping problems can be solved state by state.\nSimulations lets you experiment with threshold strategies.\nResearch Timeline places the major developments in historical context.\nSelected variants will be developed later with complete finite-\\(n\\) derivations."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Secretary Problem Site",
+    "section": "",
+    "text": "Universidad Autónoma de Sinaloa\nLearn the secretary problem and the famous 37% rule through exact formulas, optimal stopping proofs, interactive simulations, and research on sequential selection.\nExplore the site"
+  },
+  {
+    "objectID": "index.html#optimal-stopping-explained-visually",
+    "href": "index.html#optimal-stopping-explained-visually",
+    "title": "The Secretary Problem Site",
+    "section": "",
+    "text": "Universidad Autónoma de Sinaloa\nLearn the secretary problem and the famous 37% rule through exact formulas, optimal stopping proofs, interactive simulations, and research on sequential selection.\nExplore the site"
+  },
+  {
+    "objectID": "index.html#explore-the-project",
+    "href": "index.html#explore-the-project",
+    "title": "The Secretary Problem Site",
+    "section": "Explore the project",
+    "text": "Explore the project\n\n\nProblem Variants\nExplore the full-information problem, choosing the second best, multiple-choice models, and more.\nExplore variants & extensions →\n\n\nInteractive Simulations\nExplore the secretary problem and compare stopping thresholds with the optimal 37% strategy.\nTry interactive simulations →\n\n\nResearch\nExplore the complete backward-induction derivation and the history of optimal stopping research.\nRead the backward-induction proof →\nExplore the research timeline →\nDownload Python teaching resources →"
+  },
+  {
+    "objectID": "index.html#why-a-site",
+    "href": "index.html#why-a-site",
+    "title": "The Secretary Problem Site",
+    "section": "Why a Site?",
+    "text": "Why a Site?\nThe secretary problem is not a single problem. It is a family of optimal-stopping models that changes according to the information available, the number of selections allowed, the objective, and the costs involved.\nBegin with the classical secretary problem, explore its exact optimal stopping rule, and experiment with interactive simulations. The site connects these ideas to variants and extensions and the research literature."
   },
   {
     "objectID": "backward-induction.html",
@@ -210,129 +245,157 @@
     "text": "References\nThe general theory of backward induction and optimal stopping is developed by Chow, Robbins, and Siegmund (1971), Shiryaev (2007), and Ferguson (2010).\nHistorical and foundational treatments of the secretary problem include Ferguson (1989) and Gilbert and Mosteller (1966)."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Secretary Problem Site",
+    "objectID": "classical.html",
+    "href": "classical.html",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
     "section": "",
-    "text": "Universidad Autónoma de Sinaloa\nLearn the secretary problem and the famous 37% rule through exact formulas, optimal stopping proofs, interactive simulations, and research on sequential selection.\nExplore the site"
+    "text": "Why should you reject roughly the first 37% of candidates before choosing? The secretary problem is a classical optimal stopping problem: decisions are sequential, rejections are final, and success means selecting the single best candidate.\nThe exact finite-sample solution and its asymptotic 37% rule are derived below; you can also experiment with the rule."
   },
   {
-    "objectID": "index.html#optimal-stopping-explained-visually",
-    "href": "index.html#optimal-stopping-explained-visually",
-    "title": "The Secretary Problem Site",
+    "objectID": "classical.html#model-and-assumptions",
+    "href": "classical.html#model-and-assumptions",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Model and assumptions",
+    "text": "Model and assumptions\nThere are \\(n\\ge 2\\) candidates, ranked absolutely from \\(1\\) (best) to \\(n\\) (worst). The classical no-information model assumes:\n\nThe candidates arrive in a uniformly random order (all \\(n!\\) orders are equally likely).\nYou observe only each candidate’s relative rank among those seen so far, not their absolute rank.\nYou may accept at most one candidate. Every rejection is irrevocable.\nYour objective is to maximize the probability of choosing the single overall best candidate.\n\nA candidate is a record if they are better than all candidates seen before. Since a nonrecord cannot be the overall best, there is no benefit to selecting one when the objective is the overall best."
+  },
+  {
+    "objectID": "classical.html#the-threshold-strategy",
+    "href": "classical.html#the-threshold-strategy",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "The threshold strategy",
+    "text": "The threshold strategy\nFix an integer \\(r\\) with \\(0\\le r&lt;n\\):\n\nReject the first \\(r\\) candidates, observing their relative ranks.\nStarting at position \\(r+1\\), accept the first record (a candidate better than every earlier candidate).\nIf there is no subsequent record, no candidate is selected and the attempt fails.\n\nFor \\(r=0\\), the rule accepts the first candidate immediately. This convention is used in the interactive simulation below.\nThe classical theorem establishes that a threshold rule is optimal among all stopping rules based on relative ranks, not merely the best rule within a preselected class of thresholds. A backward-induction proof of this optimal-policy structure is provided on the Backward Induction page."
+  },
+  {
+    "objectID": "classical.html#exact-success-probability-a-finite-n-derivation",
+    "href": "classical.html#exact-success-probability-a-finite-n-derivation",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Exact success probability: a finite-\\(n\\) derivation",
+    "text": "Exact success probability: a finite-\\(n\\) derivation\nLet \\(P_n(r)\\) denote the probability that the threshold-\\(r\\) strategy selects absolute rank \\(1\\).\nProposition. For \\(1\\le r&lt;n\\),\n\\[\n\\boxed{\nP_n(r)=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}\n=\\frac{r}{n}\\left(H_{n-1}-H_{r-1}\\right),\n}\n\\]\nwhere \\(H_m=\\sum_{j=1}^m 1/j\\) for \\(m\\ge1\\) and \\(H_0=0\\). For \\(r=0\\), \\(P_n(0)=1/n\\).\nProof. Write \\(K\\) for the arrival position of the overall best candidate. Uniform random order gives\n\\[\n\\Pr(K=k)=\\frac1n,\\qquad k=1,\\ldots,n.\n\\]\nIf \\(K\\le r\\), that candidate is rejected, so success is impossible. If \\(K=k&gt;r\\), the strategy selects the overall best precisely when the best candidate among the first \\(k-1\\) arrivals occurred during the initial \\(r\\) positions. Otherwise, a record after position \\(r\\) would have triggered selection earlier.\nConditionally on \\(K=k\\), each of the first \\(k-1\\) positions is equally likely to hold the best among those first \\(k-1\\) candidates. Thus\n\\[\n\\Pr(\\text{success}\\mid K=k)=\\frac{r}{k-1},\\qquad k&gt;r.\n\\]\nSumming over the possible positions of the overall best gives\n\\[\nP_n(r)\n=\\sum_{k=r+1}^{n}\\Pr(K=k)\\Pr(\\text{success}\\mid K=k)\n=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}.\n\\]\nIf \\(r=0\\), the first candidate is accepted, which is the overall best with probability \\(1/n\\). \\(\\square\\)"
+  },
+  {
+    "objectID": "classical.html#which-threshold-is-optimal-for-a-given-n",
+    "href": "classical.html#which-threshold-is-optimal-for-a-given-n",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Which threshold is optimal for a given \\(n\\)?",
+    "text": "Which threshold is optimal for a given \\(n\\)?\nFinite-\\(n\\) criterion. For \\(1\\le r&lt;n-1\\),\n\\[\n\\boxed{\nP_n(r+1)-P_n(r)\n=\\frac1n\\left(\\sum_{j=r+1}^{n-1}\\frac1j-1\\right).\n}\n\\]\nTo see this, subtract the two formulas:\n\\[\n\\begin{aligned}\nnP_n(r+1)&=(r+1)\\sum_{j=r+1}^{n-1}\\frac1j,\\\\\nnP_n(r)&=1+r\\sum_{j=r+1}^{n-1}\\frac1j.\n\\end{aligned}\n\\]\nThe sum in the difference decreases strictly as \\(r\\) increases. Consequently the success probabilities increase until the displayed sum first becomes at most \\(1\\), then decrease. For \\(n\\ge3\\), one optimal threshold is therefore\n\\[\n\\boxed{\nr_n^\\star=\\min\\left\\{r\\in\\{1,\\ldots,n-1\\}:\n\\sum_{j=r+1}^{n-1}\\frac1j\\le1\\right\\}.\n}\n\\]\nAn empty sum is \\(0\\). If the sum equals \\(1\\) at the transition, the adjacent threshold \\(r_n^\\star+1\\) is also optimal. For \\(n=2\\), both \\(r=0\\) and \\(r=1\\) have success probability \\(1/2\\).\nFor example, with \\(n=10\\), the optimal threshold is \\(r^\\star=3\\), and\n\\[\nP_{10}(3)=\\frac3{10}\\left(\\frac13+\\frac14+\\cdots+\\frac19\\right)\\approx0.39869.\n\\]\nThis exact threshold need not equal the integer obtained by simply rounding \\(n/e\\)."
+  },
+  {
+    "objectID": "classical.html#why-the-37-rule-appears",
+    "href": "classical.html#why-the-37-rule-appears",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Why the 37% rule appears",
+    "text": "Why the 37% rule appears\nSuppose \\(n\\) grows and \\(r/n\\to x\\in(0,1)\\). The harmonic sum satisfies\n\\[\n\\sum_{j=r}^{n-1}\\frac1j\n=\\log\\left(\\frac nr\\right)+o(1),\n\\]\nso\n\\[\nP_n(r)=\\frac rn\\sum_{j=r}^{n-1}\\frac1j\n\\longrightarrow -x\\log x.\n\\]\nDifferentiating yields\n\\[\n\\frac{d}{dx}[-x\\log x]=-\\log x-1.\n\\]\nThis vanishes at \\(x=e^{-1}\\), where the second derivative \\(-1/x\\) is negative. The finite-\\(n\\) optimality criterion above also implies that \\(r_n^\\star/n\\to 1/e\\). Therefore,\n\\[\n\\boxed{\n\\frac{r_n^\\star}{n}\\longrightarrow\\frac1e,\n\\qquad\nP_n(r_n^\\star)\\longrightarrow\\frac1e\n\\approx 0.367879.\n}\n\\]\nInterpretation: for a large pool, reject about 36.8% of candidates, then accept the next record. The limiting probability of choosing the best is also about 36.8%. These are two distinct quantities that happen to share the same limit; for a fixed finite \\(n\\), they generally differ."
+  },
+  {
+    "objectID": "classical.html#interactive-optimal-threshold-explorer",
+    "href": "classical.html#interactive-optimal-threshold-explorer",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Interactive optimal threshold explorer",
+    "text": "Interactive optimal threshold explorer\nExplore the exact, finite-(n) probability curve for every rejection threshold. Choose (n), move the threshold (r), and compare your choice to the smallest optimal threshold. The graph uses the harmonic-sum formula—not Monte Carlo simulation.\n\n  \n    Number of candidates 30\n    \n    Reject the first 11\n    \n  \n  \n    Your exact probability \n    Smallest optimal threshold \n  \n  \n  \n  Choose optimal threshold\n  Blue: exact probability · Orange: your threshold · Green: optimal threshold. For finite \\(n\\), ties are resolved by choosing the smallest maximizing threshold."
+  },
+  {
+    "objectID": "classical.html#explore-further",
+    "href": "classical.html#explore-further",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Explore further",
+    "text": "Explore further\n\nBackward induction: why a threshold strategy is optimal among all admissible stopping rules.\nInteractive simulations: explore stopping decisions and compare empirical success rates with exact probabilities.\nVariants and extensions: what changes when there is full information, a different target rank, or multiple selections.\nResearch timeline and references: foundational work and later developments.\n\nThe classical analysis appears in Gilbert and Mosteller (1966) and the survey Freeman (1983); historical context is given by Ferguson (1989)."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About The Secretary Problem Site",
     "section": "",
-    "text": "Universidad Autónoma de Sinaloa\nLearn the secretary problem and the famous 37% rule through exact formulas, optimal stopping proofs, interactive simulations, and research on sequential selection.\nExplore the site"
+    "text": "The Secretary Problem Site is a free, open-access educational and science-communication project created by José Ángel Islas Anguiano at Universidad Autónoma de Sinaloa. Its purpose is to make the mathematics, history, and applications of optimal stopping and secretary problems accessible to students, educators, researchers, and the general public.\nThe site combines intuitive explanations, mathematical derivations, interactive visualizations, historical context, and research references. No registration or payment is required."
   },
   {
-    "objectID": "index.html#explore-the-project",
-    "href": "index.html#explore-the-project",
-    "title": "The Secretary Problem Site",
-    "section": "Explore the project",
-    "text": "Explore the project\n\n\nProblem Variants\nExplore the full-information problem, choosing the second best, multiple-choice models, and more.\nExplore variants & extensions →\n\n\nInteractive Simulations\nExplore the secretary problem and compare stopping thresholds with the optimal 37% strategy.\nTry interactive simulations →\n\n\nResearch\nExplore the complete backward-induction derivation and the history of optimal stopping research.\nRead the backward-induction proof →\nExplore the research timeline →"
-  },
-  {
-    "objectID": "index.html#why-a-site",
-    "href": "index.html#why-a-site",
-    "title": "The Secretary Problem Site",
-    "section": "Why a Site?",
-    "text": "Why a Site?\nThe secretary problem is not a single problem. It is a family of optimal-stopping models that changes according to the information available, the number of selections allowed, the objective, and the costs involved.\nBegin with the classical secretary problem, explore its exact optimal stopping rule, and experiment with interactive simulations. The site connects these ideas to variants and extensions and the research literature."
-  },
-  {
-    "objectID": "variants.html",
-    "href": "variants.html",
-    "title": "Secretary Problem Variants & Extensions",
+    "objectID": "simulations.html",
+    "href": "simulations.html",
+    "title": "Secretary Problem Simulations",
     "section": "",
-    "text": "The classical secretary problem is only the starting point.\nChanging the information available, the objective, the number of choices, or the horizon leads to genuinely different optimal-stopping problems."
+    "text": "Experiment with sequential decisions, test different rejection thresholds, and discover why the classical strategy approaches the (37%) rule."
   },
   {
-    "objectID": "variants.html#the-classical-benchmark",
-    "href": "variants.html#the-classical-benchmark",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "The classical benchmark",
-    "text": "The classical benchmark\nThere are \\(n\\) candidates whose absolute ranks form a uniformly random permutation of\n\\[\n1,2,\\ldots,n,\n\\]\nwith rank \\(1\\) best. Write \\(X_k\\) for the absolute rank of the candidate arriving at position \\(k\\), and \\(R_k\\) for that candidate’s relative rank among the first \\(k\\) arrivals.\nCandidates are observed sequentially. At time \\(k\\), only the candidate’s relative rank among the first \\(k\\) observations is known. Decisions are irrevocable, and only one candidate may be selected.\nThe objective is\n\\[\n\\max_{\\tau}\\Pr(X_\\tau=1).\n\\]\nFor a threshold \\(r\\), reject the first \\(r\\) candidates and then accept the first subsequent record. Its success probability is\n\\[\nP_n(r)\n=\n\\frac{r}{n}\n\\sum_{j=r+1}^{n}\\frac{1}{j-1}.\n\\]\nAs \\(n\\to\\infty\\), the optimal threshold satisfies\n\\[\n\\frac{r_n}{n}\\to \\frac1e,\n\\]\nand the optimal success probability also converges to \\(1/e\\).\nThe extensions below can be organized by asking which part of this benchmark is changed."
+    "objectID": "simulations.html#explore-one-selection",
+    "href": "simulations.html#explore-one-selection",
+    "title": "Secretary Problem Simulations",
+    "section": "Explore one selection",
+    "text": "Explore one selection\nYou will observe the candidates sequentially. Smaller relative ranks are better, and relative rank (1) means that the current candidate is the best observed so far.\nThe absolute ranks remain hidden until you hire someone or reach the final candidate.\n\n  \n    \n      EXPLORE\n      Can you hire the best candidate?\n      \n        Decide whether to reject or hire each candidate using only the\n        information available at that moment.\n      \n    \n\n    \n      New game\n    \n  \n\n  \n    \n      Number of candidates:\n      10\n    \n\n    \n  \n\n  \n    Candidate\n    \n      1\n      /\n      10\n    \n  \n\n  \n    RELATIVE RANK\n    1\n    \n      This candidate is the best observed so far.\n    \n  \n\n  \n    \n      Reject\n    \n\n    \n      Hire\n    \n  \n\n  \n    Observed relative ranks\n    \n  \n\n  \n\n  \n    Complete sequence of absolute ranks\n    Absolute rank \\(1\\) is the overall best."
   },
   {
-    "objectID": "variants.html#full-information-secretary-problem",
-    "href": "variants.html#full-information-secretary-problem",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "1. Full-information secretary problem",
-    "text": "1. Full-information secretary problem\n\nProblem\nInstead of seeing only relative ranks, suppose the numerical observations\n\\[\nY_1,\\ldots,Y_n\\overset{\\mathrm{iid}}{\\sim}F\n\\]\nare revealed sequentially, where \\(F\\) is a known continuous distribution. Here \\(Y_k\\) is an observed value, not the absolute rank \\(X_k\\) used in the classical model.\nThe objective is to maximize\n\\[\n\\Pr\\!\\left(Y_\\tau=\\max_{1\\le j\\le n}Y_j\\right).\n\\]\n\n\nWhat changes?\nThe numerical value of the current observation contains information about how likely future observations are to exceed it.\nThe optimal decision therefore depends not only on whether the current observation is a record, but also on how large that record is.\n\n\nOptimal-strategy structure\nUsing the probability-integral transform,\n\\[\nU_i=F(Y_i),\n\\]\nthe problem can be reduced to independent \\(U(0,1)\\) observations.\nThe optimal rule is described by time-dependent critical values: a record is accepted only when its value is sufficiently large relative to the number of observations remaining.\n\n\nConnection to the classical model\nBoth problems seek the overall maximum.\nThe difference is informational:\n\nno information: only relative ranks are observed;\nfull information: the actual values are observed.\n\nGilbert and Mosteller developed the foundational analysis of both settings."
+    "objectID": "simulations.html#simulate-a-threshold-strategy",
+    "href": "simulations.html#simulate-a-threshold-strategy",
+    "title": "Secretary Problem Simulations",
+    "section": "Simulate a threshold strategy",
+    "text": "Simulate a threshold strategy\nChoose a total number of candidates (n), a rejection threshold (r), and the number of simulated repetitions.\nThe strategy rejects the first (r) candidates and then accepts the first subsequent record.\n\n  \n    \n      SIMULATE\n      Can your threshold beat the 37% rule?\n      \n        Compare a Monte Carlo estimate with the exact success\n        probability and the optimal finite-sample threshold.\n      \n    \n\n    \n      Run experiment\n    \n  \n\n  \n    \n      \n        Candidates \\(n\\):\n        50\n      \n\n      \n    \n\n    \n      \n        Rejection threshold \\(r\\):\n        18\n      \n\n      \n    \n\n    \n      \n        Simulated repetitions:\n        5000\n      \n\n      \n    \n  \n\n  \n    \n      Empirical probability\n      —\n    \n\n    \n      Exact probability\n      —\n    \n\n    \n      Optimal threshold\n      —\n    \n\n    \n      Optimal probability\n      —\n    \n  \n\n  \n    Run the experiment to compare simulation and theory."
   },
   {
-    "objectID": "variants.html#the-postdoc-problem-selecting-the-second-best",
-    "href": "variants.html#the-postdoc-problem-selecting-the-second-best",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "2. The postdoc problem: selecting the second best",
-    "text": "2. The postdoc problem: selecting the second best\n\nProblem\nChange the reward from selecting absolute rank \\(1\\) to selecting absolute rank \\(2\\):\n\\[\n\\max_{\\tau}\\Pr(X_\\tau=2).\n\\]\nThe arrival order is still uniformly random, decisions remain irrevocable, and only relative ranks are observed.\n\n\nWhat changes?\nThe current record is no longer the only potentially relevant candidate. A candidate with current relative rank \\(2\\) may also be strategically important.\nThus a small change in the terminal reward changes the state space of the stopping problem.\n\n\nConnection to the classical model\nThe information structure is unchanged. Only the reward changes:\n\\[\n\\mathbf 1_{\\{X_\\tau=1\\}}\n\\quad\\longrightarrow\\quad\n\\mathbf 1_{\\{X_\\tau=2\\}}.\n\\]\nThis makes the postdoc problem a particularly useful example of how the optimal rule can change when the target rank changes."
+    "objectID": "simulations.html#understand-the-mathematics",
+    "href": "simulations.html#understand-the-mathematics",
+    "title": "Secretary Problem Simulations",
+    "section": "Understand the mathematics",
+    "text": "Understand the mathematics\nFor (r), the exact probability of selecting the overall best is\n\\[\nP_n(r)\n=\n\\frac{r}{n}\n\\sum_{j=r+1}^{n}\\frac{1}{j-1}.\n\\]\nIf (r=0), the first candidate is selected, so\n\\[\nP_n(0)=\\frac1n.\n\\]\nThe graph below displays (P_n(r)) for every admissible rejection threshold.\n\n  \n    \n      UNDERSTAND\n      The probability curve\n      \n        The blue curve gives the exact probability. The selected\n        threshold is shown in coral and the optimum in gold.\n      \n    \n  \n\n  \n    \n      \n      Exact probability\n    \n\n    \n      \n      Your threshold\n    \n\n    \n      \n      Optimal threshold\n    \n\n    \n      \n      \\(n/e\\)\n    \n  \n\n  \n    \n  \n\n  \n    \n      Selected threshold\n      —\n    \n\n    \n      Finite-\\(n\\) optimum\n      —\n    \n\n    \n      Approximation \\(n/e\\)\n      —"
   },
   {
-    "objectID": "variants.html#multiple-choice-and-dowry-problems",
-    "href": "variants.html#multiple-choice-and-dowry-problems",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "3. Multiple-choice and dowry problems",
-    "text": "3. Multiple-choice and dowry problems\n\nProblem\nSuppose the decision maker is allowed more than one selection.\nWith \\(m\\) available choices, the decision maker chooses stopping times\n\\[\n\\tau_1&lt;\\tau_2&lt;\\cdots&lt;\\tau_m.\n\\]\nThe success event depends on the particular model—for example, whether one of the selected observations is the overall best, or whether several top ranks must be captured.\n\n\nSakaguchi’s contribution\nSakaguchi’s work is an important early part of this branch of the literature.\nHis 1978 paper\nDowry Problems and OLA Policies\nstudied secretary-type stopping rules in a dowry formulation and belongs to the early development of multiple-stopping extensions.\nSakaguchi also studied generalized secretary models with uncertain employment, showing that changing the selection mechanism itself can produce new optimal-stopping structures.\n\n\nTamaki’s double-choice problems\nTamaki subsequently analyzed explicit two-choice secretary problems.\nIn one formulation, the decision maker is allowed two choices and seeks to select either the best or the second-best candidate. In another, the objective is to recognize both the maximum and the second maximum.\nThese problems illustrate why multiple-choice secretary models require more state information than the classical one-choice problem.\n\n\nDynamic-programming structure\nIf \\(j\\) selections remain at time \\(k\\), the state must record both the information observed so far and the remaining number of choices.\nSchematically,\n\\[\nV_{k,j}(s)\n=\n\\max\\{\n\\text{value of selecting now},\n\\text{value of continuing}\n\\}.\n\\]\nSelecting now changes the state from \\(j\\) remaining choices to \\(j-1\\).\n\n\nConnection to the classical model\nThe classical secretary problem is recovered when\n\\[\nm=1.\n\\]\nThus multiple-choice models enlarge the stopping problem by adding a resource variable: the number of selections still available."
+    "objectID": "simulations.html#what-the-experiments-show",
+    "href": "simulations.html#what-the-experiments-show",
+    "title": "Secretary Problem Simulations",
+    "section": "What the experiments show",
+    "text": "What the experiments show\nThe simulations illustrate three important facts:\n\nA nonrecord candidate cannot be the overall best.\nRejecting too few candidates provides insufficient information.\nRejecting too many candidates leaves too few opportunities to select a later record.\n\nThe optimal threshold balances these competing risks.\nFor large (n),\n\\[\nr^\\star\\approx \\frac{n}{e},\n\\qquad\nP_n(r^\\star)\\approx\\frac1e.\n\\]\nTherefore, both the optimal rejection fraction and the maximum success probability approach approximately (37%).\n\n\n\n\n\n\nNoteSimulation versus proof\n\n\n\nMonte Carlo simulation provides numerical evidence, but it does not prove optimality. The exact probability formula and the backward-induction argument establish the mathematical result."
   },
   {
-    "objectID": "variants.html#unknown-or-random-horizon",
-    "href": "variants.html#unknown-or-random-horizon",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "4. Unknown or random horizon",
-    "text": "4. Unknown or random horizon\n\nProblem\nThe classical model assumes that the total number \\(n\\) of observations is known.\nSuppose instead that the number of observations is a random variable\n\\[\nN.\n\\]\nThe distribution of \\(N\\) may be known even though its realized value is not.\n\n\nWhat changes?\nWith a fixed horizon, the decision maker knows exactly how many observations remain.\nWith a random horizon, the continuation value must also account for the probability that the sequence ends.\nThis produces stopping rules that depend on both relative rank information and uncertainty about the remaining horizon.\n\n\nConnection to the \\(1/e\\) phenomenon\nThe classical \\(1/e\\) threshold is not a universal rule for random horizons. In the continuous-time unified-approach model of Bruss (1984), candidate arrival times are conditionally independent and a \\(1/e\\) law holds under the model’s specific assumptions. A generic prior distribution for the unknown horizon \\(N\\) need not yield the same optimal rule or success probability. See Bruss (1984)."
-  },
-  {
-    "objectID": "variants.html#last-success-problems-and-the-odds-theorem",
-    "href": "variants.html#last-success-problems-and-the-odds-theorem",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "5. Last-success problems and the odds theorem",
-    "text": "5. Last-success problems and the odds theorem\n\nProblem\nLet\n\\[\nI_1,\\ldots,I_n\n\\]\nbe independent Bernoulli random variables with\n\\[\n\\Pr(I_k=1)=p_k,\\qquad 0\\le p_k&lt;1.\n\\]\nThe objective is to stop at an index \\(\\tau\\) for which \\(I_\\tau=1\\) and no later success occurs. If there is no success, the attempt fails. Assume decisions use only the observations up to the current index.\nDefine\n\\[\nq_k=1-p_k&gt;0,\n\\qquad\nr_k=\\frac{p_k}{q_k}.\n\\]\nSum-the-odds rule (Bruss, 2000). Define\n\\[\ns=\\max\\left(\\{1\\}\\cup\\left\\{k\\in\\{1,\\ldots,n\\}:\\sum_{j=k}^{n}r_j\\ge1\\right\\}\\right).\n\\]\nReject observations before \\(s\\), then stop at the first success \\(I_k=1\\) with \\(k\\ge s\\). If no success occurs after \\(s\\), the attempt fails. When the total sum of odds is less than \\(1\\), this convention gives \\(s=1\\). This rule maximizes the probability of stopping on the last success among all stopping times in this model. See Bruss (2000).\n\n\nConnection to secretary problems\nThe odds theorem is not the classical secretary problem itself.\nIt belongs to the same broader optimal-stopping family: the decision maker must act without knowing whether a future event will supersede the current one."
-  },
-  {
-    "objectID": "variants.html#applicant-side-secretary-problems",
-    "href": "variants.html#applicant-side-secretary-problems",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "6. Applicant-side secretary problems",
-    "text": "6. Applicant-side secretary problems\n\nProblem\nThe classical problem is posed from the employer’s perspective:\n\nWhen should the employer stop?\n\nGlass reversed the perspective.\nSuppose the employer follows a known stopping rule and an applicant may choose an interview position \\(i\\).\nThe applicant seeks to maximize\n\\[\n\\Pr(\\text{selected}\\mid\\text{position }i).\n\\]\n\n\nWhat changes?\nThe decision variable is no longer a stopping time.\nInstead,\n\\[\n\\tau\n\\quad\\longrightarrow\\quad\ni.\n\\]\nThe employer’s stopping rule becomes part of the environment faced by the applicant.\n\n\nKnown self-rank\nIf the applicant knows their own absolute rank, the best position can depend strongly on that rank.\nThis produces a strategic positioning problem built on top of a classical secretary stopping rule."
-  },
-  {
-    "objectID": "variants.html#uncertain-self-rank",
-    "href": "variants.html#uncertain-self-rank",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "7. Uncertain self-rank",
-    "text": "7. Uncertain self-rank\nSuppose the applicant does not know their absolute rank.\nLet\n\\[\nJ\\in\\{1,\\ldots,n\\}\n\\]\nbe the applicant’s random absolute rank, distinct from the observed relative ranks \\(R_k\\), with a prior distribution. For example, a truncated geometric prior is\n\\[\n\\Pr(J=j)\n=\n\\frac{(1-q)q^{j-1}}{1-q^n},\n\\qquad 0&lt;q&lt;1.\n\\]\nThe applicant’s value from position \\(i\\) becomes\n\\[\nV(i)\n=\n\\sum_{j=1}^{n}\n\\Pr(J=j)\n\\Pr(\\text{selected}\\mid J=j,\\text{position }i).\n\\]\nThis turns applicant positioning into a Bayesian decision problem."
-  },
-  {
-    "objectID": "variants.html#comparing-the-main-variants",
-    "href": "variants.html#comparing-the-main-variants",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "Comparing the main variants",
-    "text": "Comparing the main variants\n\n\n\n\n\n\n\n\n\nVariant\nInformation\nObjective\nDecision\n\n\n\n\nClassical secretary\nRelative ranks\nSelect rank \\(1\\)\nOne stopping time\n\n\nFull information\nNumerical values\nSelect maximum\nOne stopping time\n\n\nPostdoc\nRelative ranks\nSelect rank \\(2\\)\nOne stopping time\n\n\nMultiple choice / dowry\nRelative ranks\nCapture target using several choices\nMultiple stopping times\n\n\nRandom horizon\nRelative ranks or events\nBest choice with uncertain \\(N\\)\nStopping time\n\n\nOdds theorem\nBernoulli successes\nStop on last success\nStopping time\n\n\nApplicant perspective\nEmployer rule + self-rank\nBe selected\nInterview position\n\n\nUncertain self-rank\nPrior over own rank\nBe selected\nInterview position"
-  },
-  {
-    "objectID": "variants.html#a-map-of-the-secretary-problem-family",
-    "href": "variants.html#a-map-of-the-secretary-problem-family",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "A map of the secretary-problem family",
-    "text": "A map of the secretary-problem family\nThe main extensions can be classified according to which component of the classical model is changed.\n\n\n  \n    Secretary Problem\n  \n\n  \n\n    \n      Information\n      Relative ranks\n      Full values\n      Partial information\n      Uncertain self-rank\n    \n\n    \n      Objective\n      Best candidate\n      Second best\n      Top k\n      Last success\n    \n\n    \n      Choice structure\n      One choice\n      Multiple choices\n      Dowry problems\n      Strategic positioning\n    \n\n    \n      Horizon\n      Fixed\n      Random\n      Unknown\n    \n\n  \n\n\nA useful way to generate new secretary problems is therefore to modify one or more components of the classical model:\n\n  Information\n  +\n  Objective\n  +\n  Choice structure\n  +\n  Horizon\n\nEach modification can produce a genuinely different optimal-stopping problem."
-  },
-  {
-    "objectID": "variants.html#where-to-go-next",
-    "href": "variants.html#where-to-go-next",
-    "title": "Secretary Problem Variants & Extensions",
-    "section": "Where to go next",
-    "text": "Where to go next\nThe Atlas develops these ideas from several complementary viewpoints.\n\nBackward Induction shows how finite stopping problems can be solved state by state.\nSimulations lets you experiment with threshold strategies.\nResearch Timeline places the major developments in historical context.\nSelected variants will be developed later with complete finite-\\(n\\) derivations."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "Secretary Problem References",
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Secretary Problem Teaching and Python Resources",
     "section": "",
-    "text": "This bibliography supports the mathematical explanations, historical notes, and interactive experiments presented in The Secretary Problem Site.\n\n\nThe initial collection includes foundational work on the classical secretary problem, full-information models, historical development, extensions, and related optimal-stopping principles.\nAs the site grows, this database will be expanded to include literature on:\n\nmultiple-choice secretary problems,\nselecting the second-best candidate,\ngeneralized top-(m) objectives,\nfull-information best-choice models,\nduration problems,\ninterview costs and rewards,\nunknown numbers of candidates,\nrank-dependent payoffs."
+    "text": "These resources accompany The Secretary Problem Site. The programs use only the Python standard library and can run locally or in a Google Colab code cell. All simulations are illustrative: mathematical optimality follows from the exact formulas, not from Monte Carlo experiments.\n\n\nDownload classical_secretary.py\nThe script computes the exact finite-(n) threshold probabilities, identifies the smallest maximizing threshold, and estimates success using random permutations.\nFor (r),\n\\[\nP_n(r)=\\frac{r}{n}\\sum_{j=r}^{n-1}\\frac1j,\n\\qquad P_n(0)=\\frac1n.\n\\]\nRun it in a terminal:\npython3 code/classical_secretary.py --n 30 --r 11 --trials 10000 --seed 123\npython3 code/classical_secretary.py --self-test\nFor Colab, download and upload the script, then run !python classical_secretary.py --n 30 --r 11.\n\n\n\nDownload last_success_odds.py\nFor independent Bernoulli observations with (0p_k&lt;1), the code calculates the optimal start index given by the sum-the-odds rule and checks its exact success probability against all deterministic start indices.\npython3 code/last_success_odds.py --probabilities 0.2 0.5 0.3 0.4\npython3 code/last_success_odds.py --self-test\nThe calculation uses exact fractions when decimal inputs are supplied; floating-point Monte Carlo is not required.\n\n\n\nDownload postdoc_secretary.py\nThis script solves the finite-horizon postdoc problem using exact rational backward induction. It calculates the conditional stopping reward at each relative rank and returns the optimal decision. The built-in tests compare the resulting policy with exhaustive enumeration of all permutations for small \\(n\\).\npython3 code/postdoc_secretary.py --n 10 --k 5 --rank 2\npython3 code/postdoc_secretary.py --self-test\nSee the interactive postdoc explorer.\n\n\n\nDownload full_information_uniform.py\nThis program covers the first stopping decision for \\(n=2\\) or \\(n=3\\) independent \\(U(0,1)\\) observations. It evaluates exact rational acceptance and continuation probabilities at any rational first observation \\(x\\), and reports the analytic acceptance cutoff: \\(1/2\\) for \\(n=2\\) or \\((1+\\sqrt6)/5\\) for \\(n=3\\).\npython3 code/full_information_uniform.py --n 3 --x 0.70\npython3 code/full_information_uniform.py --self-test\nSee the interactive full-information explorer. This deliberately focuses on two small horizons so that the displayed decision has a transparent analytical derivation.\n\n\n\n\nOptimal Threshold Explorer: see how the exact success curve changes with (n) and (r).\nSequential decision game and simulations: compare mathematical predictions to simulated outcomes.\nPostdoc decision explorer: use exact dynamic programming to choose rank 2.\nFull-information first-decision explorer: compare acceptance with continuation for two or three observations.\nOdds-theorem explorer: vary four Bernoulli success probabilities and inspect the optimal start index.\nBackward-induction proof: derive optimal decisions from the Bellman recursion.\n\n\n\n\n\nDetermine the smallest optimal threshold for (n=10), and verify its exact success probability.\nCompare optimal rejection fractions for (n=10,30,100) with (1/e).\nInvestigate the difference between exact probability and simulated frequency for increasing numbers of trials.\nFor \\(n=5\\), derive the postdoc stopping rewards for relative ranks 1 and 2 and verify the backward recursion.. For three iid uniform observations, derive the first-stage continuation function and its stopping cutoff.. For four independent Bernoulli trials, compute the sum-the-odds threshold and enumerate the exact success probabilities of all fixed starting positions.\n\n\n\n\nThese examples are offered as educational materials. When using them in a course, credit The Secretary Problem Site and link to the relevant mathematical derivation. Primary mathematical sources are listed in the References section."
   },
   {
-    "objectID": "references.html#foundational-literature",
-    "href": "references.html#foundational-literature",
-    "title": "Secretary Problem References",
+    "objectID": "resources.html#classical-secretary-problem-exact-probability-and-simulation",
+    "href": "resources.html#classical-secretary-problem-exact-probability-and-simulation",
+    "title": "Secretary Problem Teaching and Python Resources",
     "section": "",
-    "text": "The initial collection includes foundational work on the classical secretary problem, full-information models, historical development, extensions, and related optimal-stopping principles.\nAs the site grows, this database will be expanded to include literature on:\n\nmultiple-choice secretary problems,\nselecting the second-best candidate,\ngeneralized top-(m) objectives,\nfull-information best-choice models,\nduration problems,\ninterview costs and rewards,\nunknown numbers of candidates,\nrank-dependent payoffs."
+    "text": "Download classical_secretary.py\nThe script computes the exact finite-(n) threshold probabilities, identifies the smallest maximizing threshold, and estimates success using random permutations.\nFor (r),\n\\[\nP_n(r)=\\frac{r}{n}\\sum_{j=r}^{n-1}\\frac1j,\n\\qquad P_n(0)=\\frac1n.\n\\]\nRun it in a terminal:\npython3 code/classical_secretary.py --n 30 --r 11 --trials 10000 --seed 123\npython3 code/classical_secretary.py --self-test\nFor Colab, download and upload the script, then run !python classical_secretary.py --n 30 --r 11."
+  },
+  {
+    "objectID": "resources.html#last-success-problem-brusss-odds-theorem",
+    "href": "resources.html#last-success-problem-brusss-odds-theorem",
+    "title": "Secretary Problem Teaching and Python Resources",
+    "section": "",
+    "text": "Download last_success_odds.py\nFor independent Bernoulli observations with (0p_k&lt;1), the code calculates the optimal start index given by the sum-the-odds rule and checks its exact success probability against all deterministic start indices.\npython3 code/last_success_odds.py --probabilities 0.2 0.5 0.3 0.4\npython3 code/last_success_odds.py --self-test\nThe calculation uses exact fractions when decimal inputs are supplied; floating-point Monte Carlo is not required."
+  },
+  {
+    "objectID": "resources.html#postdoc-problem-choosing-the-second-best-candidate",
+    "href": "resources.html#postdoc-problem-choosing-the-second-best-candidate",
+    "title": "Secretary Problem Teaching and Python Resources",
+    "section": "",
+    "text": "Download postdoc_secretary.py\nThis script solves the finite-horizon postdoc problem using exact rational backward induction. It calculates the conditional stopping reward at each relative rank and returns the optimal decision. The built-in tests compare the resulting policy with exhaustive enumeration of all permutations for small \\(n\\).\npython3 code/postdoc_secretary.py --n 10 --k 5 --rank 2\npython3 code/postdoc_secretary.py --self-test\nSee the interactive postdoc explorer."
+  },
+  {
+    "objectID": "resources.html#full-information-best-choice-first-stage-thresholds",
+    "href": "resources.html#full-information-best-choice-first-stage-thresholds",
+    "title": "Secretary Problem Teaching and Python Resources",
+    "section": "",
+    "text": "Download full_information_uniform.py\nThis program covers the first stopping decision for \\(n=2\\) or \\(n=3\\) independent \\(U(0,1)\\) observations. It evaluates exact rational acceptance and continuation probabilities at any rational first observation \\(x\\), and reports the analytic acceptance cutoff: \\(1/2\\) for \\(n=2\\) or \\((1+\\sqrt6)/5\\) for \\(n=3\\).\npython3 code/full_information_uniform.py --n 3 --x 0.70\npython3 code/full_information_uniform.py --self-test\nSee the interactive full-information explorer. This deliberately focuses on two small horizons so that the displayed decision has a transparent analytical derivation."
+  },
+  {
+    "objectID": "resources.html#interactive-activities",
+    "href": "resources.html#interactive-activities",
+    "title": "Secretary Problem Teaching and Python Resources",
+    "section": "",
+    "text": "Optimal Threshold Explorer: see how the exact success curve changes with (n) and (r).\nSequential decision game and simulations: compare mathematical predictions to simulated outcomes.\nPostdoc decision explorer: use exact dynamic programming to choose rank 2.\nFull-information first-decision explorer: compare acceptance with continuation for two or three observations.\nOdds-theorem explorer: vary four Bernoulli success probabilities and inspect the optimal start index.\nBackward-induction proof: derive optimal decisions from the Bellman recursion."
+  },
+  {
+    "objectID": "resources.html#suggested-classroom-exercises",
+    "href": "resources.html#suggested-classroom-exercises",
+    "title": "Secretary Problem Teaching and Python Resources",
+    "section": "",
+    "text": "Determine the smallest optimal threshold for (n=10), and verify its exact success probability.\nCompare optimal rejection fractions for (n=10,30,100) with (1/e).\nInvestigate the difference between exact probability and simulated frequency for increasing numbers of trials.\nFor \\(n=5\\), derive the postdoc stopping rewards for relative ranks 1 and 2 and verify the backward recursion.. For three iid uniform observations, derive the first-stage continuation function and its stopping cutoff.. For four independent Bernoulli trials, compute the sum-the-odds threshold and enumerate the exact success probabilities of all fixed starting positions."
+  },
+  {
+    "objectID": "resources.html#reuse-and-attribution",
+    "href": "resources.html#reuse-and-attribution",
+    "title": "Secretary Problem Teaching and Python Resources",
+    "section": "",
+    "text": "These examples are offered as educational materials. When using them in a course, credit The Secretary Problem Site and link to the relevant mathematical derivation. Primary mathematical sources are listed in the References section."
   }
 ]

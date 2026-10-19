@@ -175,6 +175,10 @@ window.Quarto = {
 <span class="menu-text">Variants</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./timeline.html"> 
 <span class="menu-text">Timeline</span></a>
   </li>  
@@ -209,12 +213,14 @@ window.Quarto = {
   <li><a href="#problem" id="toc-problem" class="nav-link" data-scroll-target="#problem">Problem</a></li>
   <li><a href="#what-changes" id="toc-what-changes" class="nav-link" data-scroll-target="#what-changes">What changes?</a></li>
   <li><a href="#optimal-strategy-structure" id="toc-optimal-strategy-structure" class="nav-link" data-scroll-target="#optimal-strategy-structure">Optimal-strategy structure</a></li>
+  <li><a href="#interactive-first-decision-experiment-uniform-observations" id="toc-interactive-first-decision-experiment-uniform-observations" class="nav-link" data-scroll-target="#interactive-first-decision-experiment-uniform-observations">Interactive first-decision experiment (uniform observations)</a></li>
   <li><a href="#connection-to-the-classical-model" id="toc-connection-to-the-classical-model" class="nav-link" data-scroll-target="#connection-to-the-classical-model">Connection to the classical model</a></li>
   </ul></li>
   <li><a href="#the-postdoc-problem-selecting-the-second-best" id="toc-the-postdoc-problem-selecting-the-second-best" class="nav-link" data-scroll-target="#the-postdoc-problem-selecting-the-second-best">2. The postdoc problem: selecting the second best</a>
   <ul class="collapse">
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem</a></li>
   <li><a href="#what-changes-1" id="toc-what-changes-1" class="nav-link" data-scroll-target="#what-changes-1">What changes?</a></li>
+  <li><a href="#interactive-postdoc-decision-exact-backward-induction" id="toc-interactive-postdoc-decision-exact-backward-induction" class="nav-link" data-scroll-target="#interactive-postdoc-decision-exact-backward-induction">Interactive postdoc decision (exact backward induction)</a></li>
   <li><a href="#connection-to-the-classical-model-1" id="toc-connection-to-the-classical-model-1" class="nav-link" data-scroll-target="#connection-to-the-classical-model-1">Connection to the classical model</a></li>
   </ul></li>
   <li><a href="#multiple-choice-and-dowry-problems" id="toc-multiple-choice-and-dowry-problems" class="nav-link" data-scroll-target="#multiple-choice-and-dowry-problems">3. Multiple-choice and dowry problems</a>
@@ -235,6 +241,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem</a></li>
   <li><a href="#connection-to-secretary-problems" id="toc-connection-to-secretary-problems" class="nav-link" data-scroll-target="#connection-to-secretary-problems">Connection to secretary problems</a></li>
+  <li><a href="#interactive-experiment-sum-the-odds" id="toc-interactive-experiment-sum-the-odds" class="nav-link" data-scroll-target="#interactive-experiment-sum-the-odds">Interactive experiment: sum the odds</a></li>
   </ul></li>
   <li><a href="#applicant-side-secretary-problems" id="toc-applicant-side-secretary-problems" class="nav-link" data-scroll-target="#applicant-side-secretary-problems">6. Applicant-side secretary problems</a>
   <ul class="collapse">
@@ -336,6 +343,44 @@ U_i=F(Y_i),
 <p>the problem can be reduced to independent <span class="math inline">\(U(0,1)\)</span> observations.</p>
 <p>The optimal rule is described by time-dependent critical values: a record is accepted only when its value is sufficiently large relative to the number of observations remaining.</p>
 </section>
+<section id="interactive-first-decision-experiment-uniform-observations" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-first-decision-experiment-uniform-observations">Interactive first-decision experiment (uniform observations)</h3>
+<p>To obtain <strong>closed-form, verifiable</strong> stopping decisions, the experiment uses <span class="math inline">\(Y_1,\ldots,Y_n\overset{\mathrm{iid}}{\sim}U(0,1)\)</span> with <span class="math inline">\(n=2\)</span> or <span class="math inline">\(n=3\)</span>. After seeing the first value <span class="math inline">\(x\)</span>, accepting wins with probability <span class="math inline">\(x^{n-1}\)</span>.</p>
+<p>Rejecting and then acting optimally has probability</p>
+<p><span class="math display">\[
+C_2(x)=1-x,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+C_3(x)=
+\begin{cases}
+\frac34-\frac{x^2}{2},&amp;0\le x\le\frac12,\\
+\frac12+x-\frac{3x^2}{2},&amp;\frac12&lt;x\le1.
+\end{cases}
+\]</span></p>
+<p>For <span class="math inline">\(n=3\)</span>, if the first value <span class="math inline">\(x\)</span> is rejected, the second observation <span class="math inline">\(y\)</span> should be accepted only if it is a record and <span class="math inline">\(y\ge 1/2\)</span>; otherwise the last observation is chosen only when it sets a new record. Integrating over the second observation gives <span class="math inline">\(C_3(x)\)</span> above.</p>
+<p>Thus the first-observation acceptance thresholds are <span class="math inline">\(1/2\)</span> for <span class="math inline">\(n=2\)</span> and <span class="math inline">\((1+\sqrt6)/5\approx0.68990\)</span> for <span class="math inline">\(n=3\)</span>. These are <em>first-stage thresholds</em>, not the full-information rule for an arbitrary horizon.</p>
+<div id="full-information-experiment">
+<section class="atlas-interactive-card variant-decision-explorer">
+  <h3 class="anchored">Full-information: select or continue?</h3>
+  <div class="variant-explorer-controls">
+    <label for="full-n">Number of observations (n): <strong id="full-n-value">3</strong></label>
+    <input id="full-n" type="range" min="2" max="3" value="3" step="1">
+    <label for="full-x">First observed value (x): <strong id="full-x-value">0.70</strong></label>
+    <input id="full-x" type="range" min="0" max="1" value="0.70" step="0.01">
+  </div>
+  <div class="explorer-statistics" aria-live="polite">
+    <p>Accept now <strong id="full-stop"></strong></p>
+    <p>Continue optimally <strong id="full-continue"></strong></p>
+  </div>
+  <p>First-stage cutoff: <strong id="full-cutoff"></strong></p>
+  <p class="variant-decision"><strong id="full-decision"></strong></p>
+  <p id="full-reason" aria-live="polite"></p>
+  <p class="explorer-note">Assumptions: independent, identical and continuous Uniform(0,1) observations. Exact analytical continuation formulas; probabilities shown as rounded percentages.</p>
+</section>
+<script src="full-information-explorer.js"></script>
+</div>
+</section>
 <section id="connection-to-the-classical-model" class="level3">
 <h3 class="anchored" data-anchor-id="connection-to-the-classical-model">Connection to the classical model</h3>
 <p>Both problems seek the overall maximum.</p>
@@ -362,6 +407,46 @@ U_i=F(Y_i),
 <h3 class="anchored" data-anchor-id="what-changes-1">What changes?</h3>
 <p>The current record is no longer the only potentially relevant candidate. A candidate with current relative rank <span class="math inline">\(2\)</span> may also be strategically important.</p>
 <p>Thus a small change in the terminal reward changes the state space of the stopping problem.</p>
+</section>
+<section id="interactive-postdoc-decision-exact-backward-induction" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-postdoc-decision-exact-backward-induction">Interactive postdoc decision (exact backward induction)</h3>
+<p>Conditional on observing relative rank <span class="math inline">\(a\)</span> at position <span class="math inline">\(k\)</span>, the probability that the current candidate has <em>absolute</em> rank <span class="math inline">\(2\)</span> is</p>
+<p><span class="math display">\[
+g_{n,k}(a)=
+\begin{cases}
+\dfrac{k(n-k)}{n(n-1)},&amp;a=1,\\[4pt]
+\dfrac{k(k-1)}{n(n-1)},&amp;a=2,\\[4pt]
+0,&amp;a\ge3.
+\end{cases}
+\]</span></p>
+<p>The relative ranks are independent with <span class="math inline">\(R_k\)</span> uniform on <span class="math inline">\(\{1,\ldots,k\}\)</span>. Let <span class="math inline">\(V_{n+1}=0\)</span> and let <span class="math inline">\(V_k\)</span> be the maximum probability of selecting absolute rank <span class="math inline">\(2\)</span> <em>before</em> observing relative rank <span class="math inline">\(R_k\)</span>. Then</p>
+<p><span class="math display">\[
+V_k=\frac1k\sum_{a=1}^k\max\{g_{n,k}(a),V_{k+1}\},
+\qquad k=n,n-1,\ldots,1.
+\]</span></p>
+<p>At position <span class="math inline">\(k\)</span>, select when <span class="math inline">\(g_{n,k}(a)\ge V_{k+1}\)</span> and this success probability is positive; otherwise continue. When tied at zero, the experiment displays continuation. This dynamic program optimizes over all admissible decisions based on observed relative ranks.</p>
+<div id="postdoc-experiment">
+<section class="atlas-interactive-card variant-decision-explorer">
+  <h3 class="anchored">Postdoc problem: select rank 2</h3>
+  <div class="variant-explorer-controls">
+    <label for="postdoc-n">Candidates (n): <strong id="postdoc-n-value">10</strong></label>
+    <input id="postdoc-n" type="range" min="3" max="60" value="10" step="1">
+    <label for="postdoc-k">Current position (k): <strong id="postdoc-k-value">5</strong></label>
+    <input id="postdoc-k" type="range" min="1" max="10" value="5" step="1">
+    <label for="postdoc-rank">Observed relative rank (a): <strong id="postdoc-rank-value">2</strong></label>
+    <input id="postdoc-rank" type="range" min="1" max="5" value="2" step="1">
+  </div>
+  <div class="explorer-statistics" aria-live="polite">
+    <p>Select now <strong id="postdoc-stop"></strong></p>
+    <p>Continue optimally <strong id="postdoc-continue"></strong></p>
+  </div>
+  <p>Optimal win probability before the first candidate: <strong id="postdoc-initial"></strong></p>
+  <p class="variant-decision"><strong id="postdoc-decision"></strong></p>
+  <p id="postdoc-reason" aria-live="polite"></p>
+  <p class="explorer-note">Assumptions: uniformly random arrival order, relative ranks only, one irrevocable selection. Calculations use the exact Bellman recursion and display rounded percentages.</p>
+</section>
+<script src="postdoc-explorer.js"></script>
+</div>
 </section>
 <section id="connection-to-the-classical-model-1" class="level3">
 <h3 class="anchored" data-anchor-id="connection-to-the-classical-model-1">Connection to the classical model</h3>
@@ -478,6 +563,31 @@ s=\max\left(\{1\}\cup\left\{k\in\{1,\ldots,n\}:\sum_{j=k}^{n}r_j\ge1\right\}\rig
 <p>It belongs to the same broader optimal-stopping family: the decision maker must act without knowing whether a future event will supersede the current one.</p>
 <hr>
 </section>
+<div id="last-success-experiment">
+<section id="interactive-experiment-sum-the-odds" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-experiment-sum-the-odds">Interactive experiment: sum the odds</h3>
+<p>Change the success probabilities of four <strong>independent</strong> Bernoulli trials. The page computes the exact last-success probability for each possible starting position and highlights the start prescribed by Bruss’s odds theorem. A decision maker rejects successes before that position and accepts the first later success.</p>
+<section class="atlas-interactive-card odds-explorer">
+  <div class="odds-controls">
+    <label for="odds-p-1">Probability p₁: <strong id="odds-value-1">0.20</strong></label>
+    <input id="odds-p-1" type="range" min="0" max="0.90" step="0.05" value="0.20">
+    <label for="odds-p-2">Probability p₂: <strong id="odds-value-2">0.50</strong></label>
+    <input id="odds-p-2" type="range" min="0" max="0.90" step="0.05" value="0.50">
+    <label for="odds-p-3">Probability p₃: <strong id="odds-value-3">0.30</strong></label>
+    <input id="odds-p-3" type="range" min="0" max="0.90" step="0.05" value="0.30">
+    <label for="odds-p-4">Probability p₄: <strong id="odds-value-4">0.40</strong></label>
+    <input id="odds-p-4" type="range" min="0" max="0.90" step="0.05" value="0.40">
+  </div>
+  <div class="explorer-statistics" aria-live="polite">
+    <p>Optimal start <strong id="odds-threshold">—</strong></p>
+    <p>Exact winning probability <strong id="odds-probability">—</strong></p>
+  </div>
+  <p id="odds-explanation" aria-live="polite"></p>
+  <p class="explorer-note">This demonstration concerns the last-success objective, not selecting the best candidate in the classical secretary problem. Probabilities remain strictly below 1.</p>
+</section>
+<script src="odds-explorer.js"></script>
+</section>
+</div>
 </section>
 <section id="applicant-side-secretary-problems" class="level2">
 <h2 class="anchored" data-anchor-id="applicant-side-secretary-problems">6. Applicant-side secretary problems</h2>
