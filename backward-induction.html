@@ -277,7 +277,7 @@ R_n
 \]</span></p>
 <p>The event <span class="math inline">\(R_n=1\)</span> means that the candidate at time <span class="math inline">\(n\)</span> is better than every candidate previously observed.</p>
 <p>Such a candidate is called a <strong>record</strong>.</p>
-<p>A non-record cannot be the overall best. Therefore, every optimal policy rejects non-records. A genuine stop-or-continue decision occurs only when <span class="math inline">\(R_n=1\)</span>.</p>
+<p>A non-record cannot be the overall best. It is therefore always optimal to continue at a non-record while further candidates remain. The only decisions that can offer a positive chance of success from stopping occur when <span class="math inline">\(R_n=1\)</span>.</p>
 </section>
 <section id="uniformity-of-relative-ranks" class="level2">
 <h2 class="anchored" data-anchor-id="uniformity-of-relative-ranks">3. Uniformity of relative ranks</h2>
@@ -376,7 +376,7 @@ U_n
 </section>
 <section id="the-continuation-value" class="level2">
 <h2 class="anchored" data-anchor-id="the-continuation-value">5. The continuation value</h2>
-<p>Let <span class="math inline">\(W_n\)</span> be the optimal probability of eventual success after rejecting the candidate at time <span class="math inline">\(n\)</span>.</p>
+<p>Let <span class="math inline">\(W_n\)</span> be the optimal conditional probability of eventual success after rejecting the candidate at time <span class="math inline">\(n\)</span>, given the relative-rank observations available at that time. By independence of the successive relative ranks, this value depends on <span class="math inline">\(n\)</span> but not on the previously observed relative ranks.</p>
 <p>At a record time, define</p>
 <p><span class="math display">\[
 \boxed{V_n=\max\{U_n,W_n\}}.
@@ -417,7 +417,7 @@ W_n&amp;=
 </section>
 <section id="terminal-condition" class="level2">
 <h2 class="anchored" data-anchor-id="terminal-condition">6. Terminal condition</h2>
-<p>At time <span class="math inline">\(N\)</span>, a record must be accepted because no future candidates remain.</p>
+<p>At time <span class="math inline">\(N\)</span>, accepting a record wins with certainty. There is no remaining opportunity to succeed after rejection. If a selection at time <span class="math inline">\(N\)</span> is mandatory, selecting a non-record yields reward zero and does not affect the value.</p>
 <p>Therefore,</p>
 <p><span class="math display">\[
 U_N=1,
@@ -464,7 +464,7 @@ W_1\ge W_2\ge\cdots\ge W_N.
 U_n=\frac nN
 \]</span></p>
 <p>is strictly increasing.</p>
-<p>Therefore, the two values can cross at most once. This proves that the optimal policy has a threshold form.</p>
+<p>Thus <span class="math inline">\(U_n-W_n\)</span> is strictly increasing in <span class="math inline">\(n\)</span>. Once accepting a record is optimal, it remains optimal at every later record time. This proves that an optimal policy has a threshold form.</p>
 <p>There is an integer <span class="math inline">\(r^*\)</span> such that the optimal policy is:</p>
 <ol type="1">
 <li>Reject the first <span class="math inline">\(r^*\)</span> candidates.</li>
@@ -753,7 +753,7 @@ r\in\{1,\ldots,N-1\}:
 \sum_{j=r^*}^{N-1}\frac1j.
 }
 \]</span></p>
-<p>If equality occurs, two adjacent thresholds are optimal. The definition above selects the smaller rejection threshold, consistent with breaking a decision tie in favor of stopping.</p>
+<p>If the <strong>left-hand sum</strong> in the displayed characterization equals <span class="math inline">\(1\)</span>, two adjacent thresholds are optimal: <span class="math inline">\(r^*\)</span> and <span class="math inline">\(r^*+1\)</span>. The definition above selects the smaller rejection threshold, consistent with breaking a decision tie in favor of stopping. The boundary case <span class="math inline">\(r=0\)</span> is excluded for <span class="math inline">\(N\ge3\)</span>, because <span class="math inline">\(P_N(1)=H_{N-1}/N&gt;1/N=P_N(0)\)</span>.</p>
 </section>
 <section id="the-asymptotic-1e-rule" class="level2">
 <h2 class="anchored" data-anchor-id="the-asymptotic-1e-rule">11. The asymptotic (1/e) rule</h2>
@@ -899,17 +899,18 @@ G_n,
 </section>
 <section id="connection-with-the-secretary-problem" class="level3">
 <h3 class="anchored" data-anchor-id="connection-with-the-secretary-problem">Connection with the secretary problem</h3>
-<p>At a record time in the secretary problem, the immediate reward is</p>
+<p>For the secretary problem, let <span class="math inline">\(\mathcal F_n=\sigma(R_1,\ldots,R_n)\)</span> be the information available after the first <span class="math inline">\(n\)</span> interviews. Define the <span class="math inline">\(\mathcal F_n\)</span>-measurable reward for selecting the candidate at time <span class="math inline">\(n\)</span> by</p>
 <p><span class="math display">\[
-G_n=U_n=\frac nN.
+G_n=\mathbb P(X_n=1\mid\mathcal F_n)
+=\frac nN\,\mathbf 1_{\{R_n=1\}}.
 \]</span></p>
-<p>The conditional value of continuing is <span class="math inline">\(W_n\)</span>. Therefore, the general backward-induction equation becomes</p>
+<p>Indeed, a non-record cannot be the overall best; when <span class="math inline">\(R_n=1\)</span>, the conditional winning probability is <span class="math inline">\(n/N\)</span>. The independence of the relative ranks ensures that the previous observations do not alter this conditional probability.</p>
+<p>Maximizing the expected conditional reward <span class="math inline">\(G_\tau\)</span> is equivalent to maximizing <span class="math inline">\(\mathbb P(X_\tau=1)\)</span>, by the tower property. In particular, the compulsory-stopping formulation at <span class="math inline">\(N\)</span> has the same optimal success probability as the formulation permitting no selection when no later record appears.</p>
+<p>At a record time <span class="math inline">\(n\)</span>, the conditional reward of stopping is <span class="math inline">\(U_n=n/N\)</span> and the value of continuing is <span class="math inline">\(W_n\)</span>. The Snell-envelope recursion therefore reduces to</p>
 <p><span class="math display">\[
-\boxed{
-V_n=\max\{U_n,W_n\}.
-}
+\boxed{V_n=\max\{U_n,W_n\}}
 \]</span></p>
-<p>This is the value equation used throughout the solution.</p>
+<p>at record times. At non-record times, stopping gives zero, so continuing is optimal whenever additional candidates remain. These are exactly the decisions used in the backward induction above.</p>
 </section>
 </section>
 <section id="references" class="level2">
