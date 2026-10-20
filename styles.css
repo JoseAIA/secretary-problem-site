@@ -64,6 +64,20 @@ body {
   text-decoration: none;
 }
 
+
+.hero-secondary-link,
+.hero-secondary-link:visited {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 1rem;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 650;
+}
+.hero-secondary-link:hover {
+  color: var(--atlas-yellow);
+}
 .hero-button:hover {
   color: white;
   background: var(--atlas-coral);

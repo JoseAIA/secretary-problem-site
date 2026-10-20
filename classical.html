@@ -245,6 +245,19 @@ window.Quarto = {
 <p>The exact finite-sample solution and its asymptotic <strong>37% rule</strong> are derived below; you can also <a href="#interactive-experiment">experiment with the rule</a>.</p>
 </section>
 <div class="atlas-section">
+<section id="the-question-in-plain-language" class="level2">
+<h2 class="anchored" data-anchor-id="the-question-in-plain-language">The question in plain language</h2>
+<p>Suppose you interview 100 candidates in random order. After each interview, you know how that candidate compares with the people you have already met—but not how they compare with candidates you have not seen. You must decide immediately whether to hire them or reject them forever.</p>
+<p><strong>Would you hire a strong early candidate, or wait and risk losing everyone?</strong></p>
+<p>The classical strategy has two phases:</p>
+<ol type="1">
+<li><strong>Observe:</strong> Reject an initial group and note the best candidate in that group.</li>
+<li><strong>Choose:</strong> Hire the first later candidate who is better than everyone interviewed so far. If no such candidate appears, you do not succeed.</li>
+</ol>
+<p>For a large pool of candidates, the best observation period is approximately <strong>37% of the total</strong>. With 100 candidates, that suggests observing about 37 first; the exact best integer cutoff comes from the finite-sample mathematics below.</p>
+<p>This result depends on the assumptions of the model. It is <strong>not</strong> a universal recommendation for real hiring, dating, or investment decisions.</p>
+<p><a href="./simulations.html">Try hiring candidates yourself →</a></p>
+</section>
 <section id="model-and-assumptions" class="level2">
 <h2 class="anchored" data-anchor-id="model-and-assumptions">Model and assumptions</h2>
 <p>There are <span class="math inline">\(n\ge 2\)</span> candidates, ranked absolutely from <span class="math inline">\(1\)</span> (best) to <span class="math inline">\(n\)</span> (worst). The classical <em>no-information</em> model assumes:</p>

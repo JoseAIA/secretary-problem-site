@@ -133,6 +133,13 @@
     "text": "Why should you reject roughly the first 37% of candidates before choosing? The secretary problem is a classical optimal stopping problem: decisions are sequential, rejections are final, and success means selecting the single best candidate.\nThe exact finite-sample solution and its asymptotic 37% rule are derived below; you can also experiment with the rule."
   },
   {
+    "objectID": "classical.html#the-question-in-plain-language",
+    "href": "classical.html#the-question-in-plain-language",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "The question in plain language",
+    "text": "The question in plain language\nSuppose you interview 100 candidates in random order. After each interview, you know how that candidate compares with the people you have already met—but not how they compare with candidates you have not seen. You must decide immediately whether to hire them or reject them forever.\nWould you hire a strong early candidate, or wait and risk losing everyone?\nThe classical strategy has two phases:\n\nObserve: Reject an initial group and note the best candidate in that group.\nChoose: Hire the first later candidate who is better than everyone interviewed so far. If no such candidate appears, you do not succeed.\n\nFor a large pool of candidates, the best observation period is approximately 37% of the total. With 100 candidates, that suggests observing about 37 first; the exact best integer cutoff comes from the finite-sample mathematics below.\nThis result depends on the assumptions of the model. It is not a universal recommendation for real hiring, dating, or investment decisions.\nTry hiring candidates yourself →"
+  },
+  {
     "objectID": "classical.html#model-and-assumptions",
     "href": "classical.html#model-and-assumptions",
     "title": "Classical Secretary Problem: Proof and the 37% Rule",
@@ -298,21 +305,21 @@
     "href": "index.html",
     "title": "The Secretary Problem Site",
     "section": "",
-    "text": "Facultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS)\nExplore the classical secretary problem and the 37% rule through mathematical explanations, exact formulas, interactive simulations, and selected research references.\nExplore the site"
+    "text": "Facultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS)\nImagine interviewing candidates one at a time. You cannot go back to someone you rejected. How can you maximize your chance of choosing the best?\nThe classical secretary problem gives a surprising answer: for a large number of candidates, observe roughly the first 37% without selecting anyone, then choose the next candidate who is better than everyone seen before.\nLearn the classical problem →\nTry the hiring game →"
   },
   {
-    "objectID": "index.html#an-introduction-to-optimal-stopping",
-    "href": "index.html#an-introduction-to-optimal-stopping",
+    "objectID": "index.html#when-is-the-right-moment-to-choose",
+    "href": "index.html#when-is-the-right-moment-to-choose",
     "title": "The Secretary Problem Site",
     "section": "",
-    "text": "Facultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS)\nExplore the classical secretary problem and the 37% rule through mathematical explanations, exact formulas, interactive simulations, and selected research references.\nExplore the site"
+    "text": "Facultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS)\nImagine interviewing candidates one at a time. You cannot go back to someone you rejected. How can you maximize your chance of choosing the best?\nThe classical secretary problem gives a surprising answer: for a large number of candidates, observe roughly the first 37% without selecting anyone, then choose the next candidate who is better than everyone seen before.\nLearn the classical problem →\nTry the hiring game →"
   },
   {
-    "objectID": "index.html#explore-the-project",
-    "href": "index.html#explore-the-project",
+    "objectID": "index.html#start-here",
+    "href": "index.html#start-here",
     "title": "The Secretary Problem Site",
-    "section": "Explore the project",
-    "text": "Explore the project\n\n\nProblem Variants\nExplore the full-information problem, choosing the second best, multiple-choice models, and more.\nExplore variants & extensions →\n\n\nInteractive Simulations\nExplore the secretary problem and compare stopping thresholds with the optimal 37% strategy.\nTry interactive simulations →\n\n\nResearch\nExplore the complete backward-induction derivation and the history of optimal stopping research.\nRead the backward-induction proof →\nExplore the research timeline →\nExplore Google Colab notebooks →"
+    "section": "Start here",
+    "text": "Start here\n\n\n1. Understand the 37% rule\nLearn the simple hiring puzzle, see when the 37% rule applies, and discover why the mathematical answer works.\nStart with the classical problem →\n\n\n2. Try it yourself\nPlay a hiring game, choose when to stop, and compare your strategy with the exact optimal threshold.\nTry interactive simulations →\n\n\n3. Go deeper\nStudy the mathematical proof, investigate other models, and explore the research literature.\nRead the backward-induction proof →\nExplore variants & extensions →\nExplore the research timeline →\nExplore Google Colab notebooks →"
   },
   {
     "objectID": "index.html#about-the-subject",
