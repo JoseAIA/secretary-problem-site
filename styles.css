@@ -1514,3 +1514,31 @@ main mjx-container[display="true"] {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+
+/* Spanish edition: local page navigation supplements the global language link. */
+.spanish-site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem .7rem;
+  padding: .85rem clamp(1rem, 4vw, 3rem);
+  background: #eaf0f8;
+  border-bottom: 1px solid #cfdaea;
+  font-size: .9rem;
+  line-height: 1.7;
+}
+.spanish-site-nav a {
+  color: #173b68;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.spanish-site-nav a:hover {
+  color: #8e401b;
+}
+@media (max-width: 600px) {
+  .spanish-site-nav {
+    gap: .3rem .55rem;
+    font-size: .83rem;
+  }
+}

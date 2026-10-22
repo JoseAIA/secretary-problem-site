@@ -126,74 +126,200 @@
     "text": "References\nThe papers and books listed below support the mathematical explanations, historical timeline, and examples on The Secretary Problem Site.\nThis is a selective bibliography, not an exhaustive account of optimal stopping research. It includes foundational treatments of the classical and full-information secretary problems, multiple-choice and last-success extensions, historical surveys, and general references on optimal stopping.\nThe Timeline presents the historical setting of several of these papers. The Variants page describes the mathematical questions they address.\n\n\n\n\n\nReferences\n\nBayón, L., P. Fortuny Ayuso, J. M. Grau, A. M. Oller-Marcén, and M. M. Ruiz. 2018. “The Best-or-Worst and the Postdoc Problems.” Journal of Combinatorial Optimization 35 (3). https://doi.org/10.1007/s10878-017-0203-4.\n\n\nBruss, F. Thomas. 1984. “A Unified Approach to a Class of Best Choice Problems with an Unknown Number of Options.” The Annals of Probability 12 (3). https://doi.org/10.1214/aop/1176993237.\n\n\n———. 2000. “Sum the Odds to One and Stop.” The Annals of Probability 28 (3): 1384–91. https://doi.org/10.1214/aop/1019160340.\n\n\nChow, Y. S., S. Moriguti, H. Robbins, and S. M. Samuels. 1964. “Optimum Selection Based on Relative Rank (the Secretary Problem).” Israel Journal of Mathematics 2: 81–90. https://doi.org/10.1007/BF02759948.\n\n\nChow, Yuan Shih, Herbert Robbins, and David Siegmund. 1971. Great Expectations: The Theory of Optimal Stopping. Boston: Houghton Mifflin.\n\n\nFerguson, Thomas S. 1989. “Who Solved the Secretary Problem?” Statistical Science 4 (3): 282–89. https://doi.org/10.1214/ss/1177012493.\n\n\n———. 2010. “Optimal Stopping and Applications.” https://www.math.ucla.edu/~tom/Stopping/Contents.html.\n\n\nFreeman, P. R. 1983. “The Secretary Problem and Its Extensions: A Review.” International Statistical Review 51 (2): 189–206. https://doi.org/10.2307/1402748.\n\n\nGardner, Martin. 1960. “Mathematical Games: A Fifth Collection of Brain-Teasers.” Scientific American 202 (2). https://doi.org/10.1038/scientificamerican0260-150.\n\n\nGilbert, John P., and Frederick Mosteller. 1966. “Recognizing the Maximum of a Sequence.” Journal of the American Statistical Association 61 (313): 35–73. https://doi.org/10.1080/01621459.1966.10502008.\n\n\nGlass, Darren. 2012. “The Secretary Problem from the Applicant’s Point of View.” The College Mathematics Journal 43 (1): 76–81. https://doi.org/10.4169/college.math.j.43.1.076.\n\n\nIslas, José Ángel. 2026. “Convergence of the Critical Probabilities for Stopping Near the Top of a Random Walk.” https://arxiv.org/abs/2610.26670.\n\n\nKleinberg, Robert. 2005. “A Multiple-Choice Secretary Problem with Applications to Online Auctions.” In Proceedings of the 16th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), 630–31. https://doi.org/10.1145/1070432.1070519.\n\n\nLindley, D. V. 1961. “Dynamic Programming and Decision Theory.” Journal of the Royal Statistical Society. Series C (Applied Statistics) 10 (1): 39–51. https://doi.org/10.2307/2985407.\n\n\nSakaguchi, Minoru. 1961. “Dynamic Programming of Some Sequential Sampling Design.” Journal of Mathematical Analysis and Applications 2 (3): 446–66. https://doi.org/10.1016/0022-247X(61)90023-3.\n\n\n———. 1978. “Dowry Problems and OLA Policies.” Reports of Statistical Application Research, Japanese Union of Scientists and Engineers 25: 124–28.\n\n\nShiryaev, Albert N. 2007. Optimal Stopping Rules. Vol. 8. Stochastic Modelling and Applied Probability. Berlin; Heidelberg: Springer. https://doi.org/10.1007/978-3-540-74011-7.\n\n\nTamaki, Mitsushi. 1979a. “A Secretary Problem with Double Choices.” Journal of the Operations Research Society of Japan 22 (4): 257–65. https://doi.org/10.15807/jorsj.22.257.\n\n\n———. 1979b. “Recognizing Both the Maximum and the Second Maximum of a Sequence.” Journal of Applied Probability 16 (4): 803–12. https://doi.org/10.2307/3213146."
   },
   {
-    "objectID": "classical.html",
-    "href": "classical.html",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "objectID": "es/variants.html",
+    "href": "es/variants.html",
+    "title": "Variantes y extensiones del problema de la secretaria",
     "section": "",
-    "text": "Why should you reject roughly the first 37% of candidates before choosing? The secretary problem is a classical optimal stopping problem: decisions are sequential, rejections are final, and success means selecting the single best candidate.\nThe exact finite-sample solution and its asymptotic 37% rule are derived below; you can also experiment with the rule."
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio"
   },
   {
-    "objectID": "classical.html#the-question-in-plain-language",
-    "href": "classical.html#the-question-in-plain-language",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "The question in plain language",
-    "text": "The question in plain language\nSuppose you interview 100 candidates in random order. After each interview, you know how that candidate compares with the people you have already met—but not how they compare with candidates you have not seen. You must decide immediately whether to hire them or reject them forever.\nWould you hire a strong early candidate, or wait and risk losing everyone?\nThe classical strategy has two phases:\n\nObserve: Reject an initial group and note the best candidate in that group.\nChoose: Hire the first later candidate who is better than everyone interviewed so far. If no such candidate appears, you do not succeed.\n\nFor a large pool of candidates, the best observation period is approximately 37% of the total. With 100 candidates, that suggests observing about 37 first; the exact best integer cutoff comes from the finite-sample mathematics below.\nThis result depends on the assumptions of the model. It is not a universal recommendation for real hiring, dating, or investment decisions.\nTry hiring candidates yourself →"
+    "objectID": "es/variants.html#el-modelo-clásico-como-referencia",
+    "href": "es/variants.html#el-modelo-clásico-como-referencia",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "El modelo clásico como referencia",
+    "text": "El modelo clásico como referencia\nTenemos \\(n\\) aspirantes cuyos rangos absolutos forman una permutación uniformemente aleatoria de\n\\[\n1,2,\\ldots,n,\n\\]\ndonde el rango \\(1\\) corresponde al mejor. Denotemos por \\(X_k\\) el rango absoluto del aspirante que ocupa la posición \\(k\\) y por \\(R_k\\) su rango relativo entre los primeros \\(k\\) aspirantes.\nLos aspirantes se observan sucesivamente. En el instante \\(k\\) solo se conoce el rango relativo del aspirante entre los primeros \\(k\\). Las decisiones son irrevocables y solo se permite una selección.\nEl objetivo es\n\\[\n\\max_{\\tau}\\Pr(X_\\tau=1).\n\\]\nPara un umbral \\(1\\le r&lt;n\\), se rechaza a los primeros \\(r\\) aspirantes y luego se acepta al primer aspirante que establezca un récord. La probabilidad de éxito es\n\\[\nP_n(r)\n=\n\\frac{r}{n}\n\\sum_{j=r+1}^{n}\\frac{1}{j-1}.\n\\]\nSi \\(r=0\\), se selecciona inmediatamente al primer aspirante y \\(P_n(0)=1/n\\).\nCuando \\(n\\to\\infty\\), una elección de umbral óptimo \\(r_n^\\star\\) satisface\n\\[\n\\frac{r_n^\\star}{n}\\to \\frac1e,\n\\]\ny la probabilidad óptima de éxito también converge a \\(1/e\\).\nLas siguientes extensiones se organizan según qué componente del modelo clásico se modifica."
   },
   {
-    "objectID": "classical.html#model-and-assumptions",
-    "href": "classical.html#model-and-assumptions",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Model and assumptions",
-    "text": "Model and assumptions\nThere are \\(n\\ge 2\\) candidates, ranked absolutely from \\(1\\) (best) to \\(n\\) (worst). The classical no-information model assumes:\n\nThe candidates arrive in a uniformly random order (all \\(n!\\) orders are equally likely).\nYou observe only each candidate’s relative rank among those seen so far, not their absolute rank.\nYou may accept at most one candidate. Every rejection is irrevocable.\nYour objective is to maximize the probability of choosing the single overall best candidate.\n\nA candidate is a record if they are better than all candidates seen before. Since a nonrecord cannot be the overall best, there is no benefit to selecting one when the objective is the overall best."
+    "objectID": "es/variants.html#problema-de-la-secretaria-con-información-completa",
+    "href": "es/variants.html#problema-de-la-secretaria-con-información-completa",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "1. Problema de la secretaria con información completa",
+    "text": "1. Problema de la secretaria con información completa\n\nPlanteamiento\nEn lugar de observar únicamente los rangos relativos, supongamos que se conocen sucesivamente los valores numéricos\n\\[\nY_1,\\ldots,Y_n\\overset{\\mathrm{iid}}{\\sim}F\n\\]\ndonde \\(F\\) es una distribución continua conocida. Aquí \\(Y_k\\) es el valor observado, no el rango absoluto \\(X_k\\) del modelo clásico.\nEl objetivo es to maximize\n\\[\n\\Pr\\!\\left(Y_\\tau=\\max_{1\\le j\\le n}Y_j\\right).\n\\]\n\n\n¿Qué cambia?\nEl valor numérico de la observación actual contiene información sobre la posibilidad de que futuras observaciones la superen.\nPor eso la decisión óptima depende tanto de si la observación actual establece un récord como de su magnitud.\n\n\nEstructura de la estrategia óptima\nMediante la transformación integral de probabilidad,\n\\[\nU_i=F(Y_i),\n\\]\nel problema se reduce a observaciones independientes \\(U(0,1)\\).\nLa regla óptima se describe mediante valores críticos dependientes del tiempo: un récord se acepta únicamente si su valor es suficientemente grande en relación con el número de observaciones restantes.\n\n\nExperimento interactivo: primera decisión (observaciones uniformes)\nPara obtener decisiones de parada exactas y verificables, el experimento utiliza \\(Y_1,\\ldots,Y_n\\overset{\\mathrm{iid}}{\\sim}U(0,1)\\) con \\(n=2\\) o \\(n=3\\). Después de observar el primer valor \\(x\\), aceptarlo produce una probabilidad de éxito \\(x^{n-1}\\).\nSi se rechaza ese valor y después se actúa óptimamente, la probabilidad es\n\\[\nC_2(x)=1-x,\n\\]\ny\n\\[\nC_3(x)=\n\\begin{cases}\n\\frac34-\\frac{x^2}{2},&0\\le x\\le\\frac12,\\\\\n\\frac12+x-\\frac{3x^2}{2},&\\frac12&lt;x\\le1.\n\\end{cases}\n\\]\nSi \\(n=3\\) y se rechaza \\(x\\), la segunda observación \\(y\\) debe aceptarse solo si establece un récord y \\(y\\ge 1/2\\). En otro caso, la última observación se elige únicamente cuando establece un nuevo récord. Al integrar sobre la segunda observación se obtiene la expresión anterior para \\(C_3(x)\\).\nAsí, los umbrales de aceptación de la primera observación son \\(1/2\\) para \\(n=2\\) y \\((1+\\sqrt6)/5\\approx0.68990\\) para \\(n=3\\). Se trata de umbrales de la primera etapa, no de la regla para un horizonte arbitrario.\n\n\n  Información completa: ¿seleccionar o continuar?\n  \n    Número de observaciones (n): 3\n    \n    Primer valor observado (x): 0.70\n    \n  \n  \n    Aceptar ahora \n    Continuar óptimamente \n  \n  Umbral de la primera etapa: \n  \n  \n  Supuestos: observaciones uniformes (0,1), independientes, idénticamente distribuidas y continuas. Se usan fórmulas analíticas exactas; los porcentajes se muestran redondeados.\n\n\n\n\n\nRelación con el modelo clásico\nAmbos problemas buscan seleccionar el máximo de toda la secuencia.\nLa diferencia radica en la información:\n\ninformación relativa: solo se observan los rangos relativos;\ninformación completa: se observan los valores numéricos.\n\nGilbert y Mosteller desarrollaron el análisis fundamental de ambos modelos (Gilbert y Mosteller (1966))."
   },
   {
-    "objectID": "classical.html#the-threshold-strategy",
-    "href": "classical.html#the-threshold-strategy",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "The threshold strategy",
-    "text": "The threshold strategy\nFix an integer \\(r\\) with \\(0\\le r&lt;n\\):\n\nReject the first \\(r\\) candidates, observing their relative ranks.\nStarting at position \\(r+1\\), accept the first record (a candidate better than every earlier candidate).\nIf there is no subsequent record, no candidate is selected and the attempt fails. (Requiring a selection at the final interview would not change the probability of selecting the overall best.)\n\nFor \\(r=0\\), the rule accepts the first candidate immediately. This convention is used in the interactive simulation below.\nThe classical theorem establishes that a threshold rule is optimal among all stopping rules based on relative ranks, not merely the best rule within a preselected class of thresholds. A backward-induction proof of this optimal-policy structure is provided on the Backward Induction page."
+    "objectID": "es/variants.html#el-problema-del-posdoctorado-seleccionar-al-segundo-mejor",
+    "href": "es/variants.html#el-problema-del-posdoctorado-seleccionar-al-segundo-mejor",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "2. El problema del posdoctorado: seleccionar al segundo mejor",
+    "text": "2. El problema del posdoctorado: seleccionar al segundo mejor\n\nPlanteamiento\nCambiemos el objetivo de seleccionar al aspirante de rango absoluto \\(1\\) por el de seleccionar al de rango absoluto \\(2\\):\n\\[\n\\max_{\\tau}\\Pr(X_\\tau=2).\n\\]\nEl orden sigue siendo uniformemente aleatorio, las decisiones continúan siendo irrevocables y solo se observan rangos relativos.\n\n\n¿Qué cambia?\nUn aspirante que establece un récord ya no es el único que puede ser seleccionado: alguien con rango relativo \\(2\\) también puede ser el segundo mejor de toda la secuencia. Los rangos relativos \\(a\\ge3\\) tienen probabilidad inmediata de éxito igual a cero. Cambiar el objetivo modifica las decisiones óptimas, aunque se conserve la misma información.\n\n\nDecisión interactiva del posdoctorado (inducción hacia atrás exacta)\nCondicionado a observar el rango relativo \\(a\\) en la posición \\(k\\), la probabilidad de que el aspirante tenga rango absoluto \\(2\\) es\n\\[\ng_{n,k}(a)=\n\\begin{cases}\n\\dfrac{k(n-k)}{n(n-1)},&a=1,\\\\[4pt]\n\\dfrac{k(k-1)}{n(n-1)},&a=2,\\\\[4pt]\n0,&a\\ge3.\n\\end{cases}\n\\]\nLos rangos relativos son independientes y \\(R_k\\) es uniforme en \\(\\{1,\\ldots,k\\}\\). Sea \\(V_{n+1}=0\\) y denotemos por \\(V_k\\) la probabilidad máxima de seleccionar al aspirante de rango absoluto \\(2\\), antes de observar \\(R_k\\). Entonces\n\\[\nV_k=\\frac1k\\sum_{a=1}^k\\max\\{g_{n,k}(a),V_{k+1}\\},\n\\qquad k=n,n-1,\\ldots,1.\n\\]\nEn la posición \\(k\\) se selecciona si \\(g_{n,k}(a)\\ge V_{k+1}\\) y esa probabilidad es positiva; en otro caso se continúa. En caso de empate en cero, el experimento muestra «continuar». La programación dinámica optimiza entre todas las decisiones admisibles basadas en los rangos relativos observados.\n\n\n  Problema del posdoctorado: seleccionar el rango 2\n  \n    Aspirantes (n): 10\n    \n    Posición actual (k): 5\n    \n    Rango relativo observado (a): 2\n    \n  \n  \n    Seleccionar ahora \n    Continuar óptimamente \n  \n  Probabilidad óptima de éxito antes de entrevistar al primer aspirante: \n  \n  \n  Supuestos: orden uniformemente aleatorio, solo rangos relativos y una selección irrevocable. Los cálculos usan la recursión exacta de Bellman y muestran porcentajes redondeados.\n\n\n\n\n\nRelación con el modelo clásico\nLa estructura de información es la misma; solo cambia la recompensa:\n\\[\n\\mathbf 1_{\\{X_\\tau=1\\}}\n\\quad\\longrightarrow\\quad\n\\mathbf 1_{\\{X_\\tau=2\\}}.\n\\]\nEsto ilustra cómo cambia la regla óptima al modificar el rango objetivo. Para un análisis adicional del problema del posdoctorado y su relación con la selección del mejor o el peor, véase Bayón et al. (2018)."
   },
   {
-    "objectID": "classical.html#exact-success-probability-a-finite-n-derivation",
-    "href": "classical.html#exact-success-probability-a-finite-n-derivation",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Exact success probability: a finite-\\(n\\) derivation",
-    "text": "Exact success probability: a finite-\\(n\\) derivation\nLet \\(P_n(r)\\) denote the probability that the threshold-\\(r\\) strategy selects absolute rank \\(1\\).\nProposition. For \\(1\\le r&lt;n\\),\n\\[\n\\boxed{\nP_n(r)=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}\n=\\frac{r}{n}\\left(H_{n-1}-H_{r-1}\\right),\n}\n\\]\nwhere \\(H_m=\\sum_{j=1}^m 1/j\\) for \\(m\\ge1\\) and \\(H_0=0\\). For \\(r=0\\), \\(P_n(0)=1/n\\).\nProof. Write \\(K\\) for the arrival position of the overall best candidate. Uniform random order gives\n\\[\n\\Pr(K=k)=\\frac1n,\\qquad k=1,\\ldots,n.\n\\]\nIf \\(K\\le r\\), that candidate is rejected, so success is impossible. If \\(K=k&gt;r\\), the strategy selects the overall best precisely when the best candidate among the first \\(k-1\\) arrivals occurred during the initial \\(r\\) positions. Otherwise, a record after position \\(r\\) would have triggered selection earlier.\nConditionally on \\(K=k\\), each of the first \\(k-1\\) positions is equally likely to hold the best among those first \\(k-1\\) candidates. Thus\n\\[\n\\Pr(\\text{success}\\mid K=k)=\\frac{r}{k-1},\\qquad k&gt;r.\n\\]\nSumming over the possible positions of the overall best gives\n\\[\nP_n(r)\n=\\sum_{k=r+1}^{n}\\Pr(K=k)\\Pr(\\text{success}\\mid K=k)\n=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}.\n\\]\nIf \\(r=0\\), the first candidate is accepted, which is the overall best with probability \\(1/n\\). \\(\\square\\)"
+    "objectID": "es/variants.html#problemas-de-elecciones-múltiples-y-de-dote",
+    "href": "es/variants.html#problemas-de-elecciones-múltiples-y-de-dote",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "3. Problemas de elecciones múltiples y de dote",
+    "text": "3. Problemas de elecciones múltiples y de dote\n\nPlanteamiento\nSupongamos que se permite realizar más de una selección.\nCon \\(m\\) elecciones disponibles, se eligen tiempos de parada\n\\[\n\\tau_1&lt;\\tau_2&lt;\\cdots&lt;\\tau_m.\n\\]\nEl evento de éxito depende del modelo: por ejemplo, se puede exigir que alguna observación seleccionada sea la mejor o que se seleccionen varios de los rangos superiores.\n\n\nContribución de Sakaguchi\nEl trabajo de Sakaguchi es un antecedente importante de esta rama de la literatura.\nSu artículo de 1978, Dowry Problems and OLA Policies (Sakaguchi (1978)), estudió reglas de parada de tipo secretaria bajo una formulación de problemas de dote y contribuyó al desarrollo de extensiones con paradas múltiples.\nSakaguchi también estudió modelos generalizados con empleo incierto, mostrando que modificar el mecanismo de selección puede generar nuevas estructuras de parada óptima.\n\n\nProblemas de dos elecciones de Tamaki\nPosteriormente, Tamaki analizó problemas de secretaria con dos elecciones.\nEn una formulación se permiten dos elecciones y se tiene éxito si alguna de ellas es el mejor o el segundo mejor aspirante (Tamaki (1979a)). En otra, el objetivo es seleccionar tanto al máximo como al segundo máximo (Tamaki (1979b)).\nEstos modelos muestran por qué las elecciones múltiples requieren un estado con más información que el problema clásico de una sola elección.\n\n\nEstructura de programación dinámica\nSi en el instante \\(k\\) quedan \\(j\\) elecciones, el estado debe registrar la información observada y el número de selecciones restantes.\nEsquemáticamente,\n\\[\nV_{k,j}(s)\n=\n\\max\\{\n\\text{value of selecting now},\n\\text{value of continuing}\n\\}.\n\\]\nSeleccionar ahora disminuye de \\(j\\) a \\(j-1\\) el número de elecciones restantes.\n\n\nRelación con el modelo clásico\nSe recupera el problema clásico cuando\n\\[\nm=1.\n\\]\nPor tanto, los modelos de elecciones múltiples agregan una variable de recursos: el número de elecciones disponibles."
   },
   {
-    "objectID": "classical.html#which-threshold-is-optimal-for-a-given-n",
-    "href": "classical.html#which-threshold-is-optimal-for-a-given-n",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Which threshold is optimal for a given \\(n\\)?",
-    "text": "Which threshold is optimal for a given \\(n\\)?\nFinite-\\(n\\) criterion. For \\(1\\le r&lt;n-1\\),\n\\[\n\\boxed{\nP_n(r+1)-P_n(r)\n=\\frac1n\\left(\\sum_{j=r+1}^{n-1}\\frac1j-1\\right).\n}\n\\]\nTo see this, subtract the two formulas:\n\\[\n\\begin{aligned}\nnP_n(r+1)&=(r+1)\\sum_{j=r+1}^{n-1}\\frac1j,\\\\\nnP_n(r)&=1+r\\sum_{j=r+1}^{n-1}\\frac1j.\n\\end{aligned}\n\\]\nThe sum in the difference decreases strictly as \\(r\\) increases. Consequently, the threshold probabilities increase while the sum exceeds \\(1\\), are equal at adjacent thresholds if the sum equals \\(1\\), and decrease once the sum falls below \\(1\\).\nThe boundary case \\(r=0\\) must be considered separately: for \\(n\\ge3\\), \\(P_n(1)=H_{n-1}/n&gt;1/n=P_n(0)\\), whereas for \\(n=2\\) the two probabilities are equal. Thus, for \\(n\\ge3\\), the smallest optimal threshold is\n\\[\n\\boxed{\nr_n^\\star=\\min\\left\\{r\\in\\{1,\\ldots,n-1\\}:\n\\sum_{j=r+1}^{n-1}\\frac1j\\le1\\right\\}.\n}\n\\]\nAn empty sum is \\(0\\). If the sum equals \\(1\\) at the transition and \\(r_n^\\star&lt;n-1\\), the adjacent threshold \\(r_n^\\star+1\\) is also optimal. For \\(n=2\\), both \\(r=0\\) and \\(r=1\\) have success probability \\(1/2\\).\nFor example, with \\(n=10\\), the optimal threshold is \\(r^\\star=3\\), and\n\\[\nP_{10}(3)=\\frac3{10}\\left(\\frac13+\\frac14+\\cdots+\\frac19\\right)\\approx0.39869.\n\\]\nThis exact threshold need not equal the integer obtained by simply rounding \\(n/e\\)."
+    "objectID": "es/variants.html#horizonte-desconocido-o-aleatorio",
+    "href": "es/variants.html#horizonte-desconocido-o-aleatorio",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "4. Horizonte desconocido o aleatorio",
+    "text": "4. Horizonte desconocido o aleatorio\n\nPlanteamiento\nEl modelo clásico supone conocido el número total \\(n\\) de observaciones.\nSupongamos, en cambio, que el número de observaciones es una variable aleatoria\n\\[\nN.\n\\]\nLa distribución de \\(N\\) puede conocerse, aunque su valor realizado sea desconocido.\n\n\n¿Qué cambia?\nCon un horizonte fijo se sabe cuántas observaciones quedan.\nCon un horizonte aleatorio, el valor de continuación debe incorporar la probabilidad de que la secuencia termine.\nLos valores de continuación dependen tanto de la información observada como de la distribución condicional del horizonte restante.\n\n\nRelación con el fenómeno \\(1/e\\)\nEl umbral clásico \\(1/e\\) no es universal para horizontes aleatorios. En el modelo de tiempo continuo del enfoque unificado de Bruss (1984), una ley \\(1/e\\) se cumple bajo supuestos específicos de independencia condicional. Una distribución a priori arbitraria del horizonte desconocido \\(N\\) no necesariamente produce la misma regla óptima ni la misma probabilidad de éxito (Bruss (1984))."
   },
   {
-    "objectID": "classical.html#why-the-37-rule-appears",
-    "href": "classical.html#why-the-37-rule-appears",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Why the 37% rule appears",
-    "text": "Why the 37% rule appears\nSuppose \\(n\\) grows and \\(r/n\\to x\\in(0,1)\\). The harmonic sum satisfies\n\\[\n\\sum_{j=r}^{n-1}\\frac1j\n=\\log\\left(\\frac nr\\right)+o(1),\n\\]\nso\n\\[\nP_n(r)=\\frac rn\\sum_{j=r}^{n-1}\\frac1j\n\\longrightarrow -x\\log x.\n\\]\nDifferentiating yields\n\\[\n\\frac{d}{dx}[-x\\log x]=-\\log x-1.\n\\]\nThis vanishes at \\(x=e^{-1}\\), where the second derivative \\(-1/x\\) is negative. The finite-\\(n\\) optimality criterion above also implies that \\(r_n^\\star/n\\to 1/e\\). Therefore,\n\\[\n\\boxed{\n\\frac{r_n^\\star}{n}\\longrightarrow\\frac1e,\n\\qquad\nP_n(r_n^\\star)\\longrightarrow\\frac1e\n\\approx 0.367879.\n}\n\\]\nInterpretation: for a large pool, reject about 36.8% of candidates, then accept the next record. The limiting probability of choosing the best is also about 36.8%. These are two distinct quantities that happen to share the same limit; for a fixed finite \\(n\\), they generally differ."
+    "objectID": "es/variants.html#problemas-del-último-éxito-y-teorema-de-las-razones",
+    "href": "es/variants.html#problemas-del-último-éxito-y-teorema-de-las-razones",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "5. Problemas del último éxito y teorema de las razones",
+    "text": "5. Problemas del último éxito y teorema de las razones\n\nPlanteamiento\nSean\n\\[\nI_1,\\ldots,I_n\n\\]\nvariables aleatorias de Bernoulli independientes, con\n\\[\n\\Pr(I_k=1)=p_k,\\qquad 0\\le p_k&lt;1.\n\\]\nEl objetivo es detenerse en un índice \\(\\tau\\) tal que \\(I_\\tau=1\\) y no aparezcan éxitos posteriores. Si no hay éxitos, el intento fracasa. Se supone que cada decisión depende solo de las observaciones realizadas hasta el instante actual.\nDefinimos\n\\[\nq_k=1-p_k&gt;0,\n\\qquad\nr_k=\\frac{p_k}{q_k}.\n\\]\nRegla de la suma de las razones (Bruss, 2000). Definimos\n\\[\ns=\\max\\left(\\{1\\}\\cup\\left\\{k\\in\\{1,\\ldots,n\\}:\\sum_{j=k}^{n}r_j\\ge1\\right\\}\\right).\n\\]\nSe rechazan las observaciones anteriores a \\(s\\) y se elige el primer éxito \\(I_k=1\\) con \\(k\\ge s\\). Si no hay éxitos después de \\(s\\), el intento fracasa. Si la suma total de las razones es menor que \\(1\\), esta convención da \\(s=1\\). Esta regla maximiza la probabilidad de detenerse en el último éxito entre todos los tiempos de parada admisibles del modelo. Véase Bruss (2000).\n\n\nRelación con los problemas de la secretaria\nEl teorema de las razones no es, en sí mismo, el problema clásico de la secretaria.\nForma parte de una familia más amplia de parada óptima: se debe decidir sin saber si un evento futuro superará al actual.\n\n\n\n\nExperimento interactivo: suma de las razones\nModifica las probabilidades de éxito de cuatro ensayos de Bernoulli independientes. La página calcula la probabilidad exacta de detenerse en el último éxito para cada posición inicial y destaca la posición prescrita por el teorema de Bruss. Se ignoran los éxitos anteriores a esa posición y se acepta el primero posterior.\n\n  \n    Probabilidad p₁: 0.20\n    \n    Probabilidad p₂: 0.50\n    \n    Probabilidad p₃: 0.30\n    \n    Probabilidad p₄: 0.40\n    \n  \n  \n    Inicio óptimo —\n    Probabilidad exacta de éxito —\n  \n  \n  Esta demostración corresponde al último éxito, no a seleccionar al mejor aspirante del problema clásico. Las probabilidades son estrictamente menores que 1."
   },
   {
-    "objectID": "classical.html#interactive-optimal-threshold-explorer",
-    "href": "classical.html#interactive-optimal-threshold-explorer",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Interactive optimal threshold explorer",
-    "text": "Interactive optimal threshold explorer\nExplore the exact, finite-(n) probability curve for every rejection threshold. Choose (n), move the threshold (r), and compare your choice to the smallest optimal threshold. The graph uses the harmonic-sum formula—not Monte Carlo simulation.\n\n  \n    Number of candidates 30\n    \n    Reject the first 11\n    \n  \n  \n    Your exact probability \n    Smallest optimal threshold \n  \n  \n  \n  Choose optimal threshold\n  Blue: exact probability · Orange: your threshold · Green: optimal threshold. For finite \\(n\\), ties are resolved by choosing the smallest maximizing threshold."
+    "objectID": "es/variants.html#el-problema-desde-la-perspectiva-del-aspirante",
+    "href": "es/variants.html#el-problema-desde-la-perspectiva-del-aspirante",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "6. El problema desde la perspectiva del aspirante",
+    "text": "6. El problema desde la perspectiva del aspirante\n\nPlanteamiento\nEl problema clásico se formula desde la perspectiva del empleador:\n\n¿Cuándo debería detenerse el empleador?\n\nGlass (2012) estudió el problema desde la perspectiva del aspirante (Glass (2012)).\nSupongamos que el empleador sigue una regla de parada conocida y que un aspirante puede elegir su posición de entrevista \\(i\\).\nEl aspirante busca maximizar\n\\[\n\\Pr(\\text{selected}\\mid\\text{position }i).\n\\]\n\n\n¿Qué cambia?\nLa variable de decisión del aspirante es la posición de entrevista \\(i\\), no el tiempo de parada \\(\\tau\\) del empleador. La regla del empleador se considera fija al elegir la posición.\n\n\nRango propio conocido\nSi el aspirante conoce su rango absoluto, la posición óptima puede depender considerablemente de ese rango.\nAsí surge un problema de posicionamiento estratégico basado en una regla de parada clásica."
   },
   {
-    "objectID": "classical.html#explore-further",
-    "href": "classical.html#explore-further",
-    "title": "Classical Secretary Problem: Proof and the 37% Rule",
-    "section": "Explore further",
-    "text": "Explore further\n\nBackward induction: why a threshold strategy is optimal among all admissible stopping rules.\nInteractive simulations: explore stopping decisions and compare empirical success rates with exact probabilities.\nVariants and extensions: what changes when there is full information, a different target rank, or multiple selections.\nResearch timeline and references: foundational work and later developments.\n\nThe classical analysis appears in Gilbert and Mosteller (1966) and the survey Freeman (1983); historical context is given by Ferguson (1989)."
+    "objectID": "es/variants.html#rango-propio-incierto",
+    "href": "es/variants.html#rango-propio-incierto",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "7. Rango propio incierto",
+    "text": "7. Rango propio incierto\nSupongamos que el aspirante desconoce su rango absoluto.\nLet\n\\[\nJ\\in\\{1,\\ldots,n\\}\n\\]\nel rango absoluto aleatorio del aspirante, distinto de los rangos relativos observados \\(R_k\\), con una distribución a priori. Suponemos que el empleador sigue una regla de parada determinada. Por ejemplo, una distribución geométrica truncada viene dada por\n\\[\n\\Pr(J=j)\n=\n\\frac{(1-q)q^{j-1}}{1-q^n},\n\\qquad 0&lt;q&lt;1.\n\\]\nEl valor para el aspirante de elegir la posición \\(i\\) es\n\\[\nV(i)\n=\n\\sum_{j=1}^{n}\n\\Pr(J=j)\n\\Pr(\\text{selected}\\mid J=j,\\text{position }i).\n\\]\nDe este modo, elegir la posición de entrevista se convierte en un problema bayesiano de decisión bajo la regla de parada del empleador."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About The Secretary Problem Site",
+    "objectID": "es/variants.html#comparación-de-las-principales-variantes",
+    "href": "es/variants.html#comparación-de-las-principales-variantes",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "Comparación de las principales variantes",
+    "text": "Comparación de las principales variantes\n\n\n\n\n\n\n\n\n\nVariante\nInformación\nObjetivo\nDecisión\n\n\n\n\nSecretaria clásica\nRangos relativos\nSeleccionar el rango \\(1\\)\nUn tiempo de parada\n\n\nInformación completa\nValores numéricos\nSeleccionar el máximo\nUn tiempo de parada\n\n\nPosdoctorado\nRangos relativos\nSeleccionar el rango \\(2\\)\nUn tiempo de parada\n\n\nElecciones múltiples / dote\nRangos relativos\nAlcanzar el objetivo con varias elecciones\nVarios tiempos de parada\n\n\nHorizonte aleatorio\nRangos relativos o eventos\nMejor elección con \\(N\\) incierto\nTiempo de parada\n\n\nTeorema de las razones\nÉxitos de Bernoulli\nDetenerse en el último éxito\nTiempo de parada\n\n\nPerspectiva del aspirante\nRegla del empleador + rango propio\nSer seleccionado\nPosición de entrevista\n\n\nRango propio incierto\nDistribución a priori del rango propio\nSer seleccionado\nPosición de entrevista"
+  },
+  {
+    "objectID": "es/variants.html#mapa-de-la-familia-de-problemas-de-la-secretaria",
+    "href": "es/variants.html#mapa-de-la-familia-de-problemas-de-la-secretaria",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "Mapa de la familia de problemas de la secretaria",
+    "text": "Mapa de la familia de problemas de la secretaria\nLas principales extensiones se clasifican según el componente del modelo clásico que se modifica.\n\n\n  \n    Problema de la secretaria\n  \n\n  \n\n    \n      Información\n      Rangos relativos\n      Valores completos\n      Información parcial\n      Rango propio incierto\n    \n\n    \n      Objetivo\n      Mejor aspirante\n      Segundo mejor\n      Top k\n      Último éxito\n    \n\n    \n      Estructura de elecciones\n      Una elección\n      Elecciones múltiples\n      Problemas de dote\n      Posicionamiento estratégico\n    \n\n    \n      Horizonte\n      Fijo\n      Aleatorio\n      Desconocido\n    \n\n  \n\n\nUna forma de construir nuevos problemas de la secretaria consiste en modificar uno o varios componentes del modelo clásico:\n\n  Information\n  +\n  Objective\n  +\n  Choice structure\n  +\n  Horizon\n\nCada modificación puede producir un problema de parada óptima distinto."
+  },
+  {
+    "objectID": "es/variants.html#cómo-continuar",
+    "href": "es/variants.html#cómo-continuar",
+    "title": "Variantes y extensiones del problema de la secretaria",
+    "section": "Cómo continuar",
+    "text": "Cómo continuar\nEste sitio presenta los temas desde varios puntos de vista complementarios.\n\nInducción hacia atrás muestra cómo resolver problemas con horizonte finito, estado por estado.\nSimulaciones permite experimentar con estrategias de umbral.\nCronología presenta los desarrollos más importantes en su contexto histórico.\nRecursos ofrece ejemplos y ejercicios en Python para las variantes interactivas.\n\nVersión en inglés"
+  },
+  {
+    "objectID": "es/simulations.html",
+    "href": "es/simulations.html",
+    "title": "Simulaciones del problema de la secretaria",
     "section": "",
-    "text": "The Secretary Problem Site is a personal educational website created by José Ángel Islas Anguiano, a mathematician at Facultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS). It presents the classical secretary problem and selected optimal-stopping variations for students and readers interested in mathematics.\nThe site includes mathematical explanations, derivations, interactive simulations, references, and Google Colab notebooks. The materials can be accessed without registration or payment."
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio\nVersión en inglés"
+  },
+  {
+    "objectID": "es/simulations.html#explora-una-selección",
+    "href": "es/simulations.html#explora-una-selección",
+    "title": "Simulaciones del problema de la secretaria",
+    "section": "Explora una selección",
+    "text": "Explora una selección\nObservarás a los aspirantes uno por uno. Cuanto menor sea el rango relativo, mejor será el aspirante; el rango relativo (1) indica que es el mejor de los observados hasta ese momento.\nLos rangos absolutos permanecen ocultos mientras decides. Al terminar el juego, se muestra la secuencia completa. Si modificas el número de aspirantes, el cambio se aplicará al siguiente juego, no al actual.\n\n  \n    \n      EXPLORAR\n      ¿Puedes contratar al mejor aspirante?\n      \n        Decide si rechazar o contratar a cada aspirante utilizando únicamente la\n        información disponible en ese momento.\n      \n    \n\n    \n      Nuevo juego\n    \n  \n\n  \n    \n      Aspirantes en el próximo juego:\n      10\n    \n\n    \n  \n\n  \n    Aspirante\n    \n      1\n      /\n      10\n    \n  \n\n  \n    RANGO RELATIVO\n    1\n    \n      Este aspirante es el mejor de los observados hasta ahora.\n    \n  \n\n  \n    \n      Rechazar\n    \n\n    \n      Contratar\n    \n  \n\n  \n    Rangos relativos observados\n    \n  \n\n  \n\n  \n    Secuencia completa de rangos absolutos\n    El rango absoluto \\(1\\) corresponde al mejor de todos."
+  },
+  {
+    "objectID": "es/simulations.html#simula-una-estrategia-de-umbral",
+    "href": "es/simulations.html#simula-una-estrategia-de-umbral",
+    "title": "Simulaciones del problema de la secretaria",
+    "section": "Simula una estrategia de umbral",
+    "text": "Simula una estrategia de umbral\nElige el número total de aspirantes (n), el umbral de rechazo (r) y la cantidad de repeticiones simuladas.\nLa estrategia rechaza a los primeros (r) aspirantes y selecciona al primer aspirante posterior que establezca un récord. Si no aparece otro récord, el intento fracasa. Debes ejecutar una nueva simulación cuando cambies cualquier parámetro.\n\n  \n    \n      SIMULAR\n      ¿Puede tu umbral superar la regla del 37 %?\n      \n        Compara una estimación de Monte Carlo con la probabilidad\n        exacta y con el umbral óptimo para un horizonte finito.\n      \n    \n\n    \n      Ejecutar experimento\n    \n  \n\n  \n    \n      \n        Aspirantes \\(n\\):\n        50\n      \n\n      \n    \n\n    \n      \n        Umbral de rechazo \\(r\\):\n        18\n      \n\n      \n    \n\n    \n      \n        Repeticiones simuladas:\n        5000\n      \n\n      \n    \n  \n\n  \n    \n      Probabilidad empírica\n      Sin ejecutar\n    \n\n    \n      Probabilidad exacta\n      —\n    \n\n    \n      Umbral óptimo\n      —\n    \n\n    \n      Probabilidad óptima\n      —\n    \n  \n\n  \n    Ejecuta el experimento para comparar la simulación con la teoría."
+  },
+  {
+    "objectID": "es/simulations.html#comprende-las-matemáticas",
+    "href": "es/simulations.html#comprende-las-matemáticas",
+    "title": "Simulaciones del problema de la secretaria",
+    "section": "Comprende las matemáticas",
+    "text": "Comprende las matemáticas\nPara (r), la probabilidad exacta de seleccionar al mejor de todos es\n\\[\nP_n(r)\n=\n\\frac{r}{n}\n\\sum_{j=r+1}^{n}\\frac{1}{j-1}.\n\\]\nSi (r=0), se selecciona al primer aspirante y, por tanto,\n\\[\nP_n(0)=\\frac1n.\n\\]\nLa siguiente gráfica representa (P_n(r)) para todos los umbrales de rechazo admisibles.\n\n  \n    \n      COMPRENDER\n      La curva de probabilidades\n      \n        La curva azul representa la probabilidad exacta para cada umbral entero.\n        El umbral elegido aparece en color coral y el óptimo en dorado;\n        la línea discontinua señala la aproximación continua \\(n/e\\).\n      \n    \n  \n\n  \n    \n      \n      Probabilidad exacta\n    \n\n    \n      \n      Tu umbral\n    \n\n    \n      \n      Umbral óptimo\n    \n\n    \n      \n      \\(n/e\\)\n    \n  \n\n  La curva representa la probabilidad exacta de éxito para cada umbral entero. En una pantalla estrecha, desplaza la gráfica horizontalmente para verla completa.\n  \n    \n  \n\n  \n    \n      Umbral elegido\n      —\n    \n\n    \n      Óptimo para \\(n\\) finito\n      —\n    \n\n    \n      Aproximación \\(n/e\\)\n      —"
+  },
+  {
+    "objectID": "es/simulations.html#qué-muestran-los-experimentos",
+    "href": "es/simulations.html#qué-muestran-los-experimentos",
+    "title": "Simulaciones del problema de la secretaria",
+    "section": "¿Qué muestran los experimentos?",
+    "text": "¿Qué muestran los experimentos?\nLas simulaciones ilustran tres hechos importantes:\n\nUn aspirante que no establece un récord no puede ser el mejor de todos.\nRechazar a muy pocos aspirantes proporciona información insuficiente.\nRechazar a demasiados aspirantes deja pocas oportunidades para seleccionar un récord posterior.\n\nEl umbral óptimo equilibra estos dos riesgos.\nPara (n) grande,\n\\[\nr^\\star\\approx \\frac{n}{e},\n\\qquad\nP_n(r^\\star)\\approx\\frac1e.\n\\]\nPor consiguiente, tanto la fracción óptima de rechazo como la probabilidad máxima de éxito se aproximan al (37%).\n\n\n\n\n\n\nNotaSimulación frente a demostración\n\n\n\nUna simulación de Monte Carlo proporciona evidencia numérica, pero no demuestra la optimalidad. La fórmula de probabilidad exacta y el argumento de inducción hacia atrás fundamentan el resultado matemático."
+  },
+  {
+    "objectID": "es/references.html",
+    "href": "es/references.html",
+    "title": "Referencias del problema de la secretaria",
+    "section": "",
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio\n\n\nReferencias\nLos artículos y libros de esta página sustentan las explicaciones matemáticas, la cronología histórica y los ejemplos de El problema de la secretaria.\nEsta es una bibliografía seleccionada, no una recopilación exhaustiva de los trabajos sobre parada óptima. Incluye estudios fundamentales de los problemas clásico y de información completa, extensiones con múltiples elecciones, el problema del último éxito, reseñas históricas y referencias generales sobre parada óptima.\nEn la Cronología se presenta el contexto histórico de algunos de estos trabajos. La página de Variantes explica los problemas matemáticos correspondientes.\nVersión en inglés\n\n\n\n\n\nReferencias\n\nBayón, L., P. Fortuny Ayuso, J. M. Grau, A. M. Oller-Marcén, y M. M. Ruiz. 2018. «The Best-or-Worst and the Postdoc Problems». Journal of Combinatorial Optimization 35 (3). https://doi.org/10.1007/s10878-017-0203-4.\n\n\nBruss, F. Thomas. 1984. «A Unified Approach to a Class of Best Choice Problems with an Unknown Number of Options». The Annals of Probability 12 (3). https://doi.org/10.1214/aop/1176993237.\n\n\n———. 2000. «Sum the Odds to One and Stop». The Annals of Probability 28 (3): 1384-91. https://doi.org/10.1214/aop/1019160340.\n\n\nChow, Y. S., S. Moriguti, H. Robbins, y S. M. Samuels. 1964. «Optimum Selection Based on Relative Rank (the Secretary Problem)». Israel Journal of Mathematics 2: 81-90. https://doi.org/10.1007/BF02759948.\n\n\nChow, Yuan Shih, Herbert Robbins, y David Siegmund. 1971. Great Expectations: The Theory of Optimal Stopping. Boston: Houghton Mifflin.\n\n\nFerguson, Thomas S. 1989. «Who Solved the Secretary Problem?» Statistical Science 4 (3): 282-89. https://doi.org/10.1214/ss/1177012493.\n\n\n———. 2010. «Optimal Stopping and Applications». https://www.math.ucla.edu/~tom/Stopping/Contents.html.\n\n\nFreeman, P. R. 1983. «The Secretary Problem and Its Extensions: A Review». International Statistical Review 51 (2): 189-206. https://doi.org/10.2307/1402748.\n\n\nGardner, Martin. 1960. «Mathematical Games: A Fifth Collection of Brain-Teasers». Scientific American 202 (2). https://doi.org/10.1038/scientificamerican0260-150.\n\n\nGilbert, John P., y Frederick Mosteller. 1966. «Recognizing the Maximum of a Sequence». Journal of the American Statistical Association 61 (313): 35-73. https://doi.org/10.1080/01621459.1966.10502008.\n\n\nGlass, Darren. 2012. «The Secretary Problem from the Applicant’s Point of View». The College Mathematics Journal 43 (1): 76-81. https://doi.org/10.4169/college.math.j.43.1.076.\n\n\nIslas, José Ángel. 2026. «Convergence of the Critical Probabilities for Stopping Near the Top of a Random Walk». https://arxiv.org/abs/2610.26670.\n\n\nKleinberg, Robert. 2005. «A Multiple-Choice Secretary Problem with Applications to Online Auctions». En Proceedings of the 16th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), 630-31. https://doi.org/10.1145/1070432.1070519.\n\n\nLindley, D. V. 1961. «Dynamic Programming and Decision Theory». Journal of the Royal Statistical Society. Series C (Applied Statistics) 10 (1): 39-51. https://doi.org/10.2307/2985407.\n\n\nSakaguchi, Minoru. 1961. «Dynamic Programming of Some Sequential Sampling Design». Journal of Mathematical Analysis and Applications 2 (3): 446-66. https://doi.org/10.1016/0022-247X(61)90023-3.\n\n\n———. 1978. «Dowry Problems and OLA Policies». Reports of Statistical Application Research, Japanese Union of Scientists and Engineers 25: 124-28.\n\n\nShiryaev, Albert N. 2007. Optimal Stopping Rules. Vol. 8. Stochastic Modelling y Applied Probability. Berlin; Heidelberg: Springer. https://doi.org/10.1007/978-3-540-74011-7.\n\n\nTamaki, Mitsushi. 1979a. «A Secretary Problem with Double Choices». Journal of the Operations Research Society of Japan 22 (4): 257-65. https://doi.org/10.15807/jorsj.22.257.\n\n\n———. 1979b. «Recognizing Both the Maximum and the Second Maximum of a Sequence». Journal of Applied Probability 16 (4): 803-12. https://doi.org/10.2307/3213146."
+  },
+  {
+    "objectID": "es/classical.html",
+    "href": "es/classical.html",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "",
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio\nVersión en inglés"
+  },
+  {
+    "objectID": "es/classical.html#el-problema-en-palabras-sencillas",
+    "href": "es/classical.html#el-problema-en-palabras-sencillas",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "El problema en palabras sencillas",
+    "text": "El problema en palabras sencillas\nSupón que vas a entrevistar a 100 personas en un orden aleatorio. Después de cada entrevista sabes cómo se compara esa persona con las que ya entrevistaste, pero desconoces cómo se comparará con las siguientes. Debes contratarla o rechazarla inmediatamente.\n¿Deberías contratar a una persona prometedora al principio o esperar, arriesgándote a perder las mejores opciones?\nLa regla clásica tiene dos etapas:\n\nObservar: rechazar a un grupo inicial y recordar quién fue el mejor dentro de ese grupo.\nSeleccionar: contratar al primer aspirante posterior que supere a todos los entrevistados anteriormente. Si nadie lo consigue, no se selecciona a nadie.\n\nCuando el número de aspirantes es grande, conviene observar aproximadamente al 37 % del total. Con 100 aspirantes esto sugiere observar a unos 37; el umbral entero óptimo exacto se obtiene con los cálculos que siguen.\nEl resultado depende de los supuestos del modelo. No es una recomendación universal para decisiones reales de contratación, pareja o inversión.\nPrueba el juego de entrevistas →"
+  },
+  {
+    "objectID": "es/classical.html#modelo-y-supuestos",
+    "href": "es/classical.html#modelo-y-supuestos",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "Modelo y supuestos",
+    "text": "Modelo y supuestos\nTenemos (n) aspirantes, cuyos rangos absolutos van de (1) (el mejor) a (n) (el peor). El modelo clásico de información relativa supone que:\n\nLos aspirantes se presentan en orden uniformemente aleatorio: cada una de las (n!) permutaciones tiene la misma probabilidad.\nAl entrevistar a un aspirante solo se conoce su rango relativo entre los entrevistados hasta ese momento, no su rango absoluto.\nSe puede seleccionar a lo sumo a un aspirante, y los rechazos son definitivos.\nEl objetivo es maximizar la probabilidad de seleccionar al único mejor aspirante de todos.\n\nUn aspirante establece un récord si es mejor que todos los anteriores. Un aspirante que no establece récord no puede ser el mejor de todos, por lo que nunca conviene seleccionarlo con este objetivo."
+  },
+  {
+    "objectID": "es/classical.html#estrategia-de-umbral",
+    "href": "es/classical.html#estrategia-de-umbral",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "Estrategia de umbral",
+    "text": "Estrategia de umbral\nFijemos un entero (r) con (0r&lt;n):\n\nRechazamos a los primeros (r) aspirantes y observamos sus rangos relativos.\nDesde la posición (r+1), seleccionamos al primer aspirante que establezca un nuevo récord.\nSi no aparece un récord posterior, no seleccionamos a nadie y el intento fracasa. Obligar a seleccionar al último aspirante no cambiaría la probabilidad de contratar al mejor.\n\nCuando (r=0), seleccionamos de inmediato al primer aspirante. Esta misma convención se utiliza en la simulación.\nEl teorema clásico establece que una estrategia de umbral es óptima entre todas las reglas de parada basadas en rangos relativos, no solo entre las estrategias de umbral. Puedes consultar la demostración por inducción hacia atrás."
+  },
+  {
+    "objectID": "es/classical.html#probabilidad-exacta-de-éxito-para-un-horizonte-finito",
+    "href": "es/classical.html#probabilidad-exacta-de-éxito-para-un-horizonte-finito",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "Probabilidad exacta de éxito para un horizonte finito",
+    "text": "Probabilidad exacta de éxito para un horizonte finito\nSea (P_n(r)) la probabilidad de seleccionar al aspirante de rango absoluto (1) mediante la estrategia de umbral (r).\nProposición. Para (1r&lt;n),\n\\[\n\\boxed{\nP_n(r)=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}\n=\\frac{r}{n}\\left(H_{n-1}-H_{r-1}\\right),\n}\n\\]\ndonde (H_m=_{j=1}^m 1/j) para (m) y (H_0=0). Si (r=0), entonces (P_n(0)=1/n).\nDemostración. Denotemos por (K) la posición en que llega el mejor aspirante. Por el orden aleatorio uniforme,\n\\[\n\\Pr(K=k)=\\frac1n,\\qquad k=1,\\ldots,n.\n\\]\nSi (Kr), rechazamos al mejor y no podemos tener éxito. Si (K=k&gt;r), lo seleccionamos precisamente cuando el mejor de los primeros (k-1) aspirantes apareció entre las primeras (r) posiciones. De lo contrario, habríamos elegido a un aspirante que estableció un récord después de la posición (r).\nCondicionado a (K=k), cada posición entre las primeras (k-1) tiene la misma probabilidad de contener al mejor de ese grupo. En consecuencia,\n\\[\n\\Pr(\\text{éxito}\\mid K=k)=\\frac{r}{k-1},\\qquad k&gt;r.\n\\]\nSumando sobre las posibles posiciones del mejor aspirante obtenemos\n\\[\nP_n(r)\n=\\sum_{k=r+1}^{n}\\Pr(K=k)\\Pr(\\text{éxito}\\mid K=k)\n=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}.\n\\]\nSi (r=0), se selecciona al primero, que es el mejor con probabilidad (1/n). ()"
+  },
+  {
+    "objectID": "es/classical.html#qué-umbral-es-óptimo-para-un-valor-de-n",
+    "href": "es/classical.html#qué-umbral-es-óptimo-para-un-valor-de-n",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "¿Qué umbral es óptimo para un valor de (n)?",
+    "text": "¿Qué umbral es óptimo para un valor de (n)?\nCriterio para un horizonte finito. Si (1r&lt;n-1),\n\\[\n\\boxed{\nP_n(r+1)-P_n(r)\n=\\frac1n\\left(\\sum_{j=r+1}^{n-1}\\frac1j-1\\right).\n}\n\\]\nPara verificarlo, restamos las expresiones:\n\\[\n\\begin{aligned}\nnP_n(r+1)&=(r+1)\\sum_{j=r+1}^{n-1}\\frac1j,\\\\\nnP_n(r)&=1+r\\sum_{j=r+1}^{n-1}\\frac1j.\n\\end{aligned}\n\\]\nLa suma que aparece en la diferencia disminuye estrictamente al crecer (r). Por tanto, las probabilidades aumentan mientras la suma sea mayor que (1), coinciden para dos umbrales consecutivos si vale exactamente (1) y disminuyen cuando es menor que (1).\nEl caso (r=0) se considera por separado: para (n), (P_n(1)=H_{n-1}/n&gt;1/n=P_n(0)); para (n=2) ambas probabilidades son iguales. Así, cuando (n), el menor umbral óptimo es\n\\[\n\\boxed{\nr_n^\\star=\\min\\left\\{r\\in\\{1,\\ldots,n-1\\}:\n\\sum_{j=r+1}^{n-1}\\frac1j\\le1\\right\\}.\n}\n\\]\nUna suma vacía vale (0). Si la suma en el umbral de transición es exactamente (1) y (r_n^&lt;n-1), el umbral siguiente (r_n^+1) también es óptimo. Para (n=2), tanto (r=0) como (r=1) tienen probabilidad de éxito (1/2).\nPor ejemplo, con (n=10), el umbral óptimo es (r^), y\n\\[\nP_{10}(3)=\\frac3{10}\\left(\\frac13+\\frac14+\\cdots+\\frac19\\right)\\approx0.39869.\n\\]\nEl valor entero óptimo no tiene por qué coincidir con el resultado de redondear (n/e)."
+  },
+  {
+    "objectID": "es/classical.html#de-dónde-surge-la-regla-del-37",
+    "href": "es/classical.html#de-dónde-surge-la-regla-del-37",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "¿De dónde surge la regla del 37 %?",
+    "text": "¿De dónde surge la regla del 37 %?\nSupongamos que (n) crece y que (r/nx(0,1)). Para la suma armónica se cumple\n\\[\n\\sum_{j=r}^{n-1}\\frac1j\n=\\log\\left(\\frac nr\\right)+o(1).\n\\]\nEn consecuencia,\n\\[\nP_n(r)=\\frac rn\\sum_{j=r}^{n-1}\\frac1j\n\\longrightarrow -x\\log x.\n\\]\nAl derivar,\n\\[\n\\frac{d}{dx}[-x\\log x]=-\\log x-1.\n\\]\nLa derivada se anula en (x=e^{-1}), donde la segunda derivada, (-1/x), es negativa. El criterio de optimalidad finita también permite demostrar que (r_n^/n/e). Por tanto,\n\\[\n\\boxed{\n\\frac{r_n^\\star}{n}\\longrightarrow\\frac1e,\n\\qquad\nP_n(r_n^\\star)\\longrightarrow\\frac1e\n\\approx 0.367879.\n}\n\\]\nInterpretación: para un grupo grande, rechazamos aproximadamente al primer 36.8 % y después seleccionamos al siguiente aspirante que establezca un récord. La probabilidad máxima de seleccionar al mejor también tiende a 36.8 %. Son dos cantidades distintas que comparten el mismo límite, pero que generalmente difieren para un valor finito de (n)."
+  },
+  {
+    "objectID": "es/classical.html#explorador-interactivo-del-umbral-óptimo",
+    "href": "es/classical.html#explorador-interactivo-del-umbral-óptimo",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "Explorador interactivo del umbral óptimo",
+    "text": "Explorador interactivo del umbral óptimo\nExplora la curva exacta para cada umbral de rechazo con (n) finito. Selecciona (n), mueve (r) y compara tu elección con el menor umbral óptimo. La gráfica utiliza la suma armónica, no una simulación de Monte Carlo.\n\n  \n    Número de aspirantes 30\n    \n    Rechazar a los primeros 11\n    \n  \n  \n    Tu probabilidad exacta \n    Menor umbral óptimo \n  \n  \n  \n  Elegir el umbral óptimo\n  Azul: probabilidad exacta · Naranja: umbral elegido · Verde: umbral óptimo. Si existen empates para \\(n\\) finito, se elige el menor umbral que alcanza el máximo."
+  },
+  {
+    "objectID": "es/classical.html#para-profundizar",
+    "href": "es/classical.html#para-profundizar",
+    "title": "El problema clásico de la secretaria: demostración y regla del 37 %",
+    "section": "Para profundizar",
+    "text": "Para profundizar\n\nInducción hacia atrás: por qué la estrategia de umbral es óptima entre todas las reglas admisibles.\nSimulaciones interactivas: decisiones sucesivas y comparación de frecuencias empíricas con probabilidades exactas.\nVariantes y extensiones: qué ocurre con información completa, con otros rangos objetivo o con varias selecciones.\nCronología de la investigación y referencias: investigaciones fundamentales y desarrollos posteriores.\n\nEl análisis clásico se encuentra en Gilbert y Mosteller (1966) y el estudio de conjunto en Freeman (1983); el contexto histórico se presenta en Ferguson (1989)."
+  },
+  {
+    "objectID": "es/about.html",
+    "href": "es/about.html",
+    "title": "Acerca del sitio",
+    "section": "",
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio\n\nEl problema de la secretaria es un sitio web educativo personal creado por José Ángel Islas Anguiano, matemático de la Facultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS). Presenta el problema clásico de la secretaria y algunas variantes de parada óptima para estudiantes y personas interesadas en las matemáticas.\nEl sitio contiene explicaciones y demostraciones matemáticas, simulaciones interactivas, referencias bibliográficas y cuadernos de Google Colab. Los materiales están disponibles sin necesidad de registrarse ni pagar.\nVersión en inglés"
   },
   {
     "objectID": "backward-induction.html",
@@ -299,6 +425,286 @@
     "title": "Secretary Problem by Backward Induction",
     "section": "References",
     "text": "References\nThe general theory of backward induction and optimal stopping is developed by Chow, Robbins, and Siegmund (1971), Shiryaev (2007), and Ferguson (2010).\nHistorical and foundational treatments of the secretary problem include Ferguson (1989) and Gilbert and Mosteller (1966)."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About The Secretary Problem Site",
+    "section": "",
+    "text": "The Secretary Problem Site is a personal educational website created by José Ángel Islas Anguiano, a mathematician at Facultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS). It presents the classical secretary problem and selected optimal-stopping variations for students and readers interested in mathematics.\nThe site includes mathematical explanations, derivations, interactive simulations, references, and Google Colab notebooks. The materials can be accessed without registration or payment."
+  },
+  {
+    "objectID": "classical.html",
+    "href": "classical.html",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "",
+    "text": "Why should you reject roughly the first 37% of candidates before choosing? The secretary problem is a classical optimal stopping problem: decisions are sequential, rejections are final, and success means selecting the single best candidate.\nThe exact finite-sample solution and its asymptotic 37% rule are derived below; you can also experiment with the rule."
+  },
+  {
+    "objectID": "classical.html#the-question-in-plain-language",
+    "href": "classical.html#the-question-in-plain-language",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "The question in plain language",
+    "text": "The question in plain language\nSuppose you interview 100 candidates in random order. After each interview, you know how that candidate compares with the people you have already met—but not how they compare with candidates you have not seen. You must decide immediately whether to hire them or reject them forever.\nWould you hire a strong early candidate, or wait and risk losing everyone?\nThe classical strategy has two phases:\n\nObserve: Reject an initial group and note the best candidate in that group.\nChoose: Hire the first later candidate who is better than everyone interviewed so far. If no such candidate appears, you do not succeed.\n\nFor a large pool of candidates, the best observation period is approximately 37% of the total. With 100 candidates, that suggests observing about 37 first; the exact best integer cutoff comes from the finite-sample mathematics below.\nThis result depends on the assumptions of the model. It is not a universal recommendation for real hiring, dating, or investment decisions.\nTry hiring candidates yourself →"
+  },
+  {
+    "objectID": "classical.html#model-and-assumptions",
+    "href": "classical.html#model-and-assumptions",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Model and assumptions",
+    "text": "Model and assumptions\nThere are \\(n\\ge 2\\) candidates, ranked absolutely from \\(1\\) (best) to \\(n\\) (worst). The classical no-information model assumes:\n\nThe candidates arrive in a uniformly random order (all \\(n!\\) orders are equally likely).\nYou observe only each candidate’s relative rank among those seen so far, not their absolute rank.\nYou may accept at most one candidate. Every rejection is irrevocable.\nYour objective is to maximize the probability of choosing the single overall best candidate.\n\nA candidate is a record if they are better than all candidates seen before. Since a nonrecord cannot be the overall best, there is no benefit to selecting one when the objective is the overall best."
+  },
+  {
+    "objectID": "classical.html#the-threshold-strategy",
+    "href": "classical.html#the-threshold-strategy",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "The threshold strategy",
+    "text": "The threshold strategy\nFix an integer \\(r\\) with \\(0\\le r&lt;n\\):\n\nReject the first \\(r\\) candidates, observing their relative ranks.\nStarting at position \\(r+1\\), accept the first record (a candidate better than every earlier candidate).\nIf there is no subsequent record, no candidate is selected and the attempt fails. (Requiring a selection at the final interview would not change the probability of selecting the overall best.)\n\nFor \\(r=0\\), the rule accepts the first candidate immediately. This convention is used in the interactive simulation below.\nThe classical theorem establishes that a threshold rule is optimal among all stopping rules based on relative ranks, not merely the best rule within a preselected class of thresholds. A backward-induction proof of this optimal-policy structure is provided on the Backward Induction page."
+  },
+  {
+    "objectID": "classical.html#exact-success-probability-a-finite-n-derivation",
+    "href": "classical.html#exact-success-probability-a-finite-n-derivation",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Exact success probability: a finite-\\(n\\) derivation",
+    "text": "Exact success probability: a finite-\\(n\\) derivation\nLet \\(P_n(r)\\) denote the probability that the threshold-\\(r\\) strategy selects absolute rank \\(1\\).\nProposition. For \\(1\\le r&lt;n\\),\n\\[\n\\boxed{\nP_n(r)=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}\n=\\frac{r}{n}\\left(H_{n-1}-H_{r-1}\\right),\n}\n\\]\nwhere \\(H_m=\\sum_{j=1}^m 1/j\\) for \\(m\\ge1\\) and \\(H_0=0\\). For \\(r=0\\), \\(P_n(0)=1/n\\).\nProof. Write \\(K\\) for the arrival position of the overall best candidate. Uniform random order gives\n\\[\n\\Pr(K=k)=\\frac1n,\\qquad k=1,\\ldots,n.\n\\]\nIf \\(K\\le r\\), that candidate is rejected, so success is impossible. If \\(K=k&gt;r\\), the strategy selects the overall best precisely when the best candidate among the first \\(k-1\\) arrivals occurred during the initial \\(r\\) positions. Otherwise, a record after position \\(r\\) would have triggered selection earlier.\nConditionally on \\(K=k\\), each of the first \\(k-1\\) positions is equally likely to hold the best among those first \\(k-1\\) candidates. Thus\n\\[\n\\Pr(\\text{success}\\mid K=k)=\\frac{r}{k-1},\\qquad k&gt;r.\n\\]\nSumming over the possible positions of the overall best gives\n\\[\nP_n(r)\n=\\sum_{k=r+1}^{n}\\Pr(K=k)\\Pr(\\text{success}\\mid K=k)\n=\\frac{r}{n}\\sum_{k=r+1}^{n}\\frac{1}{k-1}.\n\\]\nIf \\(r=0\\), the first candidate is accepted, which is the overall best with probability \\(1/n\\). \\(\\square\\)"
+  },
+  {
+    "objectID": "classical.html#which-threshold-is-optimal-for-a-given-n",
+    "href": "classical.html#which-threshold-is-optimal-for-a-given-n",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Which threshold is optimal for a given \\(n\\)?",
+    "text": "Which threshold is optimal for a given \\(n\\)?\nFinite-\\(n\\) criterion. For \\(1\\le r&lt;n-1\\),\n\\[\n\\boxed{\nP_n(r+1)-P_n(r)\n=\\frac1n\\left(\\sum_{j=r+1}^{n-1}\\frac1j-1\\right).\n}\n\\]\nTo see this, subtract the two formulas:\n\\[\n\\begin{aligned}\nnP_n(r+1)&=(r+1)\\sum_{j=r+1}^{n-1}\\frac1j,\\\\\nnP_n(r)&=1+r\\sum_{j=r+1}^{n-1}\\frac1j.\n\\end{aligned}\n\\]\nThe sum in the difference decreases strictly as \\(r\\) increases. Consequently, the threshold probabilities increase while the sum exceeds \\(1\\), are equal at adjacent thresholds if the sum equals \\(1\\), and decrease once the sum falls below \\(1\\).\nThe boundary case \\(r=0\\) must be considered separately: for \\(n\\ge3\\), \\(P_n(1)=H_{n-1}/n&gt;1/n=P_n(0)\\), whereas for \\(n=2\\) the two probabilities are equal. Thus, for \\(n\\ge3\\), the smallest optimal threshold is\n\\[\n\\boxed{\nr_n^\\star=\\min\\left\\{r\\in\\{1,\\ldots,n-1\\}:\n\\sum_{j=r+1}^{n-1}\\frac1j\\le1\\right\\}.\n}\n\\]\nAn empty sum is \\(0\\). If the sum equals \\(1\\) at the transition and \\(r_n^\\star&lt;n-1\\), the adjacent threshold \\(r_n^\\star+1\\) is also optimal. For \\(n=2\\), both \\(r=0\\) and \\(r=1\\) have success probability \\(1/2\\).\nFor example, with \\(n=10\\), the optimal threshold is \\(r^\\star=3\\), and\n\\[\nP_{10}(3)=\\frac3{10}\\left(\\frac13+\\frac14+\\cdots+\\frac19\\right)\\approx0.39869.\n\\]\nThis exact threshold need not equal the integer obtained by simply rounding \\(n/e\\)."
+  },
+  {
+    "objectID": "classical.html#why-the-37-rule-appears",
+    "href": "classical.html#why-the-37-rule-appears",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Why the 37% rule appears",
+    "text": "Why the 37% rule appears\nSuppose \\(n\\) grows and \\(r/n\\to x\\in(0,1)\\). The harmonic sum satisfies\n\\[\n\\sum_{j=r}^{n-1}\\frac1j\n=\\log\\left(\\frac nr\\right)+o(1),\n\\]\nso\n\\[\nP_n(r)=\\frac rn\\sum_{j=r}^{n-1}\\frac1j\n\\longrightarrow -x\\log x.\n\\]\nDifferentiating yields\n\\[\n\\frac{d}{dx}[-x\\log x]=-\\log x-1.\n\\]\nThis vanishes at \\(x=e^{-1}\\), where the second derivative \\(-1/x\\) is negative. The finite-\\(n\\) optimality criterion above also implies that \\(r_n^\\star/n\\to 1/e\\). Therefore,\n\\[\n\\boxed{\n\\frac{r_n^\\star}{n}\\longrightarrow\\frac1e,\n\\qquad\nP_n(r_n^\\star)\\longrightarrow\\frac1e\n\\approx 0.367879.\n}\n\\]\nInterpretation: for a large pool, reject about 36.8% of candidates, then accept the next record. The limiting probability of choosing the best is also about 36.8%. These are two distinct quantities that happen to share the same limit; for a fixed finite \\(n\\), they generally differ."
+  },
+  {
+    "objectID": "classical.html#interactive-optimal-threshold-explorer",
+    "href": "classical.html#interactive-optimal-threshold-explorer",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Interactive optimal threshold explorer",
+    "text": "Interactive optimal threshold explorer\nExplore the exact, finite-(n) probability curve for every rejection threshold. Choose (n), move the threshold (r), and compare your choice to the smallest optimal threshold. The graph uses the harmonic-sum formula—not Monte Carlo simulation.\n\n  \n    Number of candidates 30\n    \n    Reject the first 11\n    \n  \n  \n    Your exact probability \n    Smallest optimal threshold \n  \n  \n  \n  Choose optimal threshold\n  Blue: exact probability · Orange: your threshold · Green: optimal threshold. For finite \\(n\\), ties are resolved by choosing the smallest maximizing threshold."
+  },
+  {
+    "objectID": "classical.html#explore-further",
+    "href": "classical.html#explore-further",
+    "title": "Classical Secretary Problem: Proof and the 37% Rule",
+    "section": "Explore further",
+    "text": "Explore further\n\nBackward induction: why a threshold strategy is optimal among all admissible stopping rules.\nInteractive simulations: explore stopping decisions and compare empirical success rates with exact probabilities.\nVariants and extensions: what changes when there is full information, a different target rank, or multiple selections.\nResearch timeline and references: foundational work and later developments.\n\nThe classical analysis appears in Gilbert and Mosteller (1966) and the survey Freeman (1983); historical context is given by Ferguson (1989)."
+  },
+  {
+    "objectID": "es/backward-induction.html",
+    "href": "es/backward-induction.html",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "",
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio\nVersión en inglés"
+  },
+  {
+    "objectID": "es/backward-induction.html#una-solución-completa-mediante-inducción-hacia-atrás",
+    "href": "es/backward-induction.html#una-solución-completa-mediante-inducción-hacia-atrás",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "Una solución completa mediante inducción hacia atrás",
+    "text": "Una solución completa mediante inducción hacia atrás\nEsta página deduce la estrategia óptima a partir de los principios básicos, usando la ecuación de valor\n\\[\nV_n=\\max\\{U_n,W_n\\}.\n\\]\nAquí \\(U_n\\) es el valor de detenerse cuando aparece un récord, \\(W_n\\) es el valor de continuar y \\(V_n\\) es el valor óptimo."
+  },
+  {
+    "objectID": "es/backward-induction.html#modelo-y-objetivo",
+    "href": "es/backward-induction.html#modelo-y-objetivo",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "1. Modelo y objetivo",
+    "text": "1. Modelo y objetivo\nTenemos \\(N\\ge3\\) aspirantes que llegan en un orden uniformemente aleatorio. Sus rangos absolutos son\n\\[\n1,2,\\ldots,N,\n\\]\ndonde el rango \\(1\\) corresponde al mejor.\nDespués de cada entrevista solo observamos el rango del aspirante respecto a los ya entrevistados. Contratar a alguien termina el proceso, y los rechazos son definitivos.\nSea \\(X_k\\) el rango absoluto del aspirante situado en la posición \\(k\\). Buscamos un tiempo de parada \\(\\tau\\) que maximice\n\\[\n\\mathbb P(X_\\tau=1).\n\\]\nLa recompensa es \\(1\\) si se selecciona al mejor de todos y \\(0\\) en cualquier otro caso."
+  },
+  {
+    "objectID": "es/backward-induction.html#rangos-relativos-y-récords",
+    "href": "es/backward-induction.html#rangos-relativos-y-récords",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "2. Rangos relativos y récords",
+    "text": "2. Rangos relativos y récords\nDefinimos el rango relativo del aspirante en la posición \\(n\\) mediante\n\\[\nR_n\n=\n1+\\sum_{j=1}^{n-1}\n\\mathbf 1_{\\{X_j&lt;X_n\\}}.\n\\]\nEl evento \\(R_n=1\\) significa que el aspirante en el instante \\(n\\) es mejor que todos los anteriores.\nUn aspirante así establece un récord.\nUn aspirante que no establece un récord no puede ser el mejor de todos. Por tanto, conviene continuar si quedan más aspirantes y el actual no es un récord. Solo cuando \\(R_n=1\\) detenerse puede dar una probabilidad positiva de éxito."
+  },
+  {
+    "objectID": "es/backward-induction.html#uniformidad-de-los-rangos-relativos",
+    "href": "es/backward-induction.html#uniformidad-de-los-rangos-relativos",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "3. Uniformidad de los rangos relativos",
+    "text": "3. Uniformidad de los rangos relativos\n\n\n\n\n\n\nNotaTeorema de los rangos relativos\n\n\n\nPara una permutación uniformemente aleatoria, los rangos relativos\n\\[\nR_1,R_2,\\ldots,R_N\n\\]\nson independientes. Además,\n\\[\n\\mathbb P(R_n=j)=\\frac1n,\n\\qquad\nj=1,\\ldots,n.\n\\]\nEn particular,\n\\[\n\\mathbb P(R_n=1)=\\frac1n.\n\\]\n\n\n\nDemostración\nLa transformación de la permutación de rangos absolutos\n\\[\n(X_1,\\ldots,X_N)\n\\]\na la sucesión de rangos relativos\n\\[\n(R_1,\\ldots,R_N)\n\\]\nes una biyección.\nCada sucesión admisible de rangos relativos satisface\n\\[\nR_n\\in\\{1,\\ldots,n\\}.\n\\]\nEl número de sucesiones de este tipo es\n\\[\n1\\cdot2\\cdots N=N!,\n\\]\nque coincide con el número de permutaciones de rangos absolutos.\nComo todas las permutaciones de rangos absolutos tienen la misma probabilidad, cada sucesión admisible de rangos relativos tiene probabilidad \\(1/N!\\). Por tanto,\n\\[\n\\begin{aligned}\n\\mathbb P(R_1=r_1,\\ldots,R_N=r_N)\n&=\\frac1{N!}\\\\\n&=\\prod_{n=1}^{N}\\frac1n.\n\\end{aligned}\n\\]\nEsta factorización demuestra que los rangos relativos son independientes y que cada \\(R_n\\) es uniforme en \\(\\{1,\\ldots,n\\}\\). \\(\\square\\)"
+  },
+  {
+    "objectID": "es/backward-induction.html#el-valor-de-detenerse",
+    "href": "es/backward-induction.html#el-valor-de-detenerse",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "4. El valor de detenerse",
+    "text": "4. El valor de detenerse\nSupongamos que el aspirante en el instante \\(n\\) establece un récord.\nComo el mejor de todos necesariamente establece un récord,\n\\[\n\\mathbb P(X_n=1,\\ R_n=1)\n=\n\\mathbb P(X_n=1)\n=\n\\frac1N.\n\\]\nPor el teorema de los rangos relativos,\n\\[\n\\mathbb P(R_n=1)=\\frac1n.\n\\]\nEn consecuencia, la probabilidad de éxito al detenerse ante un récord en el instante \\(n\\) es\n\\[\n\\begin{aligned}\nU_n\n&=\n\\mathbb P(X_n=1\\mid R_n=1)\\\\\n&=\n\\frac{\\mathbb P(X_n=1,\\ R_n=1)}\n     {\\mathbb P(R_n=1)}\\\\\n&=\n\\frac{1/N}{1/n}\\\\\n&=\n\\frac nN.\n\\end{aligned}\n\\]\nPor tanto,\n\\[\n\\boxed{U_n=\\frac nN}.\n\\]\nEl valor de detenerse es estrictamente creciente en \\(n\\)."
+  },
+  {
+    "objectID": "es/backward-induction.html#el-valor-de-continuación",
+    "href": "es/backward-induction.html#el-valor-de-continuación",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "5. El valor de continuación",
+    "text": "5. El valor de continuación\nSea \\(W_n\\) la probabilidad condicional óptima de éxito posterior después de rechazar al aspirante en el instante \\(n\\), dada la información de rangos relativos disponible. Por la independencia de los rangos relativos sucesivos, este valor depende de \\(n\\), pero no de los rangos relativos observados anteriormente.\nCuando se observa un récord, definimos\n\\[\n\\boxed{V_n=\\max\\{U_n,W_n\\}}.\n\\]\nEn el instante \\(n+1\\), el siguiente aspirante establece un récord con probabilidad\n\\[\n\\frac1{n+1}.\n\\]\nSi aparece un nuevo récord, podemos decidir de nuevo entre detenernos o continuar, y el valor es \\(V_{n+1}\\).\nCon probabilidad\n\\[\n\\frac n{n+1},\n\\]\nel aspirante no establece un récord. Detenerse no puede dar éxito; por ello, continuamos con valor \\(W_{n+1}\\).\nEn consecuencia,\n\\[\n\\boxed{\nW_n\n=\n\\frac{1}{n+1}V_{n+1}\n+\n\\frac{n}{n+1}W_{n+1}\n}.\n\\]\nAsí, las ecuaciones de Bellman son\n\\[\n\\boxed{\n\\begin{aligned}\nU_n&=\\frac nN,\\\\\nV_n&=\\max\\{U_n,W_n\\},\\\\\nW_n&=\n\\frac{1}{n+1}V_{n+1}\n+\n\\frac{n}{n+1}W_{n+1}.\n\\end{aligned}\n}\n\\]"
+  },
+  {
+    "objectID": "es/backward-induction.html#condición-terminal",
+    "href": "es/backward-induction.html#condición-terminal",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "6. Condición terminal",
+    "text": "6. Condición terminal\nEn el instante \\(N\\), aceptar a un aspirante que establece un récord garantiza el éxito. Después de rechazarlo ya no hay oportunidades. Si fuera obligatorio seleccionar a alguien en el instante \\(N\\), elegir a quien no establece récord produciría recompensa cero, sin modificar el valor.\nPor tanto,\n\\[\nU_N=1,\n\\qquad\nV_N=1,\n\\qquad\nW_N=0.\n\\]\nA partir de estos valores terminales, los valores anteriores se calculan mediante inducción hacia atrás."
+  },
+  {
+    "objectID": "es/backward-induction.html#por-qué-la-estrategia-óptima-tiene-un-umbral",
+    "href": "es/backward-induction.html#por-qué-la-estrategia-óptima-tiene-un-umbral",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "7. Por qué la estrategia óptima tiene un umbral",
+    "text": "7. Por qué la estrategia óptima tiene un umbral\nDe la recurrencia del valor de continuación,\n\\[\nW_n\n=\n\\frac{1}{n+1}V_{n+1}\n+\n\\frac{n}{n+1}W_{n+1}.\n\\]\nAl restar \\(W_{n+1}\\) obtenemos\n\\[\nW_n-W_{n+1}\n=\n\\frac{V_{n+1}-W_{n+1}}{n+1}.\n\\]\nComo\n\\[\nV_{n+1}\n=\n\\max\\{U_{n+1},W_{n+1}\\}\n\\ge W_{n+1},\n\\]\nse obtiene\n\\[\nW_n-W_{n+1}\\ge0.\n\\]\nPor tanto,\n\\[\nW_1\\ge W_2\\ge\\cdots\\ge W_N.\n\\]\nEl valor de continuación \\(W_n\\) es no creciente, mientras que el valor de detenerse\n\\[\nU_n=\\frac nN\n\\]\nes estrictamente creciente.\nPor ello, \\(U_n-W_n\\) es estrictamente creciente en \\(n\\). Una vez que aceptar un récord es óptimo, continúa siendo óptimo ante todos los récords posteriores. Esto demuestra que una estrategia óptima tiene forma de umbral.\nExiste un entero \\(r^*\\) tal que la estrategia óptima consiste en:\n\nRechazar a los primeros \\(r^*\\) aspirantes.\nDesde la posición \\(r^*+1\\), aceptar al primero que establezca un récord.\nSi no aparece otro récord, el intento fracasa.\n\nEn un instante \\(n\\) con récord, detenerse es óptimo cuando\n\\[\nU_n\\ge W_n.\n\\]\nSi hay igualdad, detenerse o continuar son igualmente óptimos. Resolvemos los empates a favor de detenerse."
+  },
+  {
+    "objectID": "es/backward-induction.html#ejemplo-completo-n10",
+    "href": "es/backward-induction.html#ejemplo-completo-n10",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "8. Ejemplo completo: (N=10)",
+    "text": "8. Ejemplo completo: (N=10)\nResolvamos el problema con \\(N=10\\) sin suponer de antemano la existencia o el valor del umbral.\nComenzamos con\n\\[\nU_{10}=1,\n\\qquad\nV_{10}=1,\n\\qquad\nW_{10}=0.\n\\]\nDespués calculamos hacia atrás mediante\n\\[\nW_n\n=\n\\frac{1}{n+1}V_{n+1}\n+\n\\frac{n}{n+1}W_{n+1}.\n\\]\nLos valores resultantes son:\n\n\n\n\\(n\\)\n\\(U_n\\)\n\\(W_n\\)\n\\(V_n\\)\nDecisión óptima\n\n\n\n\n10\n\\(1\\)\n\\(0\\)\n\\(1\\)\nDetenerse\n\n\n9\n\\(9/10\\)\n\\(1/10\\)\n\\(9/10\\)\nDetenerse\n\n\n8\n\\(4/5\\)\n\\(17/90\\)\n\\(4/5\\)\nDetenerse\n\n\n7\n\\(7/10\\)\n\\(191/720\\)\n\\(7/10\\)\nDetenerse\n\n\n6\n\\(3/5\\)\n\\(55/168\\)\n\\(3/5\\)\nDetenerse\n\n\n5\n\\(1/2\\)\n\\(1879/5040\\)\n\\(1/2\\)\nDetenerse\n\n\n4\n\\(2/5\\)\n\\(2509/6300\\)\n\\(2/5\\)\nDetenerse\n\n\n3\n\\(3/10\\)\n\\(3349/8400\\)\n\\(3349/8400\\)\nContinuar\n\n\n2\n\\(1/5\\)\n\\(3349/8400\\)\n\\(3349/8400\\)\nContinuar\n\n\n1\n\\(1/10\\)\n\\(3349/8400\\)\n\\(3349/8400\\)\nContinuar\n\n\n\nEn el instante \\(3\\),\n\\[\nU_3=\\frac3{10}\n&lt;\n\\frac{3349}{8400}\n=\nW_3,\n\\]\npor lo que continuar es óptimo.\nEn el instante \\(4\\),\n\\[\nU_4=\\frac25\n&gt;\n\\frac{2509}{6300}\n=\nW_4,\n\\]\npor lo que detenerse ante un récord es óptimo.\nEl cruce ocurre entre los instantes \\(3\\) y \\(4\\). Por tanto, la estrategia óptima rechaza a los primeros tres aspirantes y acepta al siguiente que establezca un récord:\n\\[\n\\boxed{r^*=3}.\n\\]\nLa probabilidad óptima de éxito es\n\\[\n\\boxed{\nV_1\n=\n\\frac{3349}{8400}\n\\approx0.398690\n}.\n\\]"
+  },
+  {
+    "objectID": "es/backward-induction.html#probabilidad-de-éxito-con-un-umbral-fijo",
+    "href": "es/backward-induction.html#probabilidad-de-éxito-con-un-umbral-fijo",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "9. Probabilidad de éxito con un umbral fijo",
+    "text": "9. Probabilidad de éxito con un umbral fijo\nFijemos\n\\[\nr\\in\\{1,\\ldots,N-1\\}.\n\\]\nConsideremos la estrategia que rechaza a los primeros \\(r\\) aspirantes y acepta al primer récord posterior.\nSupongamos que el mejor de todos ocupa la posición \\(k&gt;r\\). La estrategia lo selecciona exactamente cuando el mejor entre los primeros \\(k-1\\) aparece durante el periodo inicial de rechazo.\nEl mejor de todos tiene la misma probabilidad de ocupar cualquier posición; por tanto,\n\\[\n\\mathbb P(X_k=1)=\\frac1N.\n\\]\nCondicionado a \\(X_k=1\\), el mejor de los primeros \\(k-1\\) aspirantes tiene la misma probabilidad de ocupar cualquiera de esas posiciones. Por tanto, la probabilidad de que ocupe una de las primeras \\(r\\) posiciones es\n\\[\n\\frac{r}{k-1}.\n\\]\nAl sumar sobre las posibles posiciones del mejor de todos obtenemos\n\\[\n\\begin{aligned}\nP_N(r)\n&=\n\\sum_{k=r+1}^{N}\n\\frac1N\\frac{r}{k-1}\\\\\n&=\n\\frac rN\n\\sum_{k=r+1}^{N}\\frac1{k-1}.\n\\end{aligned}\n\\]\nAl cambiar el índice de la suma se obtiene\n\\[\n\\boxed{\nP_N(r)\n=\n\\frac rN\n\\sum_{j=r}^{N-1}\\frac1j\n}.\n\\]\nSi \\(r=0\\), se acepta inmediatamente al primer aspirante, y\n\\[\nP_N(0)=\\frac1N.\n\\]\n\n\n\n\n\n\nAdvertenciaDistinción entre (W_r) from (P_N(r))\n\n\n\nLas cantidades \\(W_r\\) y \\(P_N(r)\\) tienen significados distintos.\nEl valor \\(W_r\\) es la probabilidad de éxito futuro si, después del instante \\(r\\), todas las decisiones se toman óptimamente.\nEn cambio, \\(P_N(r)\\) es la probabilidad de éxito de la estrategia de umbral fijo \\(r\\).\nNo necesariamente coinciden.\nPor ejemplo, para \\(N=10\\),\n\\[\nP_{10}(1)\n=\n\\frac1{10}\\sum_{j=1}^{9}\\frac1j\n\\approx0.2829,\n\\]\nmientras que\n\\[\nW_1\n=\n\\frac{3349}{8400}\n\\approx0.3987.\n\\]\nEn el umbral óptimo,\n\\[\n\\boxed{\nW_{r^*}=P_N(r^*)=V_1\n}.\n\\]"
+  },
+  {
+    "objectID": "es/backward-induction.html#caracterización-exacta-del-umbral",
+    "href": "es/backward-induction.html#caracterización-exacta-del-umbral",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "10. Caracterización exacta del umbral",
+    "text": "10. Caracterización exacta del umbral\nPara \\(r=1,\\ldots,N-2\\),\n\\[\nP_N(r)\n=\n\\frac rN\n\\sum_{j=r}^{N-1}\\frac1j\n\\]\ny\n\\[\nP_N(r+1)\n=\n\\frac{r+1}{N}\n\\sum_{j=r+1}^{N-1}\\frac1j.\n\\]\nComo\n\\[\nP_N(r)\n=\n\\frac rN\n\\left(\n\\frac1r+\n\\sum_{j=r+1}^{N-1}\\frac1j\n\\right),\n\\]\nal restar obtenemos\n\\[\n\\boxed{\nP_N(r+1)-P_N(r)\n=\n\\frac1N\n\\left(\n\\sum_{j=r+1}^{N-1}\\frac1j-1\n\\right)\n}.\n\\]\nSe deduce que \\(P_N(r)\\) aumenta mientras\n\\[\n\\sum_{j=r+1}^{N-1}\\frac1j&gt;1\n\\]\ny disminuye cuando la suma se vuelve menor que \\(1\\).\nEl menor umbral óptimo es\n\\[\n\\boxed{\nr^*\n=\n\\min\n\\left\\{\nr\\in\\{1,\\ldots,N-1\\}:\n\\sum_{j=r+1}^{N-1}\\frac1j\\le1\n\\right\\}.\n}\n\\]\nEquivalentemente,\n\\[\n\\boxed{\n\\sum_{j=r^*+1}^{N-1}\\frac1j\n\\le1\n\\le\n\\sum_{j=r^*}^{N-1}\\frac1j.\n}\n\\]\nSi la suma del lado izquierdo de la caracterización es igual a \\(1\\), dos umbrales consecutivos son óptimos: \\(r^*\\) y \\(r^*+1\\). La definición anterior selecciona el menor umbral de rechazo, de acuerdo con la convención de detenerse en caso de empate. Se excluye \\(r=0\\) para \\(N\\ge3\\), pues \\(P_N(1)=H_{N-1}/N&gt;1/N=P_N(0)\\)."
+  },
+  {
+    "objectID": "es/backward-induction.html#regla-asintótica-de-1e-rule",
+    "href": "es/backward-induction.html#regla-asintótica-de-1e-rule",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "11. Regla asintótica de (1/e) rule",
+    "text": "11. Regla asintótica de (1/e) rule\nPara \\(N\\) grande, la suma armónica puede aproximarse mediante una integral:\n\\[\n\\sum_{j=r+1}^{N-1}\\frac1j\n\\approx\n\\int_r^N\\frac{dx}{x}\n=\n\\log\\frac Nr.\n\\]\nAsí, la condición del umbral se aproxima por\n\\[\n\\log\\frac N{r^*}=1.\n\\]\nAl despejar \\(r^*\\) obtenemos\n\\[\n\\boxed{\n\\frac{r^*}{N}\\longrightarrow\\frac1e\n}.\n\\]\nUsando la fórmula exacta de probabilidad,\n\\[\nP_N(r^*)\n=\n\\frac{r^*}{N}\n\\sum_{j=r^*}^{N-1}\\frac1j.\n\\]\nEl primer factor tiende a \\(1/e\\) y la suma armónica tiende a \\(1\\). Por tanto,\n\\[\n\\boxed{\nP_N(r^*)\\longrightarrow\\frac1e\n}.\n\\]\nNuméricamente,\n\\[\n\\frac1e\\approx0.367879.\n\\]\n\n\n\n\n\n\nImportanteResultado final\n\n\n\nCuando el número de aspirantes es grande:\n\nRechaza aproximadamente a los primeros \\(N/e\\) aspirantes.\nRecuerda al mejor aspirante observado durante ese periodo.\nAcepta al primer aspirante posterior que supere a todos los anteriores.\n\nTanto la fracción óptima de rechazo como la probabilidad óptima de éxito tienden aproximadamente al \\(37\\%\\)."
+  },
+  {
+    "objectID": "es/backward-induction.html#teorema-general-de-inducción-hacia-atrás",
+    "href": "es/backward-induction.html#teorema-general-de-inducción-hacia-atrás",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "12. Teorema general de inducción hacia atrás",
+    "text": "12. Teorema general de inducción hacia atrás\nEl cálculo anterior es un caso particular, con horizonte finito, del teorema de la envolvente de Snell.\nPara distinguir la teoría general de la notación del problema de la secretaria, denotemos por \\(G_n\\) un proceso de recompensa general y por \\(Z_n\\) su proceso de valor.\n\n\n\n\n\n\nNotaTeorema: parada óptima con horizonte finito\n\n\n\nSea\n\\[\nG_1,G_2,\\ldots,G_N\n\\]\nun proceso integrable adaptado a una filtración\n\\[\n\\mathcal F_1,\\mathcal F_2,\\ldots,\\mathcal F_N.\n\\]\nDefine\n\\[\nZ_N=G_N\n\\]\ny, para \\(n=N-1,\\ldots,1\\), definamos\n\\[\n\\boxed{\nZ_n\n=\n\\max\n\\left\\{\nG_n,\n\\mathbb E[Z_{n+1}\\mid\\mathcal F_n]\n\\right\\}.\n}\n\\]\nEntonces\n\\[\nZ_n\n=\n\\mathop{\\mathrm{ess\\,sup}}_{\\tau\\in\\mathcal T_{n,N}}\n\\mathbb E[G_\\tau\\mid\\mathcal F_n],\n\\]\ndonde \\(\\mathcal T_{n,N}\\) es el conjunto de los tiempos de parada con valores en\n\\[\n\\{n,\\ldots,N\\}.\n\\]\nUn tiempo de parada óptimo a partir del instante \\(n\\) es\n\\[\n\\boxed{\n\\tau_n^*\n=\n\\inf\n\\{k\\ge n:G_k=Z_k\\}.\n}\n\\]\n\n\n\nDemostración\nEn el instante \\(N\\) es obligatorio detenerse. Por tanto,\n\\[\nZ_N=G_N.\n\\]\nSupongamos que \\(Z_{n+1}\\) es el valor óptimo a partir del instante \\(n+1\\).\nEn el instante \\(n\\) hay dos alternativas.\nSi nos detenemos, recibimos la recompensa \\(G_n\\).\nSi continuamos, el mejor valor condicional alcanzable es\n\\[\n\\mathbb E[Z_{n+1}\\mid\\mathcal F_n].\n\\]\nPor tanto, el valor óptimo es\n\\[\nZ_n\n=\n\\max\n\\left\\{\nG_n,\n\\mathbb E[Z_{n+1}\\mid\\mathcal F_n]\n\\right\\}.\n\\]\nLa inducción hacia atrás demuestra la fórmula de valor en cada instante. Detenerse en el primer momento en que la recompensa inmediata coincide con el proceso de valor alcanza ese óptimo. \\(\\square\\)\n\n\nRelación con el problema de la secretaria\nPara el problema de la secretaria, sea \\(\\mathcal F_n=\\sigma(R_1,\\ldots,R_n)\\) la información disponible después de las primeras \\(n\\) entrevistas. Definimos la recompensa medible respecto de \\(\\mathcal F_n\\) al seleccionar al aspirante en el instante \\(n\\) mediante\n\\[\nG_n=\\mathbb P(X_n=1\\mid\\mathcal F_n)\n=\\frac nN\\,\\mathbf 1_{\\{R_n=1\\}}.\n\\]\nEn efecto, un aspirante que no establece un récord no puede ser el mejor; si \\(R_n=1\\), la probabilidad condicional de éxito es \\(n/N\\). La independencia de los rangos relativos garantiza que las observaciones anteriores no modifican esta probabilidad.\nPor la propiedad de la esperanza condicionada iterada, maximizar la recompensa condicional esperada \\(G_\\tau\\) equivale a maximizar \\(\\mathbb P(X_\\tau=1)\\). En particular, el modelo que obliga a detenerse en \\(N\\) tiene la misma probabilidad óptima de éxito que aquel que permite no seleccionar a nadie si no aparece otro récord.\nCuando aparece un récord en el instante \\(n\\), la recompensa condicional de detenerse es \\(U_n=n/N\\) y el valor de continuar es \\(W_n\\). Por ello, la recurrencia de la envolvente de Snell se reduce a\n\\[\n\\boxed{V_n=\\max\\{U_n,W_n\\}}\n\\]\nen los instantes con récord. Si no hay récord, detenerse da valor cero, por lo que conviene continuar mientras queden aspirantes. Estas son exactamente las decisiones usadas en la inducción hacia atrás anterior."
+  },
+  {
+    "objectID": "es/backward-induction.html#referencias",
+    "href": "es/backward-induction.html#referencias",
+    "title": "El problema de la secretaria mediante inducción hacia atrás",
+    "section": "Referencias",
+    "text": "Referencias\nLa teoría general de inducción hacia atrás y parada óptima se desarrolla en Chow, Robbins, y Siegmund (1971), Shiryaev (2007) y Ferguson (2010).\nEntre los trabajos históricos fundamentales sobre el problema de la secretaria se encuentran Ferguson (1989) y Gilbert y Mosteller (1966)."
+  },
+  {
+    "objectID": "es/index.html",
+    "href": "es/index.html",
+    "title": "El problema de la secretaria",
+    "section": "",
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio\nVersión en inglés"
+  },
+  {
+    "objectID": "es/index.html#cuándo-conviene-tomar-una-decisión",
+    "href": "es/index.html#cuándo-conviene-tomar-una-decisión",
+    "title": "El problema de la secretaria",
+    "section": "¿Cuándo conviene tomar una decisión?",
+    "text": "¿Cuándo conviene tomar una decisión?\n\nSitio creado por José Ángel Islas Anguiano, Ph.D.\nFacultad de Ciencias Naturales y Exactas (FACINE), Universidad Autónoma de Sinaloa (UAS)\nImagina que entrevistas a varias personas, una por una. Si rechazas a alguien, no puedes volver a contratarlo después. ¿Cómo puedes aumentar la probabilidad de elegir a la mejor persona?\nEl problema clásico de la secretaria tiene una respuesta sorprendente: si hay muchos aspirantes, conviene observar aproximadamente al primer 37 % sin contratar a nadie y, después, elegir al primero que supere a todos los anteriores. Este resultado depende de ciertos supuestos que explicaremos más adelante.\nConoce el problema clásico →\nPrueba el juego de entrevistas →"
+  },
+  {
+    "objectID": "es/index.html#comienza-aquí",
+    "href": "es/index.html#comienza-aquí",
+    "title": "El problema de la secretaria",
+    "section": "Comienza aquí",
+    "text": "Comienza aquí\n\n\n1. Comprende la regla del 37 %\nConoce el problema de selección, descubre cuándo se aplica la regla del 37 % y entiende por qué funciona.\nComenzar con el problema clásico →\n\n\n2. Experimenta\nSimula entrevistas, decide cuándo detenerte y compara tus resultados con la estrategia óptima.\nProbar las simulaciones →\n\n\n3. Profundiza\nEstudia la demostración matemática, otras versiones del modelo y la literatura de investigación.\nDemostración por inducción hacia atrás →\nVariantes y extensiones →\nCronología de la investigación →\nCuadernos de Google Colab →"
+  },
+  {
+    "objectID": "es/index.html#acerca-del-tema",
+    "href": "es/index.html#acerca-del-tema",
+    "title": "El problema de la secretaria",
+    "section": "Acerca del tema",
+    "text": "Acerca del tema\nEl problema de la secretaria es un punto de partida para una familia de problemas de parada óptima. Al cambiar la información disponible, el número de elecciones permitidas o el objetivo de selección, surgen distintas preguntas matemáticas.\nComienza con el problema clásico, examina su regla óptima de parada y experimenta con las simulaciones. También puedes consultar las variantes y las referencias bibliográficas."
+  },
+  {
+    "objectID": "es/resources.html",
+    "href": "es/resources.html",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "",
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio"
+  },
+  {
+    "objectID": "es/resources.html#problema-clásico-de-la-secretaria",
+    "href": "es/resources.html#problema-clásico-de-la-secretaria",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Problema clásico de la secretaria",
+    "text": "Problema clásico de la secretaria\nDeduce la probabilidad exacta para un número finito de aspirantes (n), encuentra el umbral óptimo de rechazo, simula permutaciones uniformes y compara los resultados de Monte Carlo con la curva teórica.\nAbrir en Google Colab (en inglés) · Descargar cuaderno (.ipynb)"
+  },
+  {
+    "objectID": "es/resources.html#problema-del-último-éxito-y-teorema-de-las-razones-de-bruss",
+    "href": "es/resources.html#problema-del-último-éxito-y-teorema-de-las-razones-de-bruss",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Problema del último éxito y teorema de las razones de Bruss",
+    "text": "Problema del último éxito y teorema de las razones de Bruss\nEstudia observaciones de Bernoulli independientes, calcula el índice de parada mediante la suma de las razones, simula el objetivo de seleccionar el último éxito y compara probabilidades exactas y estimadas.\nAbrir en Google Colab (en inglés) · Descargar cuaderno (.ipynb)"
+  },
+  {
+    "objectID": "es/resources.html#problema-del-posdoctorado-seleccionar-al-segundo-mejor",
+    "href": "es/resources.html#problema-del-posdoctorado-seleccionar-al-segundo-mejor",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Problema del posdoctorado: seleccionar al segundo mejor",
+    "text": "Problema del posdoctorado: seleccionar al segundo mejor\nResuelve el problema con horizonte finito mediante inducción hacia atrás sobre rangos relativos. Luego simula las decisiones utilizando permutaciones aleatorias.\nAbrir en Google Colab (en inglés) · Descargar cuaderno (.ipynb)"
+  },
+  {
+    "objectID": "es/resources.html#problema-de-la-secretaria-con-información-completa",
+    "href": "es/resources.html#problema-de-la-secretaria-con-información-completa",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Problema de la secretaria con información completa",
+    "text": "Problema de la secretaria con información completa\nDeduce la decisión óptima inicial para dos o tres observaciones uniformes independientes. Simula probabilidades de éxito condicionadas al primer valor y representa gráficamente cuándo conviene detenerse.\nAbrir en Google Colab (en inglés) · Descargar cuaderno (.ipynb)"
+  },
+  {
+    "objectID": "es/resources.html#demostraciones-interactivas-de-este-sitio",
+    "href": "es/resources.html#demostraciones-interactivas-de-este-sitio",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Demostraciones interactivas de este sitio",
+    "text": "Demostraciones interactivas de este sitio\n\nExplorador de umbrales y simulación del problema clásico\nExperimentos de Monte Carlo y curva de probabilidades\nExperimentos sobre el segundo mejor, información completa y el teorema de Bruss\nDemostración por inducción hacia atrás"
+  },
+  {
+    "objectID": "es/resources.html#secuencia-sugerida-para-estudiar",
+    "href": "es/resources.html#secuencia-sugerida-para-estudiar",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Secuencia sugerida para estudiar",
+    "text": "Secuencia sugerida para estudiar\n\nComienza con el cuaderno clásico para comprender el orden aleatorio, los récords y el umbral óptimo.\nContinúa con el cuaderno del posdoctorado para observar cómo cambian las decisiones al buscar al segundo mejor.\nCompara ese problema de rangos relativos con el de información completa, donde se conocen los valores numéricos.\nEstudia el último éxito y la regla de la suma de las razones."
+  },
+  {
+    "objectID": "es/resources.html#reproducibilidad-y-verificación",
+    "href": "es/resources.html#reproducibilidad-y-verificación",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Reproducibilidad y verificación",
+    "text": "Reproducibilidad y verificación\nCada cuaderno fija una semilla aleatoria para hacer reproducibles las simulaciones. Puedes modificar los parámetros y comparar las frecuencias de Monte Carlo con las probabilidades exactas.\nEl repositorio del sitio incluye, además, pruebas matemáticas automatizadas de los cálculos de referencia. Estas pruebas para desarrolladores se mantienen separadas de los cuadernos destinados al alumnado."
+  },
+  {
+    "objectID": "es/resources.html#fuentes",
+    "href": "es/resources.html#fuentes",
+    "title": "Cuadernos de Google Colab y recursos didácticos",
+    "section": "Fuentes",
+    "text": "Fuentes\nLas obras fundamentales figuran en Referencias. Los problemas clásico y de información completa se apoyan en Gilbert y Mosteller (1966); el modelo del último éxito utiliza Bruss (2000), y el problema del posdoctorado sigue el modelo de rangos relativos descrito en Variantes.\nVersión en inglés"
+  },
+  {
+    "objectID": "es/timeline.html",
+    "href": "es/timeline.html",
+    "title": "Cronología de la investigación sobre el problema de la secretaria",
+    "section": "",
+    "text": "Inicio · Problema clásico · Simulaciones · Inducción hacia atrás · Variantes · Recursos · Cronología · Referencias · Acerca del sitio\nVersión en inglés"
+  },
+  {
+    "objectID": "es/timeline.html#más-de-sesenta-años-de-parada-óptima",
+    "href": "es/timeline.html#más-de-sesenta-años-de-parada-óptima",
+    "title": "Cronología de la investigación sobre el problema de la secretaria",
+    "section": "Más de sesenta años de parada óptima",
+    "text": "Más de sesenta años de parada óptima\nEl problema de la secretaria pasó de ser un acertijo recreativo a convertirse en un modelo importante para la parada óptima, la probabilidad aplicada, la teoría de decisiones, la economía y los algoritmos en línea.\n\nEn Who Solved the Secretary Problem? (1989), Thomas S. Ferguson distingue la circulación inicial del problema de su publicación y solución matemática. Merrill Flood ya había discutido una versión hacia 1950; Martin Gardner la difundió entre un público amplio en su columna de febrero de 1960 en Scientific American, basada en una formulación atribuida a John H. Fox Jr. y L. Gerald Marnie. Ferguson identifica el artículo de D. V. Lindley de 1961 como la primera solución publicada en una revista científica. La divulgación de Gardner y el tratamiento matemático de Lindley constituyen, por tanto, hitos distintos."
   },
   {
     "objectID": "index.html",
